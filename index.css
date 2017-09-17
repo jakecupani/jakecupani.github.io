@@ -1,7 +1,8 @@
-#maintext {
+#main {
 	font-size: 50pt;
 	color: #347ab4;
 	margin-top: 100px;
+	font-family: 'Petrona', serif;
 }
 
 body {
@@ -17,4 +18,8 @@ body {
 
 a img:hover {
   opacity: 0.7;
+}
+
+#welcome {
+	font-family: 'Gloria Hallelujah', cursive;
 }
