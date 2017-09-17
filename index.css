@@ -2,7 +2,8 @@
 	font-size: 50pt;
 	background-color: #e3e3e3;
 	color: #347ab4;
-	margin-top: 150px;
+	margin-top: 100px;
+	background-color: rgba(255,255,255,0.4);
 }
 
 body {
