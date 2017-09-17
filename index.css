@@ -14,3 +14,7 @@ body {
 	font-size: 25pt;
 	margin-top: -50px;
 }
+
+a img:hover {
+  opacity: 0.7;
+}
