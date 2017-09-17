@@ -1,0 +1,17 @@
+#maintext {
+	font-size: 50pt;
+	background-color: #e3e3e3;
+	color: #347ab4;
+	margin-top: 150px;
+}
+
+body {
+	background-color: #e3e3e3;
+}
+
+#bio {
+	margin-left: 150px;
+	margin-right: 150px;
+	font-size: 25pt;
+	margin-top: -50px;
+}
