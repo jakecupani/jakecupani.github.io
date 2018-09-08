@@ -1,0 +1,4 @@
+This is a Brave Payments publisher verification file.
+
+Domain: jakecupani.github.io
+Token: 305f0f0adb343626fe9ae3ec73f801eda09200d2dde1c05c7875b2bb7308c1d5
