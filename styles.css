@@ -11,7 +11,7 @@ body {
 /* The sidebar menu */
 .sidenav {
 	height: 100%;
-  	width: 260px!important;
+  	width: 200px;
   	position: fixed;
 	z-index: 1;
 	top: 0;
@@ -156,3 +156,10 @@ img {
 	max-width: 100%;
 }
 
+
+
+/*@media screen and (max-width: 1400px) {
+	.content {
+		width: 900px;
+	}
+}*/
