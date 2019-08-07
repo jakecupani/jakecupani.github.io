@@ -1,0 +1,158 @@
+body {
+	background-color: ghostwhite;
+	font-family: 'Comfortaa', cursive;
+	word-wrap: break-word;
+}
+
+#logo {
+	width: 100%;
+}
+
+/* The sidebar menu */
+.sidenav {
+	height: 100%;
+  	width: 260px!important;
+  	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: white;
+	overflow-x: hidden;
+	padding-top: 20px;
+	border-right: 1pt solid gainsboro;
+}
+
+.sidenav a{
+	padding: 6px 8px 6px 16px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #252B33;
+	display: block;
+}
+
+.sidenav nav a {
+	padding: 10px;
+	text-align: center;
+	line-height: 50px;
+}
+
+.sidenav nav li {
+	list-style-type: none;
+}
+
+.sidenav nav li:hover {
+	color: #347AB4;
+	border-right: 2pt solid #347AB4;
+}
+.content {
+	background-color: white;
+	padding: 50px;
+	margin-left: 360px;
+	margin-right: 260px;
+	border: 1pt solid gainsboro;
+	font-size: 36px;
+}
+
+
+table {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+nav img:hover {
+	opacity: .7;
+}
+
+table td {
+	padding: 30px;
+}
+
+#me {
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 45%;
+  height: 45%
+}
+
+.card {
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	transition: 0.3s;
+	padding: 20px;
+}
+
+.card:hover {
+box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+padding: 2px 16px;
+}
+
+footer {
+   position:absolute;
+   width:100%;
+   font-size: 12pt;
+   bottom: 0;
+   margin-left: 500px;
+}
+
+a {
+	text-decoration: none;
+}
+
+.card a:hover{
+	text-decoration: underline;
+}
+
+.learn-more {
+	text-align: center;
+}
+
+.descriptions {
+	font-size: 16pt;
+	line-height: 2;
+}
+
+#process {
+	list-style: none;
+	text-align: center;
+}
+
+#process li {
+	padding: 10px;
+	font-size: 36px;
+	transition: 0.7s;
+}
+
+#process a {
+	text-decoration: none;
+}
+
+#process li:hover {
+	font-size: 40px;
+	transition: 0.7s;
+}
+
+.pics{
+	display: flex;
+
+}
+
+.pics img {
+	padding-right: 50px;
+}
+
+#challenge-pic {
+	display: flex;
+}
+
+span#quote {
+	color: crimson;
+}
+
+img {
+	max-height: 100%;
+	max-width: 100%;
+}
+
