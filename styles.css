@@ -20,6 +20,7 @@ body {
 	overflow-x: hidden;
 	padding-top: 20px;
 	border-right: 1pt solid gainsboro;
+	overflow: hidden;
 }
 
 .sidenav a{
