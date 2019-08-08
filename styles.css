@@ -65,9 +65,9 @@ nav img:hover {
 	opacity: .7;
 }
 
-table td {
+/*table td {
 	padding: 30px;
-}
+}*/
 
 #me {
 	display: block;
@@ -166,7 +166,11 @@ img {
 #copyright {
 	text-align: center;
 	display: inherit;
-	
+
+}
+
+.gallery table img {
+	display: inline-block;
 }
 
 /*@media screen and (max-width: 1400px) {
