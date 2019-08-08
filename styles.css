@@ -227,6 +227,7 @@ img {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;
+  width: 100%;
 }​
 /* End Test */
 
@@ -241,12 +242,18 @@ img {
 		width: 80%;
 		transition: 0.5s;
 	}
+	.img-text {
+		font-size: 30px;
+	}
 }
 
 @media screen and (max-width: 1550px) {
 	.content {
 		width: 75%;
 		transition: 0.5s;
+	}
+	.img-text {
+		font-size: 28px;
 	}
 }
 
@@ -257,6 +264,9 @@ img {
 		font-size: 35px;
 		transition: 0.5s;
 	}
+	.img-text {
+		font-size: 25px;
+	}
 }
 
 @media screen and (max-width: 1200px) {
@@ -264,6 +274,9 @@ img {
 		width: 65%;
 		font-size: 30px;
 		transition: 0.5s;
+	}
+	.img-text {
+		font-size: 16px;
 	}
 }
 
@@ -274,6 +287,9 @@ img {
 		font-size: 25px;
 		transition: 0.5s;
 	}
+	.img-text {
+		font-size: 12px;
+	}
 }
 
 @media screen and (max-width: 800px) {
@@ -283,6 +299,9 @@ img {
 		transition: 0.5s;
 
 	}
+	.img-text {
+		font-size: 5px;
+	}
 }
 
 @media screen and (max-width: 600px) {
@@ -291,5 +310,7 @@ img {
 		font-size: 20px;
 		transition: 0.5s;
 	}
-
+	.img-text {
+		font-size: 2px;
+	}
 }
