@@ -163,7 +163,11 @@ img {
 	text-decoration: none;
 }
 
-
+#copyright {
+	text-align: center;
+	display: inherit;
+	
+}
 
 /*@media screen and (max-width: 1400px) {
 	.content {
