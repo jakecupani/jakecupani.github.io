@@ -210,7 +210,7 @@ img {
   width: 100%;
   opacity: 0;
   transition: .5s ease;
-  background-color: lightsteelblue;
+  background-color: #347ab4;
 }
 
 .img-container:hover .overlay {
