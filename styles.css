@@ -196,6 +196,7 @@ img {
 @media screen and (max-width: 1400px) {
 	.content {
 		width: 72%;
+		font-size: 35px;
 		transition: 0.5s;
 	}
 }
@@ -203,6 +204,7 @@ img {
 @media screen and (max-width: 1200px) {
 	.content {
 		width: 65%;
+		font-size: 30px;
 		transition: 0.5s;
 	}
 }
@@ -211,6 +213,7 @@ img {
 @media screen and (max-width: 900px) {
 	.content {
 		width: 55%;
+		font-size: 25px;
 		transition: 0.5s;
 	}
 }
@@ -218,13 +221,17 @@ img {
 @media screen and (max-width: 800px) {
 	.content {
 		width: 50%;
+		font-size: 22px;
 		transition: 0.5s;
+
 	}
 }
 
 @media screen and (max-width: 600px) {
 	.content {
 		width: 35%;
+		font-size: 20px;
 		transition: 0.5s;
 	}
+
 }
