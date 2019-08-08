@@ -53,6 +53,7 @@ body {
 	border: 1pt solid gainsboro;
 	font-size: 36px;
 	width: 84%;
+	transition: 0.5s;
 }
 
 
@@ -65,9 +66,9 @@ nav img:hover {
 	opacity: .7;
 }
 
-/*table td {
-	padding: 30px;
-}*/
+table td {
+	/*padding: 30px;*/
+}
 
 #me {
 	display: block;
@@ -173,8 +174,57 @@ img {
 	display: inline-block;
 }
 
-/*@media screen and (max-width: 1400px) {
+.content, .sidenav {
+	display: inline-block;
+}
+
+@media screen and (max-width: 1650px) {
 	.content {
-		width: 900px;
+		width: 80%;
+		transition: 0.5s;
 	}
-}*/
+}
+
+@media screen and (max-width: 1550px) {
+	.content {
+		width: 75%;
+		transition: 0.5s;
+	}
+}
+
+
+@media screen and (max-width: 1400px) {
+	.content {
+		width: 72%;
+		transition: 0.5s;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.content {
+		width: 65%;
+		transition: 0.5s;
+	}
+}
+
+
+@media screen and (max-width: 900px) {
+	.content {
+		width: 55%;
+		transition: 0.5s;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.content {
+		width: 45%;
+		transition: 0.5s;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.content {
+		width: 35%;
+		transition: 0.5s;
+	}
+}
