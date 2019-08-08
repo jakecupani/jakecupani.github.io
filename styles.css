@@ -217,7 +217,7 @@ img {
 
 @media screen and (max-width: 800px) {
 	.content {
-		width: 45%;
+		width: 50%;
 		transition: 0.5s;
 	}
 }
