@@ -261,6 +261,7 @@ img {
   text-align: center;
   width: 100%;
 }​
+
 /* End Test */
 
 
@@ -269,19 +270,19 @@ img {
 
 
 
-@media screen and (max-width: 1650px) {
+/*@media screen and (max-width: 1650px) {
 	.content {
-		width: 80%;
+		width: 78%;
 		transition: 0.5s;
 	}
 	.img-text {
 		font-size: 30px;
 	}
-}
+}*/
 
 @media screen and (max-width: 1550px) {
 	.content {
-		width: 75%;
+		width: 55%;
 		transition: 0.5s;
 	}
 	.img-text {
@@ -292,7 +293,7 @@ img {
 
 @media screen and (max-width: 1400px) {
 	.content {
-		width: 72%;
+		width: 58%;
 		font-size: 35px;
 		transition: 0.5s;
 	}
@@ -340,6 +341,17 @@ img {
 	.content {
 		width: 35%;
 		font-size: 20px;
+		transition: 0.5s;
+	}
+	.img-text {
+		font-size: 2px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.content {
+		width: 35%;
+		font-size: 18px;
 		transition: 0.5s;
 	}
 	.img-text {
