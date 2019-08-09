@@ -270,15 +270,7 @@ img {
 
 
 
-/*@media screen and (max-width: 1650px) {
-	.content {
-		width: 78%;
-		transition: 0.5s;
-	}
-	.img-text {
-		font-size: 30px;
-	}
-}*/
+
 
 @media screen and (max-width: 1550px) {
 	.content {
@@ -358,3 +350,4 @@ img {
 		font-size: 2px;
 	}
 }
+
