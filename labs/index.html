@@ -1,72 +1,72 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
-		<title>Sample HTML Demonstration Page</title>
-		<style>
-		.head {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-items: center;
-		margin-bottom: 25px;
-		}
-		.head a,
-		.head h1 {
-		margin: 0;
-		padding: 0;
-		}
-		.container {
-		display: flex;
-		justify-content: space-around;
-		align-items: center;
-		flex-wrap: wrap;
-		}
-		.container div {
-		height: 100px;
-		width: 350px;
-		margin-bottom: 25px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		}
-		.container p {
-		}
-		.container .first {
-		background: teal;
-		}
-		.container .second {
-		background: lightblue;
-		}
-		</style>
+		<title>My Webpage</title>
+		<link rel="stylesheet" type="text/css" href="styles.css">
 	</head>
 	<body>
-		<div class="head">
-			<h1>Sample Header</h1>
-			<a href="#">anchor tag to nowhere</a>
-		</div>
-		<div class="container">
-			<div class="first" onclick="removeButton()">
-				<button onclick="alertMe(16)">What is 16C in F?</button>
+		<!-- Q1-1 -->
+		<div class="intro">
+			<div class="intro-name">
+				<h1>
+				Hello, my name is <span id="myname">Jake Cupani</span>
+				</h1>
 			</div>
-			<div class="second">
-				<p>
-					World #2
-				</p>
+			
+			<!-- Q1-2 & Q1-3 -->
+			<div class="prof-desc">
+				<h2><span>About Me</span></h2>
+				<p>I am currently a senior at the University of Maryland at College Park. I am majoring in Information Sciences, specializing in Data Science, and minoring in Astronomy. I also love UX/UI Design and try to merge my passions of Data Science and Design by creating accessible, usable, and aesthetically pleasing applications.</p>
+				<!-- Q1-4 -->
+				<img src="static/me.jpg" id="me" alt="This is a picture of me.">
+			</div>
+			<!-- Q1-3 & Q1-5-->
+			<div class="experience">
+				<h2><span>Work Experience</span></h2>
+				<ul id="work-entries">
+					<li>
+						<span class="job-title">Data Science Intern at Lifetime Brands</span>
+						<ul class="job-description">
+							<li>Developed a web application using the Python Flask framework to automate the creation of weekly sales and operations reports for the eCommerce Amazon team.</li>
+							<li>Responsibilities I had included:
+								<ol class="responsibilities">
+									<li>Attending meetings with the Amazon eCommerce team.</li>
+									<li>Analyzing and importing Excel data into Python dataframes.</li>
+									<li>Attending intern led discussions.</li>
+								</ol>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<span class="job-title">Web Development Intern at NASA Goddard</span>
+						<ul class="job-description">
+							<li>Designed, developed, and deployed the NASA Goddard Library websites using Drupal 8.</li>
+							<li>Migrated back-end systems using PHP.</li>
+							<li>Responsibilities I had included:
+								<ol class="responsibilities">
+									<li>Designing wireframes and CSS style layouts for the Goddard Library website.</li>
+									<li>Attending meetings with the other Web Developer and Project Manager.</li>
+									<li>Occasionally helping at the front desk of the library.</li>
+								</ol>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<span class="job-title">Code Instructor at The Coder School</span>
+						<ul class="job-description">
+							<li>Teach the basics of Python procedural programming, Scratch, and HTML/CSS to elementary through middle school students.</li>
+							<li>Create educational coding games and activities.</li>
+							<li>Responsibilities I had included:
+								<ol class="responsibilities">
+									<li>Designing personalized coding activities for individual sessions.</li>
+									<li>Play games with the kids during their scheduled breaks.</li>
+									<li>Instruct kids on how to use the Scratch coding environment.</li>
+								</ol>
+							</li>
+						</ul>
+					</li>
+				</ul>
 			</div>
 		</div>
-		<script>
-		function toFahrenheit(celsius) {
-		return (celsius * 1.8) + 32;
-		}
-		function alertMe(display) {
-		alert(toFahrenheit(display));
-		}
-		function removeButton() {
-		var div = document.getElementsByClassName("first")[0];
-		var div2 = document.getElementsByClassName("second")[0];
-		div.innerHTML = "<p>Hello</p>";
-		div2.innerHTML = "<p>Hello</p>";
-		}
-		</script>
 	</body>
 </html>
