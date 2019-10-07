@@ -1,9 +1,72 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title></title>
-</head>
-<body>
-hello
-</body>
+	<head>
+		<title>Sample HTML Demonstration Page</title>
+		<style>
+		.head {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-items: center;
+		margin-bottom: 25px;
+		}
+		.head a,
+		.head h1 {
+		margin: 0;
+		padding: 0;
+		}
+		.container {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		flex-wrap: wrap;
+		}
+		.container div {
+		height: 100px;
+		width: 350px;
+		margin-bottom: 25px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		}
+		.container p {
+		}
+		.container .first {
+		background: teal;
+		}
+		.container .second {
+		background: lightblue;
+		}
+		</style>
+	</head>
+	<body>
+		<div class="head">
+			<h1>Sample Header</h1>
+			<a href="#">anchor tag to nowhere</a>
+		</div>
+		<div class="container">
+			<div class="first" onclick="removeButton()">
+				<button onclick="alertMe(16)">What is 16C in F?</button>
+			</div>
+			<div class="second">
+				<p>
+					World #2
+				</p>
+			</div>
+		</div>
+		<script>
+		function toFahrenheit(celsius) {
+		return (celsius * 1.8) + 32;
+		}
+		function alertMe(display) {
+		alert(toFahrenheit(display));
+		}
+		function removeButton() {
+		var div = document.getElementsByClassName("first")[0];
+		var div2 = document.getElementsByClassName("second")[0];
+		div.innerHTML = "<p>Hello</p>";
+		div2.innerHTML = "<p>Hello</p>";
+		}
+		</script>
+	</body>
 </html>
