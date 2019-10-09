@@ -34,11 +34,12 @@
   <script>
     /* My Function */
     function replaceCountries() {
+      const json = sessionStorage.getItem("countries_arr");
+      const list = JSON.parse(json);
       var ordered_list = document.getElementsByTagName("ol")[0];
       ordered_list.innerHTML = "";
-      for (var i = 0; i < countries.length-193; i++) {
-            var curr_country = countries[Math.floor(Math.random() * countries.length)];
-            console.log(curr_country);
+      for (var i = 0; i < list.length-193; i++) {
+            var curr_country = list[Math.floor(Math.random() * list.length)];
             ordered_list.innerHTML += "<li>" + curr_country["name"] + "</li>";
       }
     }
@@ -291,6 +292,8 @@
       { "name": "Zimbabwe", "code": "ZW" }
     ]
     console.log("List of countries in the world", countries);
+    sessionStorage.setItem("countries_arr",JSON.stringify(countries));
+
   </script>
 </body>
 
