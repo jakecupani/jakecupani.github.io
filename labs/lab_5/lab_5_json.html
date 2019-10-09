@@ -11,7 +11,7 @@
     <div class="wrapper">
       <div class="header">Test JSON page</div>
       <!-- <button class="button" onclick="loadData()">Load Some JSON</button> -->
-      <button class="button" onclick="console.log('You haven\'t written a function yet!');">Click me to replace list entries</button>
+      <button class="button" onclick="replaceCountries()">Click me to replace list entries</button>
       <div class="content">
         <ul class="instructions">
           <li>Delete and re-clone the class repository</li>
@@ -32,6 +32,18 @@
     </div>
   </div>
   <script>
+    /* My Function */
+    function replaceCountries() {
+      var ordered_list = document.getElementsByTagName("ol")[0];
+      ordered_list.innerHTML = "";
+      for (var i = 0; i < countries.length-193; i++) {
+            var curr_country = countries[Math.floor(Math.random() * countries.length)];
+            console.log(curr_country);
+            ordered_list.innerHTML += "<li>" + curr_country["name"] + "</li>";
+      }
+    }
+
+
     /* N.B. - For your lab, use the variable "countries" now available on the window space */
     const countries = [
       { "name": "Afghanistan", "code": "AF" },
