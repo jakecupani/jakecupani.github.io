@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Test AJAX page</title>
+  <link rel="stylesheet" type="text/css" href="./lab_styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="wrapper">
+      <div class="header">Test AJAX page</div>
+      <button class="button" onclick="loadData()">Load Some JSON</button>
+      <div class="content"></div>
+      <div class="footer"></div>
+    </div>
+  </div>
+  <script>
+    function loadData(anything) {
+      // What ARE promises? 
+      fetch('ajax_sample.json')
+        .then(arbitrary_variable_name => {
+          console.log(arbitrary_variable_name);
+           return arbitrary_variable_name.json()}) // gotta parse a string into an object! Here's how
+        .then(res => {
+          console.log(res);
+          return res;
+        })
+        .then(res => res) // here we're just passing along res in a shorter format
+        .then(res => res.map(c => c.code)) // // Gotta know what values are available on the response - get this from your API
+        .then(codes => document.querySelector(".content").innerText = codes)
+        .catch((err) => {console.log(err)});
+      }
+
+    let cats = "cats"; // define a variable
+
+    // define a function containing a "callback"
+    function callbackDemo(arg, cb) { 
+    console.log(arg);
+      cb = arg + " dogs"
+    }
+
+    // The Callback Pine Tree Pattern
+    callbackDemo(cats, (res) => {
+      console.log(res) // "cats dogs"
+      callbackDemo(res, (res2) => {
+        console.log(res); // "cats dogs"
+        console.log(res2); // "cats dogs dogs"
+        callbackDemo(res2, (res3) => {
+          console.log(res); // "cats dogs"
+          console.log(res2); // "cats dogs dogs"
+          console.log(res3); // "cats dogs dogs dogs"
+          // what. why do we need all these variables in this inner scope?
+        })
+      })
+    })
+
+
+    function slowFunction(arg, cb){
+      setTimeout(() => {
+        // we don't need to supply an argument here,
+        // because we are taking it from the outer scope
+        cb = arg + " animal";
+      }, 2000) // this will take 2000ms or 2 sec to execute
+    }
+
+    let animal;
+    setTimeout(() => {
+        // we don't need to supply an argument here,
+        // because we are taking it from the outer scope
+        animal = cat;
+      }, 2000) // this will take 2000ms or 2 sec to execute
+    console.log(animal); // this will show undefined when it executes
+    // because the "outer context" will not update for two seconds.
+
+  </script>
+</body>
+
+</html>
