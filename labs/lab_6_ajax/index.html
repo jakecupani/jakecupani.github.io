@@ -33,6 +33,7 @@
         if (i != 0) {
           while(arr_names.includes(rand_country.name)) {
             rand_country = res[Math.floor(Math.random() * res.length)];
+            console.log("duplicate found");
           }
         }
         arr_names.push(rand_country.name);
