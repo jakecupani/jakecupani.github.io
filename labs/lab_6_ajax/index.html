@@ -20,25 +20,25 @@
       fetch('ajax_sample.json')
         .then(res => res.json())
         .then(res => randRes(res))
-        .then(codes => writeRes(codes))
         .then(codes => document.querySelector(".content").innerHTML = codes);
     }
 
     function randRes(res) {
-      arr = new Array();
-      for (var i = 0; i < 15; i++) {
-        var rand_country = res[Math.floor(Math.random() * res.length)].name;
-        console.log(rand_country);
-        arr.push(rand_country);
-      }
-      return arr;
-    }
-
-    function writeRes(res) {
+      arr_names = new Array();
+      arr_codes = new Array();
       ol_res = "<ol>";
-      for (var i=0; i<res.length; i++) {
-        ol_res += "<li>" + res[i] + "</li>";
+
+      for (var i = 0; i < 15; i++) {
+        var rand_country = res[Math.floor(Math.random() * res.length)];
+        console.log(rand_country);
+        arr_names.push(rand_country.name);
+        arr_codes.push(rand_country.code);
       }
+
+      for (var i=0; i<arr_names.length; i++) {
+        ol_res += "<li>" + arr_names[i] +", " + arr_codes[i] + "</li>";
+      }
+
       ol_res += "</ol>";
       return ol_res;
     }
