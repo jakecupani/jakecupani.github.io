@@ -30,7 +30,11 @@
 
       for (var i = 0; i < 15; i++) {
         var rand_country = res[Math.floor(Math.random() * res.length)];
-        console.log(rand_country);
+        if (i != 0) {
+          while(arr_names.includes(rand_country.name)) {
+            rand_country = res[Math.floor(Math.random() * res.length)];
+          }
+        }
         arr_names.push(rand_country.name);
         arr_codes.push(rand_country.code);
       }
