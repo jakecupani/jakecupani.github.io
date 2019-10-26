@@ -17,24 +17,23 @@
   </div>
   <script>
     function loadData() {
-      // 
       fetch('https://api.umd.io/v0/bus/routes')
-      .then(res => res.json())
-      .then(res => {
+        .then(res => res.json())
+        .then(res => {
           // you can now work in this area
           console.log(res);
           var ul_tag = "<ul>";
-          for (var i=0; i<res.length; i++) {
+          for (var i = 0; i < res.length; i++) {
             var route_id = res[i].route_id;
             var title = res[i].title;
-            var li_tag = "<li>" + route_id + " " + title + "</li>"; 
+            var li_tag = "<li>" + route_id + " " + title + "</li>";
             ul_tag += li_tag;
           }
+          document.querySelector(".header").innerHTML = res[0].title;
           ul_tag += "</ul>";
           return ul_tag;
         })
-        .then(data => document.querySelector(".content").innerHTML = data)
-        .then(route => document.querySelector(".header").innerHTML = route);
+        .then(data => document.querySelector(".content").innerHTML = data);
     }
 
   </script>
