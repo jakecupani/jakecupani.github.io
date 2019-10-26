@@ -29,13 +29,16 @@
             var li_tag = "<li>" + route_id + " " + title + "</li>";
             ul_tag += li_tag;
           }
-          document.querySelector(".header").innerHTML = res[0].title;
+          var metro = res.find(function (res) {
+            return res.title === "104 College Park Metro";
+          });
+          console.log(metro);
+          document.querySelector(".header").innerHTML = metro.title;
           ul_tag += "</ul>";
           return ul_tag;
         })
         .then(data => document.querySelector(".content").innerHTML = data);
     }
-
   </script>
 </body>
 
