@@ -36,7 +36,14 @@
             var title = res[i].title;
             var li_tag = "<li>" + route_id + " " + title + "</li>";
             ul_tag += li_tag;
+
+            // String matching
+            if (!(res[i].title.indexOf(res[i].route_id))) {
+              res[i].title = res[i].title.slice(4, res[i].title.length);
+            }
+
           }
+          console.log(res);
           ul_tag += "</ul>";
           return ul_tag;
         })
