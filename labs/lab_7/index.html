@@ -20,8 +20,16 @@
       fetch('https://api.umd.io/v0/bus/routes')
         .then(res => res.json())
         .then(res => {
+          var metro = res.find(function (res) {
+            return res.title === "104 College Park Metro";
+          });
+          document.querySelector(".header").innerHTML = metro.title;
+          return res;
+        })
+        .then(res => {
           // you can now work in this area
           console.log(res);
+          route_data = sessionStorage.setItem("data", res);
           var ul_tag = "<ul>";
           for (var i = 0; i < res.length; i++) {
             var route_id = res[i].route_id;
@@ -29,15 +37,15 @@
             var li_tag = "<li>" + route_id + " " + title + "</li>";
             ul_tag += li_tag;
           }
-          var metro = res.find(function (res) {
-            return res.title === "104 College Park Metro";
-          });
-          console.log(metro);
-          document.querySelector(".header").innerHTML = metro.title;
           ul_tag += "</ul>";
           return ul_tag;
         })
-        .then(data => document.querySelector(".content").innerHTML = data);
+        .then(data => document.querySelector(".content").innerHTML = data)
+        .then(data => {
+          data = sessionStorage.getItem("data");
+          console.log(data);
+          return data;
+        });
     }
   </script>
 </body>
