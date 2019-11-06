@@ -1,0 +1,22 @@
+{
+  "name": "sample_server",
+  "version": "1.0.0",
+  "description": "A sample webserver to pull UMD.io data and push it to a local page",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Alex Leitch",
+  "license": "CC-BY-SA-4.0",
+  "dependencies": {
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.5.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-html": "^6.0.0",
+    "eslint-plugin-import": "^2.18.2"
+  }
+}
