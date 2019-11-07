@@ -20,12 +20,18 @@
       console.log('fetch'); // confirm code is running on click
       fetch('/api')
         .then(res => res.json())
+        .then(res => res.data.map(c => c.course_id + ":" + c.name))
         .then(res => {
-          console.log(res); // logging step to check what we got
-          return res;
+           // logging step to check what we got
+          console.log(res);
+          olstr = "<ol>";
+          for (i=0; i<res.length; i++) {
+            olstr += "<li>" + res[i] + "</li>"
+          }
+          olstr += "</ol>"
+          return olstr;
         })
-        .then(res => res.data.map(c => c.route_id))
-        .then(codes => document.querySelector(".content").innerText = codes);
+        .then(codes => document.querySelector(".content").innerHTML = codes);
     }
   </script>
 </body>
