@@ -47,8 +47,9 @@ app.get('/api', (req, res) => {
     .then((r) => r.json())
     .then(res => {
       ids = res.filter(course => course.dept_id === "INST");
-      return ids; 
+      return ids;
     })
+    .then(res => res.map(c => c.course_id + ":" + c.name))
     .then((data) => {
       console.log(data);
       res.send({ data: data });
