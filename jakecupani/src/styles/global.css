@@ -27,6 +27,7 @@ body {
   line-height: 1.6;
   background-color: var(--background-body);
   color: var(--text-main);
+  transition: 0.5s;
 }
 
 h1,
@@ -212,11 +213,13 @@ td {
   gap: 0.6em;
   border-radius: 99em;
   background-color: var(--theme-code-inline-bg);
+  
 }
 
 .theme-toggle > label:focus-within {
   outline: 2px solid transparent;
   box-shadow: 0 0 0 0.08em var(--theme-accent), 0 0 0 0.12em white;
+  
 }
 
 .theme-toggle > label {
@@ -232,6 +235,7 @@ td {
 .theme-toggle .checked {
   color: var(--theme-accent);
   opacity: 1;
+  
 }
 
 input[name='theme-toggle'] {
