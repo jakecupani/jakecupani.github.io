@@ -1,16 +1,15 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-const title = 'My Astro Blog';
-const description = 'The perfect starter for your perfect blog.';
+const title = 'Jake Cupani';
+const description = "Jake Cupani's personal website.";
 const permalink = Astro.site.href;
 ---
-
 <BaseLayout title={title} description={description} permalink={permalink}>
   <div class="home-container">
     <div class="home-copy">
-      <h1>Hi, my name is Jake Cupani!</h1>
-      <p>I'm passionate about creating interactive dashboards and data visualizations.</p>
+      <h1>Hi, my name is Jake Cupani! 😊</h1>
+      <p>I'm passionate about creating <span class="emp-text">interactive dashboards</span> and <span class="emp-text">data visualizations</span>.</p>
     </div>
 
     <div class="hero-image-container">
@@ -51,6 +50,8 @@ const permalink = Astro.site.href;
   .hero-image-container {
     margin: 0 1em;
     text-align: center;
+
+    transition: 0.5s;
   }
 
   .hero-image-container picture {
@@ -64,12 +65,6 @@ const permalink = Astro.site.href;
     text-align: left;
   }
 
-  .hero-image {
-    width: 100%;
-    max-width: 550px;
-    margin-bottom: 1em;
-    border-radius: 30px;
-  }
 
   @media (max-width: 1200px) {
     p {

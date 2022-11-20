@@ -2,16 +2,18 @@
   --background-body: #fff;
   --text-main: #36393b;
   --text-secondary: #6b6f72;
-  --primary-color: #0b3d91;
+  --primary-color: #415d8f;
   --font-family-serif: Merriweather, serif;
-  --font-family-sans: 'Fira Sans', sans-serif;
+  --font-family-sans: "Fira Sans", sans-serif;
+  --img-hover: rgb(234, 234, 234);
 }
 
 :root.theme-dark {
   --background-body: #202122;
   --text-main: #fff;
   --text-secondary: #ccc;
-  --primary-color: #a4c6ff;
+  --primary-color: lightblue;
+  --img-hover: rgb(46, 46, 46);
 }
 
 *,
@@ -128,7 +130,7 @@ hr {
 }
 
 code {
-  font-family: 'SF Mono', menlo, inconsolata, monospace;
+  font-family: "SF Mono", menlo, inconsolata, monospace;
   font-size: calc(1em - 2px);
   color: #555;
   padding: 0.2em 0.4em;
@@ -212,14 +214,14 @@ td {
   margin-left: 10px;
   gap: 0.6em;
   border-radius: 99em;
-  background-color: var(--theme-code-inline-bg);
-  
+  /* background-color: var(--theme-code-inline-bg); */
+
+  background: var(--toggle-gradient);
 }
 
 .theme-toggle > label:focus-within {
   outline: 2px solid transparent;
   box-shadow: 0 0 0 0.08em var(--theme-accent), 0 0 0 0.12em white;
-  
 }
 
 .theme-toggle > label {
@@ -235,10 +237,28 @@ td {
 .theme-toggle .checked {
   color: var(--theme-accent);
   opacity: 1;
-  
 }
 
-input[name='theme-toggle'] {
+.emp-text {
+  font-weight: bold;
+  color: var(--primary-color);
+  font-size: 1.2em;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 550px;
+  margin-bottom: 1em;
+  border-radius: 30px;
+  transition: 0.5s;
+}
+
+.hero-image:hover {
+  box-shadow: 5px 10px 1px 2px var(--img-hover);
+  transition: 0.5s;
+}
+
+input[name="theme-toggle"] {
   position: absolute;
   opacity: 0;
   top: 0;
