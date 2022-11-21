@@ -23,7 +23,7 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
             </h2>
             <p>{post.frontmatter.description}</p>
             <div class="post-item-footer">
-              <span class="post-item-date">— {post.frontmatter.publishDate}</span>
+              
             </div>
           </div>
         </div>
@@ -38,6 +38,8 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
     font-family: var(--font-family-sans);
     font-weight: 700;
   }
+
+  
 
   .post-item-date {
     color: var(--text-secondary);
