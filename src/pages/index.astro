@@ -16,8 +16,22 @@ const permalink = Astro.site.href;
         > and <span class="emp-text">data visualizations</span>.
       </p>
       <button class="button"
-        ><a href="Jake Cupani Resume.pdf">Resume</a>
+        ><a target='_blank' href="Jake Cupani Resume.pdf">Resume</a>
       </button>
+      
+      <div class="socials">
+        <a target='_blank' href="https://twitter.com/jakecupani"><img src="/assets/socials/twitter.png" alt="Twitter Logo" height="50px" width="50px"></a>
+        
+        <a target='_blank' href="https://linkedin.com/in/jakecupani"><img id="linkedin" src="/assets/socials/linkedin.png" alt="LinkedIn Logo" height="70px" width="70px"></a>
+        
+        <a target='_blank' href="https://github.com/jakecupani"><img src="/assets/socials/github.png" alt="Github Logo" height="50px" width="50px"></a>
+        <a target='_blank' href="https://youtube.com/c/PyGuyCoding"><img id="youtube" src="/assets/socials/youtube.svg" alt="Github Logo" height="70px" width="70px"></a>
+
+        
+        
+      </div>
+      
+      
     </div>
 
     <div class="hero-image-container">
@@ -36,6 +50,16 @@ const permalink = Astro.site.href;
 </BaseLayout>
 
 <style>
+  .socials img {
+    margin-right: 10px;
+    margin-top: 30px;
+    transition: 1.5s;
+  }
+
+  #linkedin, #youtube {
+    margin-bottom: -10px;
+  }
+
   .home-container {
     align-items: center;
     display: flex;
