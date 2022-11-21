@@ -6,6 +6,7 @@
   --font-family-serif: Merriweather, serif;
   --font-family-sans: "Fira Sans", sans-serif;
   --img-hover: rgb(234, 234, 234);
+  --emp-hover: #003d7d;
 }
 
 :root.theme-dark {
@@ -14,6 +15,7 @@
   --text-secondary: #ccc;
   --primary-color: rgb(29, 117, 146);
   --img-hover: rgb(46, 46, 46);
+  --emp-hover: #7fb3ea;
 }
 
 *,
@@ -239,10 +241,44 @@ td {
   opacity: 1;
 }
 
+/* Custom */
 .emp-text {
   font-weight: bold;
   color: var(--primary-color);
   font-size: 1.2em;
+  transition: 0.5s;
+}
+
+.emp-text:hover {
+  color: var(--emp-hover);
+  transition: 0.5s;
+}
+
+.button {
+  /* background-color: #4caf50; */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.5rem;
+  border-radius: 50px;
+  transition: 0.5s;
+
+  background-color: #8bc6ec;
+  background-image: linear-gradient(135deg, #8bc6ec 0%, #9599e2 100%);
+}
+
+.button a {
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+.button a:hover {
+  /* font-size: 1.75rem; */
+  color: white;
+  transition: 0.5s;
 }
 
 .hero-image {
