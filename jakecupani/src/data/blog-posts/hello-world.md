@@ -8,4 +8,4 @@ description: Every blog starts with a single post. This is yours. Make it great.
 
 This post intentionally left blank.
 
-Write what you want.
+Testing!
