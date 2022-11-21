@@ -1,0 +1,6 @@
+This favicon was generated using the following font:
+
+- Font Title: Questrial
+- Font Author: Copyright 2011 The Questrial Project Authors (https://github.com/googlefonts/questrial)
+- Font Source: http://fonts.gstatic.com/s/questrial/v18/QdVUSTchPBm7nuUeVf7EuStkm20oJA.ttf
+- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))
