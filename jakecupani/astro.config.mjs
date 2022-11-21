@@ -6,7 +6,6 @@ import mdx from "@astrojs/mdx";
 export default defineConfig({
   site: "https://jakecupani.github.io",
   integrations: [mdx(), svelte()],
-  base: "/",
   markdown: {
     shikiConfig: {
       theme: "nord",
