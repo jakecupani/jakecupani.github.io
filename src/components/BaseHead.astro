@@ -47,7 +47,7 @@ const socialUrl = Astro.site.href + 'assets/social.png'
 <script is:inline>
   const root = document.documentElement;
   const theme = localStorage.getItem('theme');
-  console.log(theme);
+  
   if (theme === 'dark' || (!theme) && window.matchMedia('(prefers-color-scheme: dark)').matches) {
     root.classList.add('theme-dark');
   } else {
