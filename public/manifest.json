@@ -1,0 +1,15 @@
+{
+    "short_name": "Jake Cupani",
+    "name": "Jake Cupani's Website",
+    "icons": [],
+    "id": "/?source=pwa",
+    "start_url": "/?source=pwa",
+    "background_color": "",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#fff",
+    "shortcuts": [],
+    "description": "Jake Cupani's website",
+    "screenshots": [
+    ]
+  }
