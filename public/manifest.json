@@ -4,7 +4,7 @@
     "icons": [],
     "id": "/?source=pwa",
     "start_url": "/?source=pwa",
-    "background_color": "",
+    "background_color": "#fff",
     "display": "standalone",
     "scope": "/",
     "theme_color": "#fff",
