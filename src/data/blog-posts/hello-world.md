@@ -1,5 +1,5 @@
 ---
-title: Hello World 👋
+title: Why I Love Data Visualization ❤️
 publishDate: 30 Nov 2021
 description: Test!
 ---
