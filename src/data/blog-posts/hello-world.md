@@ -1,7 +1,7 @@
 ---
 title: Why I Love Data Visualization ❤️
 publishDate: 30 Nov 2021
-description: Test!
+description: Blog post on why I love data visualization. 
 ---
 
 Data visualization has always been a passion of mine. There is something truly magical about taking raw data and turning it into a beautiful, informative, and visually appealing graphic.
