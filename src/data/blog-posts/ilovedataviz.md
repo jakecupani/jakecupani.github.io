@@ -1,6 +1,6 @@
 ---
 title: Why I Love Data Visualization ❤️
-publishDate: 30 Nov 2021
+publishDate: 27 Dec 2022
 description: Blog post on why I love data visualization. 
 ---
 
