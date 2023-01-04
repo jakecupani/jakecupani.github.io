@@ -5,7 +5,7 @@ description: Blog post on why I love data visualization.
 tags: ['Data Visualization','Coding']
 ---
 
-> :warning: **Warning:** This post has been generated as a placeholder by ChatGPT.
+> :warning: **Warning:** This post has been generated as a test post by ChatGPT.
 
 Data visualization has always been a passion of mine. There is something truly magical about taking raw data and turning it into a beautiful, informative, and visually appealing graphic.
 
