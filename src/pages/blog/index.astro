@@ -11,7 +11,16 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 
 <BaseLayout title={title} description={description} permalink={permalink} current="blog">
   <div class="container">
+
     <h1>Blog</h1>
+    <!-- <hr> -->
+    <!-- <div class="tags-filter">
+      <h2>Tags</h2>
+      <br>
+      <button class="tag-btn">Data Visualization</button>
+      <button class="tag-btn">Coding</button>
+    </div> -->
+    
     {allPosts.map((post, index) => {
       const href = `/blog/${post.file.split('/').pop().split('.').shift()}`;
       const tags = post.frontmatter.tags;
@@ -19,6 +28,7 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
         
       }
       return (
+      
         <div>
           { index !== 0 && <hr /> }
           <div class="post-item">
@@ -81,5 +91,20 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 
   hr {
     margin: 60px auto;
+  }
+  
+  .tag-btn {
+    border-radius: 10px;
+    background-color: var(--primary-color);
+    padding: 10px;
+    color: white;
+    box-shadow: 0px 0px 0px 0px;
+    font-family: var(--font-family-sans);
+    font-weight: 700;
+    /* border-style: none; */
+    font-size: 16px;
+  }
+
+  .tags-filter {
   }
 </style>

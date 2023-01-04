@@ -5,6 +5,8 @@ description: Blog post on why I love data visualization.
 tags: ['Data Visualization','Coding']
 ---
 
+> :warning: **Warning:** This post has been generated as a placeholder by ChatGPT.
+
 Data visualization has always been a passion of mine. There is something truly magical about taking raw data and turning it into a beautiful, informative, and visually appealing graphic.
 
 I have always been drawn to the power of data visualization. From simple bar graphs and pie charts to more complex infographics and interactive dashboards, the ability to convey information in a clear and concise manner is unparalleled.
