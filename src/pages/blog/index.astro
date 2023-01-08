@@ -1,5 +1,5 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import BaseLayoutBlog from '../../layouts/BaseLayoutBlog.astro';
 
 const title = 'Blog';
 const description = 'Latest articles.';
@@ -7,19 +7,34 @@ const permalink = `${Astro.site.href}blog`;
 
 let allPosts = await Astro.glob('../../data/blog-posts/*.md');
 allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf());
+
+let tag_list = []
+for (let index = 0; index < allPosts.length; index++) {
+  const element = allPosts[index];
+  let tags = element.frontmatter.tags
+  for (let index = 0; index < tags.length; index++) {
+    const tag = tags[index];
+    tag_list.push(tag);
+  }
+}
+
+let allTags = tag_list.filter((item, index) => tag_list.indexOf(item) === index);
+console.log(allTags);
 ---
 
-<BaseLayout title={title} description={description} permalink={permalink} current="blog">
+<BaseLayoutBlog title={title} description={description} permalink={permalink} current="blog">
+  
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+  
   <div class="container">
 
     <h1>Blog</h1>
-    <!-- <hr> -->
-    <!-- <div class="tags-filter">
-      <h2>Tags</h2>
-      <br>
-      <button class="tag-btn">Data Visualization</button>
-      <button class="tag-btn">Coding</button>
-    </div> -->
+
+    
+    
+    
+    
+    
     
     {allPosts.map((post, index) => {
       const href = `/blog/${post.file.split('/').pop().split('.').shift()}`;
@@ -29,7 +44,7 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
       }
       return (
       
-        <div>
+        <div class="post" data-message={}>
           { index !== 0 && <hr /> }
           <div class="post-item">
             <h2>
@@ -42,7 +57,7 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
               
               {tags.map((tag) => (
                 <>
-                  <div class="post-tag">{tag}</div>
+                  <div class="post-tag" data-message={tag}>{tag}</div>
                 </>
               ))}
 
@@ -54,7 +69,48 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
       )
     })}
   </div>
-</BaseLayout>
+
+  <div class="tags-filter">
+      
+      
+    <!-- <p>*Filters go here*</p> -->
+    <div class="search-container">
+      <input type="text" id="searchBar">
+      
+      
+          <div class="filter-select">
+
+
+            
+            {allTags.map((t) => (
+              <>
+              <div class="filter-input">
+              
+                <div>{t}</div>
+                
+
+
+              </div>
+              
+              
+              
+              
+              </>
+            ))}
+
+            <button class="resetBtn">Reset</button>
+            
+       
+      
+    </div>
+    
+    
+    
+   
+
+  </div>
+
+</BaseLayoutBlog>
 
 <style>
   h2,
@@ -65,7 +121,7 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
   }
 
   .post-item-footer div {
-    margin-left: 5px;
+    margin-left: 10px;
   }
 
   .post-item p {
@@ -78,6 +134,18 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
     padding: 10px;
     border-radius: 10px;
     color: white;
+    display: inline;
+    font-family: var(--font-family-sans);
+}
+
+.tags-filter {
+  background-color: var(--filter);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px 0px inset;
+  height: fit-content;
+  margin-top: 110px;
+  
 }
 
   
@@ -92,19 +160,182 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
   hr {
     margin: 60px auto;
   }
-  
-  .tag-btn {
+
+  .container {
+    max-width: 30rem;
+    padding: 20px;
+  }
+
+  input {
+    transition: 0.5s;
+    padding: 8px;
+    width: 100%;
     border-radius: 10px;
-    background-color: var(--primary-color);
+    font-size: 1.8rem;
+    border: none;
+  }
+
+  .filter-text {
+    font-size: 14pt;
+    font-weight: bold;
+  }
+
+  
+
+  
+
+  .search-container {
+    /* display: inline-flex; */
+  }
+
+  form button {
+    border-radius: 50px;
+    /* border: none; */
+    background-color: white;
+    border-color: var(--primary-color);
     padding: 10px;
-    color: white;
-    box-shadow: 0px 0px 0px 0px;
-    font-family: var(--font-family-sans);
-    font-weight: 700;
-    /* border-style: none; */
-    font-size: 16px;
+    padding: 15px;
+  }
+
+  .tags-filter h2 {
+    padding-bottom: 10px;
   }
 
   .tags-filter {
+    display: table;
   }
+  
+  h1 {
+    margin: 0;
+  }
+
+  .filter-check {
+    display: none;
+    
+  }
+
+  .filter-select {
+    padding: 5px;
+    
+    
+    color: white;
+  }
+
+  .tag-dropdown:hover {
+    cursor: pointer;
+  }
+
+  .filter-input:hover {
+    cursor: pointer;
+  }
+
+  .tag-dropdown {
+    text-align: center;
+    padding: 5px;
+    
+    border-radius: 2px;
+    margin-top: 15px;
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: white;
+  }
+
+  .filter-input {
+    padding-bottom: 5px;
+    background: var(--primary-color);
+    border-radius: 10px;
+    text-align: center;
+    font-family: var(--font-family-sans);
+    font-weight: bold;
+    padding: 5px;
+    margin-top: 10px;
+  }
+
+  .hidden {
+    display: none!important;
+  }
+  
+  label:hover {
+    cursor: pointer;
+  }
+
+  .resetBtn {
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+    margin-top: 50px;
+    font-size: 1rem;
+    font-family: var(--font-family-sans);
+
+  }
+  
+  
 </style>
+
+<script>
+  let filterInput = document.querySelectorAll(".filter-input");
+  console.log(filterInput);
+
+  let posts = document.querySelectorAll(".post");
+  // console.log(posts);
+
+  filterInput.forEach(element => {
+  
+    let clickedTag = element.children[0].innerHTML;
+    console.log("Clicked Tag: ",clickedTag);
+
+    element.addEventListener('click', event => {
+      
+      posts.forEach(p => {
+        let text = p.innerHTML;
+        console.log(text.includes(clickedTag));
+        if (!text.includes(clickedTag)) {
+          
+          p.classList.add('hidden');
+          // p.style.display = "block";
+        }
+        else {
+          p.classList.remove("hidden");
+          // p.style.display = "none";
+        }
+
+      });
+    });
+
+});
+
+let searchBar = document.getElementById("searchBar");
+
+searchBar.addEventListener("input", () => {
+  const searchValue = searchBar.value.toLowerCase();
+
+  posts.forEach((post) => {
+    const postText = post.textContent.toLowerCase();
+    console.log(postText);
+
+    if (postText.indexOf(searchValue) !== -1) {
+      post.style.display = "block";
+      // post.classList.add("hidden");
+    } else {
+      post.style.display = "none";
+      // post.classList.remove("hidden");
+    }
+  });
+});
+
+let resetBtn = document.querySelector(".resetBtn");
+console.log(resetBtn);
+
+resetBtn.addEventListener('click', event => {    
+  posts.forEach((post) => {
+    post.classList.remove("hidden");
+  })
+});
+
+
+</script>
+
+

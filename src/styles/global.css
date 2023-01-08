@@ -7,6 +7,7 @@
   --font-family-sans: "Fira Sans", sans-serif;
   --img-hover: rgb(234, 234, 234);
   --emp-hover: #003d7d;
+  --filter: whitesmoke;
 }
 
 :root.theme-dark {
@@ -16,6 +17,7 @@
   --primary-color: rgb(62, 175, 213);
   --img-hover: rgb(46, 46, 46);
   --emp-hover: rgb(118, 212, 244);
+  --filter: #36393b;
 }
 
 *,

@@ -1,8 +1,8 @@
 ---
-title: Why I Love Data Visualization ❤️
+title: Why I Love Swimming ❤️
 publishDate: 27 Dec 2022
 description: Blog post on why I love data visualization.
-tags: ['Data Visualization','Python']
+tags: ['Data Visualization','Javascript']
 ---
 
 > ⚠️ **Warning:** This post has been generated as a test post by ChatGPT.
