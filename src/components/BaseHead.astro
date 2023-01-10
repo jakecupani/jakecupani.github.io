@@ -9,7 +9,9 @@ export interface Props {
 }
 
 const { title, description, permalink } = Astro.props;
-const socialUrl = Astro.site.href + 'assets/social.png'
+const socialUrl = Astro.site.href + 'assets/social.png';
+
+// console.log(Astro);
 ---
 
 <!-- Global Metadata -->
@@ -48,6 +50,7 @@ const socialUrl = Astro.site.href + 'assets/social.png'
 <script is:inline>
   const root = document.documentElement;
   const theme = localStorage.getItem('theme');
+  console.log(root,theme);
   
   if (theme === 'dark' || (!theme) && window.matchMedia('(prefers-color-scheme: dark)').matches) {
     root.classList.add('theme-dark');
@@ -65,4 +68,4 @@ const socialUrl = Astro.site.href + 'assets/social.png'
 
   gtag('config', 'G-4HG7DN7EG2');
 </script>
-<script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="jakecupani" data-description="Support me on Buy me a coffee!" data-message="Thanks a ton! Your support is greatly appreciated. <3" data-color="#5F7FFF" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
+<script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="jakecupani" data-description="Support me on Buy me a coffee!" data-message="" data-color= data-position="Right" data-x_margin="18" data-y_margin="18"></script>
