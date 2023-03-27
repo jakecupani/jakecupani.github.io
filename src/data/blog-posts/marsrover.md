@@ -34,4 +34,4 @@ As you can see, the model is very good at distinguishing between images of the s
 
 The model achieved an accuracy of 97.5%, a precision of 98.2%, a recall of 96.8% and an F1-score of 97.5% on the test set. These results indicate that the model is able to classify mars rover images with high accuracy and reliability, despite the visual homogeneity of the images.
 
-I hope you enjoyed this blog post and learned something new about machine learning and Mars exploration. If you have any questions or feedback, feel free to leave a comment below or contact me on Twitter @jakecupani. Thanks for reading!
+I hope you enjoyed this blog post and learned something new about machine learning and Mars exploration. Thanks for reading!
