@@ -3,8 +3,15 @@
   <head>
     <title>QR Code Generator</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    
     <script src="https://cdn.jsdelivr.net/npm/qrcode-generator/qrcode.min.js"></script>
+    <style>
+      .download-btn {
+        padding-bottom: 20px;
+      }
+    </style>
   </head>
   <body class="bg-gray-100">
     <div class="container mx-auto px-4 mt-8 rounded-lg bg-white shadow-lg">
@@ -16,13 +23,17 @@
         <form>
           <div class="mb-4">
             <label class="block text-gray-700 font-bold mb-2" for="text">Enter text:</label>
-            <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="text" type="text">
+            <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="text" type="text" onkeyup="generateQRCode()">
           </div>
-          <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" onclick="generateQRCode()">Generate QR Code</button>
         </form>
       </div>
       <div class="flex justify-center mt-8">
         <div id="qrcode" class="w-1/2 rounded-lg bg-white p-4 flex justify-center items-center"></div>
+      </div>
+      <div class="flex justify-center mt-8 download-btn">
+        <a href="#" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline download-btn" download="qr-code.png">
+          <i class="fas fa-download mr-2"></i>Download QR Code
+        </a>
       </div>
     </div>
     <script>
@@ -34,8 +45,22 @@
         qr.addData(text);
         qr.make();
         document.getElementById('qrcode').innerHTML = qr.createSvgTag({cellSize: 10});
+        
+        // set the href of the download link to the QR code image data
+        let svgData = document.getElementById('qrcode').querySelector('svg').outerHTML;
+        let canvas = document.createElement('canvas');
+        canvas.width = 300;
+        canvas.height = 300;
+        let ctx = canvas.getContext('2d');
+        let img = new Image();
+        img.onload = function() {
+          ctx.drawImage(img, 0, 0, 300, 300);
+          let pngData = canvas.toDataURL('image/png');
+          let downloadLink = document.querySelector('.download-btn');
+          downloadLink.href = pngData;
+        };
+        img.src = 'data:image/svg+xml;base64,' + btoa(svgData);
       }
     </script>
   </body>
-  
 </html>
