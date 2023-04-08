@@ -12,4 +12,4 @@ Let me explain how it works. ChatGPT is a web-based chatbot that uses natural la
 For example, I wanted to code a QR code generator in Javascript and Tailwind CSS. A QR code is a type of barcode that can store information such as URLs, text, or contact details. Tailwind CSS is a utility-first CSS framework that makes it easy to style web pages without writing custom CSS. I thought it would be fun to create a web app that lets users enter some text and generate a QR code for it.
 
 Here's a link to the demo:
-<a href='/gptqr.html'>ChatGPT QR Code Generator</a>
+<a href='~/gptqr/'>ChatGPT QR Code Generator</a>
