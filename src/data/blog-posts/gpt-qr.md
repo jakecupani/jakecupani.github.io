@@ -1,5 +1,5 @@
 ---
-title: ChatGPT QR Generator
+title: ChatGPT QR Generator 🤖
 publishDate: 8 Apr 2023
 description: Creating a QR Code Generator with ChatGPT!
 tags: ['ChatGPT','AI','JavaScript','Web Dev']
