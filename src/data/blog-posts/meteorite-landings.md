@@ -41,9 +41,10 @@ plt.rcParams['font.size'] = 12
 # Data Collection and Cleaning
 ```python
 # Read in the data
-df = pd.read_csv("/content/drive/My Drive/INST627/meteorite-landings.csv",low_memory=False).dropna()
+df = pd.read_csv("<FILEPATH>",low_memory=False).dropna()
 
-# Some data cleaning to make sure year values are for relevant years (a couple of rows had weird years)
+# Some data cleaning to make sure year values are
+# for relevant years (a couple of rows had weird years)
 df = df[(df['year'] <= 2016) & (df['year'] > 1800)]
 df = df[df['mass'] > 0]
 df = df[(df['reclat'] != 0) & (df['reclong'] != 0)]
@@ -51,7 +52,8 @@ df = df[(df['reclat'] != 0) & (df['reclong'] != 0)]
 drop_cols = ['name','id','recclass','fall','nametype']
 
 # Create new column for hemisphere based on lat lon
-df['hemisphere'] = df['reclat'].apply(lambda x: "Northern" if x > 0 else "Southern")
+df['hemisphere'] = df['reclat']
+.apply(lambda x: "Northern" if x > 0 else "Southern")
 
 df = df.drop(drop_cols,axis=1)
 ```
@@ -73,7 +75,8 @@ Graph
 Bar plots were used in this case to show the frequency of meteorite landings since we want to see how many times they happened over the years.
 
 ```python
-df['year'][df['year'] >= 1990].value_counts().plot(kind = 'bar', title = 'Present Frequencies of Meteorite Landings by Year')
+df['year'][df['year'] >= 1990].value_counts().plot(kind = 'bar', 
+title = 'Present Frequencies of Meteorite Landings by Year')
 ```
 
 --- 
