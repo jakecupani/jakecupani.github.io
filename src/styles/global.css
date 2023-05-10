@@ -63,13 +63,19 @@ body {
 
 @media only screen and (max-width: 1120px) {
   body {
-    background-size: 120%;
+    background-size: 200%;
   }
 }
 
 @media only screen and (max-width: 500px) {
   body {
-    background-size: 140%;
+    background-size: 300%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  body {
+    background-size: 400%;
   }
 }
 
