@@ -61,6 +61,19 @@ body {
   transition: 0.5s;
 }
 
+@media only screen and (max-width: 1120px) {
+  body {
+    background-size: 120%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  body {
+    background-size: 140%;
+  }
+}
+
+
 h1,
 h2,
 h3,

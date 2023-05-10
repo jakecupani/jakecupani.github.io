@@ -70,22 +70,5 @@ const socialUrl = Astro.site.href + 'assets/social.png';
   gtag('config', 'G-4HG7DN7EG2');
 </script>
 
-<script>
-  const body = document.querySelector('body');
-
-function setBackgroundSize() {
-  const width = window.innerWidth;
-  const height = window.innerHeight;
-
-  const factor = 100+(100-Math.floor((height/width)*100))
-  const size = factor.toString()
-  
-  body.style.backgroundSize = size + "%";
-}
-
-setBackgroundSize();
-window.addEventListener('resize', setBackgroundSize);
-</script>
-
 
 <script id="bmc-script" data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="jakecupani" data-message='Welcome!' data-description="Support me on Buy me a coffee!"  data-color="#5F7FFF" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
