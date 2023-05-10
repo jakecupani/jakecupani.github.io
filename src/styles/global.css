@@ -33,6 +33,7 @@ body {
   line-height: 1.6;
   background-color: var(--background-body);
   color: var(--text-main);
+  background-image: url('wave-haikei.svg');
   transition: 0.5s;
 }
 
@@ -50,13 +51,13 @@ h6 {
 
 h1 {
   font-family: var(--font-family-serif);
-  font-size: 2em;
+  font-size: 2.5em;
   margin: 0 0 1em 0;
 }
 
 h2 {
   margin: 1.6em 0 0 0;
-  font-size: 1.8em;
+  font-size: 2em;
 }
 
 h3 {
