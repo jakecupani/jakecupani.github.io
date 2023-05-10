@@ -16,11 +16,11 @@
   --text-main: #333333;
   --text-secondary: #98a6d4;
   --primary-color: #5f7fff;
-  --img-hover: #ffb800;
+  --img-hover: #3b3b3b;
   --emp-hover: #1f27c1;
 
   --filter: whitesmoke;
-  --background-image: url('wave-haikei.svg');
+  --background-image: url('public\assets\wave-haikei.svg');
   --font-family-serif: Merriweather, serif;
   --font-family-sans: "Fira Sans", sans-serif;
 }
@@ -34,7 +34,7 @@
   --img-hover: rgb(46, 46, 46);
   --emp-hover: rgb(118, 212, 244);
   --filter: #36393b;
-  --background-image: url('wave-haikei-dark.svg');
+  --background-image: url('public\assets\wave-haikei-dark.svg');
 }
 
 *,
