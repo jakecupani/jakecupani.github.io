@@ -2,7 +2,7 @@
 import ThemeToggleButton from './ThemeToggleButton.svelte';
 const { current = '' } = Astro.props;
 ---
-<footer class="container">
+<footer>
   <span>
     &copy; {new Date().getFullYear()} Jake Cupani.  | 
     Powered by <a href="https://astro.build" target="_blank" rel="noopener">Astro</a>.
@@ -30,7 +30,11 @@ const { current = '' } = Astro.props;
     max-width: 1400px;
     padding: 1em 2em;
     text-align: center;
-    width: 100%;
+    width: 40%;
+    
+    background-color: var(--background-body);
+    padding: 15px;
+    border-radius: 20px;
   }
   footer a:hover {
     color: #000;
