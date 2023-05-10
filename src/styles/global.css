@@ -207,10 +207,13 @@ td {
   margin: 0 auto;
   max-width: 42em;
   width: 100%;
+  background-color: #fff;
+  padding: 50px;
+  border-radius: 20px;
 }
 
 .content h1 {
-  font-size: 3em;
+  font-size: 2.5em;
   margin: 1em 0;
 }
 
