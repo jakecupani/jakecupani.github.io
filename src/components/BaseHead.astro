@@ -76,7 +76,10 @@ const socialUrl = Astro.site.href + 'assets/social.png';
 function setBackgroundSize() {
   const width = window.innerWidth;
   const height = window.innerHeight;
-  const size = width > height ? `${width}px ${width * 2}px` : `${height * 2}px ${height}px`;
+
+  const factor = 100+(100-Math.floor((height/width)*100))
+  const size = factor.toString()
+  
   body.style.backgroundSize = size;
 }
 
