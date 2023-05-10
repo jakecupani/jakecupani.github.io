@@ -80,7 +80,7 @@ function setBackgroundSize() {
   const factor = 100+(100-Math.floor((height/width)*100))
   const size = factor.toString()
   
-  body.style.backgroundSize = size;
+  body.style.backgroundSize = size + "%";
 }
 
 setBackgroundSize();
