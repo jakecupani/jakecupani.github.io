@@ -1,15 +1,30 @@
-:root {
+/* :root {
   --background-body: #fff;
   --text-main: #36393b;
   --text-secondary: #6b6f72;
-  --primary-color: #415d8f;
+  --primary-color: #5f7fff;
   --font-family-serif: Merriweather, serif;
   --font-family-sans: "Fira Sans", sans-serif;
   --img-hover: rgb(234, 234, 234);
   --emp-hover: #003d7d;
   --filter: whitesmoke;
   --background-image: url('../public/assets/wave-haikei.svg');
+} */
+
+:root {
+  --background-body: #fff;
+  --text-main: #333333;
+  --text-secondary: #98a6d4;
+  --primary-color: #5f7fff;
+  --img-hover: #ffb800;
+  --emp-hover: #1f27c1;
+
+  --filter: whitesmoke;
+  --background-image: url('../public/assets/wave-haikei.svg');
+  --font-family-serif: Merriweather, serif;
+  --font-family-sans: "Fira Sans", sans-serif;
 }
+
 
 :root.theme-dark {
   --background-body: #202122;
@@ -38,6 +53,7 @@ body {
   background-image: var(--background-image);
   background-position: bottom;
   background-repeat: no-repeat;
+  background-size: 101%;
   transition: 0.5s;
 }
 
@@ -207,8 +223,8 @@ td {
   margin: 0 auto;
   max-width: 42em;
   width: 100%;
-  background-color: #fff;
-  padding: 50px;
+  background-color: var(--background-body);
+  padding: 50px!important;
   border-radius: 20px;
 }
 
