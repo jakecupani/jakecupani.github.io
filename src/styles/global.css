@@ -67,15 +67,39 @@ body {
   }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 900px) {
+  body {
+    background-size: 220%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  body {
+    background-size: 240%;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  body {
+    background-size: 250%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
   body {
     background-size: 300%;
   }
 }
 
+@media only screen and (max-width: 500px) {
+  body {
+    background-size: 350%;
+  }
+}
+
 @media only screen and (max-width: 400px) {
   body {
-    background-size: 400%;
+    background-size: 500%;
   }
 }
 
