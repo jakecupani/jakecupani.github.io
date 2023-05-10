@@ -71,17 +71,17 @@ const socialUrl = Astro.site.href + 'assets/social.png';
 </script>
 
 <script>
-  const element = document.querySelector('.your-element-class');
+  const body = document.querySelector('body');
 
-  function setBackgroundSize() {
-    const width = window.innerWidth;
-    const height = window.innerHeight;
-    const size = width > height ? `${width}px ${width * 2}px` : `${height * 2}px ${height}px`;
-    element.style.backgroundSize = size;
-  }
+function setBackgroundSize() {
+  const width = window.innerWidth;
+  const height = window.innerHeight;
+  const size = width > height ? `${width}px ${width * 2}px` : `${height * 2}px ${height}px`;
+  body.style.backgroundSize = size;
+}
 
-  setBackgroundSize();
-  window.addEventListener('resize', setBackgroundSize);
+setBackgroundSize();
+window.addEventListener('resize', setBackgroundSize);
 </script>
 
 
