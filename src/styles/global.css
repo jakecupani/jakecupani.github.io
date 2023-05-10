@@ -23,6 +23,7 @@
   --background-image: url('wave-haikei.png');
   --font-family-serif: Merriweather, serif;
   --font-family-sans: "Fira Sans", sans-serif;
+  --bg-img-size: 101;
 }
 
 
@@ -34,8 +35,11 @@
   --img-hover: #333333;
   --emp-hover: rgb(118, 212, 244);
   --filter: #36393b;
+  --bg-img-size: 101;
   --background-image: url('wave-haikei-dark.png');
 }
+
+
 
 *,
 *:before,
