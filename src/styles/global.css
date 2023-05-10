@@ -8,7 +8,7 @@
   --img-hover: rgb(234, 234, 234);
   --emp-hover: #003d7d;
   --filter: whitesmoke;
-  --background-image: url('wave-haikei.svg');
+  --background-image: url('../public/assets/wave-haikei.svg');
 }
 
 :root.theme-dark {
@@ -19,7 +19,7 @@
   --img-hover: rgb(46, 46, 46);
   --emp-hover: rgb(118, 212, 244);
   --filter: #36393b;
-  --background-image: url('wave-haikei-dark.svg');
+  --background-image: url('../public/assets/wave-haikei-dark.svg');
 }
 
 *,
