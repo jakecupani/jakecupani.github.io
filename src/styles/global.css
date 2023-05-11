@@ -20,7 +20,7 @@
   --emp-hover: #1f27c1;
 
   --filter: whitesmoke;
-  --background-image: url('wave-haikei.png');
+  --background-image: url('wave-haikei.svg');
   --font-family-serif: Merriweather, serif;
   --font-family-sans: "Fira Sans", sans-serif;
   --bg-img-size: 101;
@@ -36,7 +36,7 @@
   --emp-hover: rgb(118, 212, 244);
   --filter: #36393b;
   --bg-img-size: 101;
-  --background-image: url('wave-haikei-dark.png');
+  --background-image: url('wave-haikei-dark.svg');
 }
 
 
