@@ -21,8 +21,8 @@
 
   --filter: whitesmoke;
   --background-image: url('wave-haikei.svg');
-  --background-image2: url('wave-haikei2.svg');
-  --background-image3: url('wave-haikei3.svg');
+  --background-image2: url('wave-haikei-2.svg');
+  --background-image3: url('wave-haikei-3.svg');
   --font-family-serif: Merriweather, serif;
   --font-family-sans: "Fira Sans", sans-serif;
   --bg-img-size: 101;
@@ -40,8 +40,8 @@
   --filter: #36393b;
   --bg-img-size: 101;
   --background-image: url('wave-haikei-dark.svg');
-  --background-image2: url('wave-haikei-dark2.svg');
-  --background-image3: url('wave-haikei-dark3.svg');
+  --background-image2: url('wave-haikei-dark-2.svg');
+  --background-image3: url('wave-haikei-dark-3.svg');
 }
 
 
