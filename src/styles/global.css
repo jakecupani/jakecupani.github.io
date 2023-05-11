@@ -33,7 +33,8 @@
   --background-body: #202122;
   --text-main: #fff;
   --text-secondary: #ccc;
-  --primary-color: rgb(62, 175, 213);
+  /* --primary-color: rgb(62, 175, 213); */
+  --primary-color: #2B6BC6;
   --img-hover: #333333;
   --emp-hover: rgb(118, 212, 244);
   --filter: #36393b;
