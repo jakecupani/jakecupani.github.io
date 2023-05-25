@@ -279,6 +279,7 @@ td {
   max-width: 42em;
   width: 100%;
   background-color: var(--background-body);
+  box-shadow: #0003 0 2px 4px;
   padding: 50px!important;
   border-radius: 20px;
 }
