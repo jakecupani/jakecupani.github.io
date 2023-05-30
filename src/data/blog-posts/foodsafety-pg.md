@@ -1,5 +1,5 @@
 ---
-title: Food Safety PG Web Application
+title: Food Safety PG Web Application 🛡️
 publishDate: 12 Oct 2021
 description: Creating a QR Code Generator with ChatGPT!
 tags: ['JavaScript','Web Dev']
