@@ -1,7 +1,7 @@
 ---
 title: Food Safety PG Web Application 🛡️
 publishDate: 12 Oct 2021
-description: Creating a QR Code Generator with ChatGPT!
+description: An application created to help users make make informed, healthy decisions regarding where to eat in PG County.
 tags: ['JavaScript','Web Dev']
 ---
 
