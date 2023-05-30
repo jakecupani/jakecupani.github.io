@@ -5,7 +5,7 @@ description: Creating a QR Code Generator with ChatGPT!
 tags: ['JavaScript','Web Dev']
 ---
 
-![Food Safety PG Logo](https://github.com/jakecupani/foodsafety_pg/blob/master/src/static/pg-logo.png)
+# [Github Repo](https://github.com/jakecupani/foodsafety-pg)
 
 > An application created to help users make make informed, healthy decisions regarding where to eat in PG County.
 
@@ -39,7 +39,7 @@ The front end of this application is created using simple HTML which provided th
 Node.js is used to created the server and the prince george's county API supplies the data to the server which is than fetch to the front-end. Depending on the machine you are using, you will need to use PowerShell for windows and termial for Mac to run the server. More in-depth detail on how to run the application from server is found in the [developer manual](https://github.com/jakecupani/foodsafety-pg/blob/master/docs/developer_manual.md) 
 
 ## Running Test for the Application
-To test our application, we will be using Google Chrome's built in auditing tool. This tool allows us to gauge how well our site is doing in terms of accessibility, performance, best practices, and SEO. Based on our results, we can determine which parts of our application need more work than others. Below we have provided the current output from the auditing tool, which shows our application is doing really well in almost all categories. ![Auditing Results](/src/static/AuditingResults.png)
+To test our application, we will be using Google Chrome's built in auditing tool. This tool allows us to gauge how well our site is doing in terms of accessibility, performance, best practices, and SEO. Based on our results, we can determine which parts of our application need more work than others. Below we have provided the current output from the auditing tool, which shows our application is doing really well in almost all categories. ![Auditing Results](https://raw.githubusercontent.com/jakecupani/foodsafety-pg/master/src/static/AuditingResults.png)
 One thing that was really great about using the Auditing tool was the simulated throttling feature. This allowed us to see how our app would do under low connection circumstances. Thankfully, our app does just fine in these circumstances. We didn't look into much detail on the SEO tips suggested by the tool, but this would definitely be useful should we want to expand this project in the future.
 
 ## API for the server application 
