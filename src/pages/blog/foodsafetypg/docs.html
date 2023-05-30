@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>PG County Food Inspections - Documentation</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+    integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+    crossorigin=""></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="shortcut icon" href="\static\favicon.ico" />
+  <!--Import fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans|Merriweather+Sans:300|Nunito:400,700&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div id="banner" class="jumbotron text-center" style="margin-bottom:0">
+    <div id="banner-text">
+      <a href="index.html"><img src="\static\pg-logo.png" id="logo"
+          alt="Prince George's County Health Inspections Logo"></a>
+    </div>
+  </div>
+
+  <!-- START NAVBAR -->
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!-- <a class="navbar-brand" href="index.html">PGCFI</a> -->
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mx-auto nav-fill w-100">
+        <li class="nav-item ">
+          <a class="nav-link" href="index.html">Home </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About <span class="sr-only">(current)</span></a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link active" href="docs.html">Documentation</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact Us</a>
+        </li>
+      </ul>
+
+    </div>
+  </nav>
+  <br>
+  <div class="container">
+    <div class="row">
+      <div class="col sm-12 ">
+        <h1 class="section-head">Documentation</h1>
+        <hr>
+        <div class="row">
+          <div class="col-sm-12">
+            <h2 class="header">Getting Started - User Guide</h2>
+            <p>This user guide is to help first time users to navigate through the our web application. The user guide
+              will
+              cover information
+              on how to user the filters and different features of the map.</p>
+            <br>
+            <div class="accordion" id="accordionExample">
+              <div class="card">
+                <div class="card-header" id="headingOne">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+                      aria-expanded="true" aria-controls="collapseOne">
+                      Filtering
+                    </button>
+                  </h2>
+                </div>
+
+                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                  <div class="card-body">
+                    The first step in using the FSPG application is applying the filters that relate to your specific
+                    search. This can be done by checking the relevant boxes on the left hand side under the Filters
+                    section, and clicking “Filter”. You can also hit the "Reset" button to remove all establishments
+                    from the map and start over.
+                  </div>
+                  <img class="getting-started" src="/static/filters.png">
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="headingTwo">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                      data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      Establishment Map
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                  <div class="card-body">
+                    <p>Once you have selected filter options you’ll want to click “filter” in order for the filters that
+                      you
+                      manipulated in the first step to show up on the map. Restaurants
+                      that meet the criteria of the filters in step 1 will show up on the map for you to be able to
+                      visualize their
+                      location.
+                    </p>
+                    <p>Once the data has loaded, you’ll be able to click on the markers and click on "get results" to
+                      see the result
+                      for that particular resturant. You will be able to see the
+                      resturant name and whether or not the resturant passed the inspection. The result will also give
+                      you a link to
+                      google map which you can click on the google map icon and the
+                      link will take you to google map. if you want more detail result for a particular resturant you
+                      can click on
+                      "see detailed inspection result" and you will be able to see how the
+                      inspection was conducted and the different criteria that was taken into consideration for a
+                      resturant pass or
+                      fail the inspection test. </p>
+                  </div>
+                  <img class="getting-started" src="/static/map.png">
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="headingThree">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                      data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      Inspection Results
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                  <div class="card-body">
+                    Underneath, you’ll see that the ‘Name’, ‘Location’, and ‘Inspection Results’ sections of the page
+                    have updated with the results related to the food establishment that you have selected. Green
+                    results are in compliance, while red results are out of compliance. Additionally, if you click the
+                    little Google Maps icon, it will take you to the respective establishment's Google Maps page where
+                    you can access user reviews, directions, and other information.
+                  </div>
+                  <img class="getting-started" src="/static/results.png">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <h2 class="header">Data Source</h2>
+        <p>This application pulls data from the <a href="https://data.princegeorgescountymd.gov/" target="_blank">Prince
+            George's County Open Data Project</a>.
+          Specifically, we are using the Food Inspections API to pull data on all food service facilities in PG County,
+          MD. This data is updated daily.</p>
+        <br>
+        <h2 class="header">Technology Stack</h2>
+        <p>The front of this application was created using HTML, bootstrap, leaflet, and javascript.
+          HTML was used to
+          build a foundation and bootstrap provided us with the tools to complete the design aspect of this application.
+          Bootstrap
+          was implemented to provide a CSS framework for this application. Bootstrap made it easy for us to implement
+          navagiation menus
+          and color to this application. leaflet provided us with map that was easy to work with when it came to
+          connecting
+          the back-end of this application to the front-end. The leaflet map allowed us to showcase the raw data and
+          convert the data
+          into something that our users can understand. Javascript allowed us to work with the API and server, and
+          dynamically modify HTML
+          and CSS to update a user interface. The developer manual provides in-depth information about each of the tools
+          that was
+          use to create this web application.
+          <img id="tech-stack" src="/static/tech-stack.png" width=70% alt="technology stack logos">
+        </p>
+
+
+
+      </div>
+
+    </div>
+  </div>
+  <footer>
+    <div class="container text-center">
+      <p>Made with <span id="heart">❤</span> by Group 18 - INST 377.</p>
+      <p>Team members: Matt Ye, Jake Cupani, Nadine Shaker, Will Kraft, Gyan Kadariya, Aparna Ranganathan</p>
+    </div>
+  </footer>
+
+
+</body>
+
+</html>

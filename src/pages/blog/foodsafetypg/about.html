@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>PG County Food Inspections - About</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+    integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+    crossorigin=""></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="shortcut icon" href="\static\favicon.ico" />
+  <!--Import fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans|Merriweather+Sans:300|Nunito:400,700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <div id="banner" class="jumbotron text-center" style="margin-bottom:0">
+    <div id="banner-text">
+      <a href="index.html"><img src="\static\pg-logo.png" id="logo"
+          alt="Prince George's County Health Inspections Logo"></a>
+    </div>
+  </div>
+  <!-- START NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!-- <a class="navbar-brand" href="index.html">PGCFI</a> -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mx-auto nav-fill w-100">
+        <li class="nav-item ">
+          <a class="nav-link" href="index.html">Home </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="about.html">About <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="docs.html">Documentation</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <br>
+  <div class="container">
+    <div class="row">
+      <div class="col sm-12 ">
+        <h1 class="section-head">About our project</h1>
+        <hr>
+        <h2 class="header">Motivation & Rationale</h2>
+        <p>Food safety is a top priority for any community wishing to keep its residents safe and healthy.
+          According to the <a href="https://www.who.int/" target="_blank">World Health Organization</a>,
+          600 million people become ill from contaminated food, and ~420,000 people die every year<sup><a
+              href="https://www.who.int/news-room/fact-sheets/detail/food-safety" target="_blank">1</a></sup>.
+          This web application is targeted to those who lack easy access to tools to allow them to make well-informed
+          healthy eating decisions.
+          Prince George’s county has the 3rd highest number of households in Maryland yet 12th in Median Household
+          Income<sup><a href="https://en.wikipedia.org/wiki/List_of_Maryland_locations_by_per_capita_income"
+              target="_blank">2</a></sup>.
+          While other counties may have more money, the residents of Prince George’s county lack the same resources. We
+          believe everyone deserves
+          to know what exactly is going into their body, and if that's going to be safe. This is why we've created Food
+          Safety PG.
+        </p>
+        <p><strong>Currently, there is no easily accessible and intuitive way to determine compliant restaurants and
+            eateries.</strong></p>
+        <p>We hope this web application will help those in PG county easily get food safety results to make better
+          informed eating decisions.</p>
+        <br>
+
+
+        <div class="team">
+          <h2 class="header">Meet the Team</h2>
+          <div class="team-cards">
+            <table>
+              <tr>
+                <td>
+                  <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <img src="/static/jake.jpg" alt="Jake Cupani Team Manager">
+                      </div>
+                      <div class="flip-card-back">
+                        <div class="team-name">
+                          <p>Jake Cupani</p>
+                          <p>Team Manager</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td>
+
+                  <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <img src="/static/matt.jpeg" alt="Matt Ye Lead Designer">
+                      </div>
+                      <div class="flip-card-back">
+                        <div class="team-name">
+                          <p>Matt Ye</p>
+                          <p>Lead Designer</p>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+
+                </td>
+                <td>
+
+                  <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <img src="/static/aparna.jpg" alt="Aparna Ranganathan Assistant Designer and Documentation">
+                      </div>
+                      <div class="flip-card-back">
+                        <div class="team-name">
+                          <p>Aparna Ranganathan</p>
+                          <p>Assistant Designer and Documentation</p>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+
+                  <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <img src="/static/Gyan.jpeg" alt="Gyan Kadariya Branding and Documentation">
+                      </div>
+                      <div class="flip-card-back">
+                        <div class="team-name">
+                          <p>Gyan Kadariya</p>
+                          <p>Branding and Documentation</p>
+                        </div>
+
+                        <p></p>
+                      </div>
+                    </div>
+                  </div>
+
+                </td>
+                <td>
+
+                  <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <img src="/static/Nadine.JPG" alt="Nadine Shaker Readme Manager">
+                      </div>
+                      <div class="flip-card-back">
+                        <div class="team-name">
+                          <p>Nadine Shaker</p>
+                          <p>Readme Manager</p>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <img src="/static/will.jpg" alt="Will Kraft Developer">
+                      </div>
+                      <div class="flip-card-back">
+                        <div class="team-name">
+                          <p>Will Kraft</p>
+                          <p>Developer</p>
+                          <p></p>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </table>
+
+          </div>
+        </div>
+        <br>
+        <br>
+        <footer>
+          <div class="container text-center">
+            <p>Made with <span id="heart">❤</span> by Group 18 - INST 377.</p>
+            <p>Team members: Matt Ye, Jake Cupani, Nadine Shaker, Will Kraft, Gyan Kadariya, Aparna Ranganathan</p>
+          </div>
+        </footer>
+</body>
+
+</html>

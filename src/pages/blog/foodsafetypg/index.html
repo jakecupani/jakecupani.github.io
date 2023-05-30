@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>PG County Food Inspections</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+    integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+    crossorigin=""></script>
+  <script src="./leaflet-providers.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="shortcut icon" href="\static\favicon.ico" />
+  <!--Import fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans|Merriweather+Sans:300|Nunito:400,700&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div id="banner" class="jumbotron text-center" style="margin-bottom:0">
+    <div id="banner-text">
+      <a href="index.html"><img src="\static\pg-logo.png" id="logo"
+          alt="Prince George's County Health Inspections Logo"></a>
+    </div>
+  </div>
+
+  <!-- START NAVBAR -->
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!-- <a class="navbar-brand" href="#">PG  CFI</a> -->
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mx-auto nav-fill w-100">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="docs.html">Documentation</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact Us</a>
+        </li>
+      </ul>
+
+    </div>
+  </nav>
+
+  <br>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4">
+
+
+        <!-- Filter layout borrowed from bootsnipp user: vosidiy ---------->
+        <h2 class="header">Filters</h2>
+        <div class="card">
+          <article class="card-group-item">
+
+            <header class="card-header">
+              <h6 class="title">Eatery Category </h6>
+            </header>
+
+            <div class="filter-content">
+              <div class="card-body">
+                <form>
+                  <label class="form-check">
+                    <input class="form-check-input" name="filter-option" type="checkbox" id="fastfood"
+                      value="Fast Food">
+                    <span class="form-check-label">
+                      Fast Food
+                    </span>
+                  </label> <!-- form-check.// -->
+                  <label class="form-check">
+                    <input class="form-check-input" name="filter-option" type="checkbox" id="fullservice"
+                      value="Full Service">
+                    <span class="form-check-label">
+                      Full Service
+                    </span>
+                  </label> <!-- form-check.// -->
+                  <label class="form-check">
+                    <input class="form-check-input" name="filter-option" type="checkbox" id="constore"
+                      value="Convenience Store">
+                    <span class="form-check-label">
+                      Convenience Store
+                    </span>
+                  </label> <!-- form-check.// -->
+                  <label class="form-check">
+                    <input class="form-check-input" name="filter-option" type="checkbox" id="carryout"
+                      value="Carry-out">
+                    <span class="form-check-label">
+                      Carry-out
+                    </span>
+                  </label> <!-- form-check.// -->
+                  <label class="form-check">
+                    <input class="form-check-input" name="filter-option" type="checkbox" id="grocstore"
+                      value="Grocery Store">
+                    <span class="form-check-label">
+                      Grocery Store
+                    </span>
+                  </label> <!-- form-check.// -->
+                  <label class="form-check">
+                    <input class="form-check-input" name="filter-option" type="checkbox" id="college"
+                      value="College/University">
+                    <span class="form-check-label">
+                      College/University
+                    </span>
+                  </label> <!-- form-check.// -->
+                  <label class="form-check">
+                    <input class="form-check-input" name="filter-option" type="checkbox" id="publicschool"
+                      value="Public School">
+                    <span class="form-check-label">
+                      Public School
+                    </span>
+                  </label> <!-- form-check.// -->
+                  <br>
+                  <button id="filter-btn" type="button" class="btn btn-block btn-primary"
+                    onclick="filterData()">Filter</button>
+                  <button type="button" class="btn btn-block btn-outline-primary" onclick="resetMap()">
+                    Reset
+                  </button>
+                </form>
+
+
+              </div> <!-- card-body.// -->
+            </div>
+
+          </article> <!-- card-group-item.// -->
+
+        </div> <!-- card.// -->
+        <!--                  END FILTER ---------------------------------->
+        <br>
+
+        <hr class="d-sm-none">
+      </div>
+      <div class="col-sm-8">
+        <h2 class="header">Map</h2>
+        <br>
+        <div id="mapid">
+        </div>
+        <!-- <p>The map</p> -->
+        <div class="container">
+          <div class="wrapper">
+            <!-- <div class="header">API Loader</div> -->
+            <button class="btn btn-block btn-primary" onclick="loadData()" data-container="body" data-toggle="popover"
+              data-placement="bottom" data-trigger="hover"
+              data-content="Warning - loading all data will cause significant slowdowns">Load All Data
+            </button>
+
+            </button>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+  <div class="album py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+
+          <h2 class="header">Results</h3>
+            <div class="card">
+              <div class="card-body">
+                <div class="row">
+
+                  <div class="col-sm-3">
+                    <h3 class="results">Name</h3>
+                    <p id="name"></p>
+                  </div>
+
+                  <div class="col-sm-3">
+                    <h3 class="results">Location</h3>
+
+                    <p id="address"></p>
+                    <div id="location-link">
+
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <h3 class="results">Inspection Results</h3>
+                    <p id="inspection_results"></p>
+                  </div>
+
+                  <div class="col-sm-12">
+                    <hr class="my-3">
+                    <p>
+
+                      <button id="inspection-button" class="btn btn-primary" type="button" data-toggle="collapse"
+                        data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                        See detailed inspection results
+                      </button>
+                    </p>
+                    <div class="collapse" id="collapseExample">
+                      <div class="card card-body">
+                        <ul>
+                          <p id="detailed-results">No resturant or establishment selcted</p>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+            <br>
+
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="text-center">
+      <p>Made with <span id="heart">❤</span> by Group 18 - INST 377.</p>
+      <p>Team members: Matt Ye, Jake Cupani, Nadine Shaker, Will Kraft, Gyan Kadariya, Aparna Ranganathan</p>
+    </div>
+  </footer>
+  <script src="filterData.js"></script>
+  <script src="loadData.js"></script>
+  <script src="map.js"></script>
+  <script src="popupData.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $('[data-toggle="popover"]').popover()
+    })
+  </script>
+
+</body>
+
+</html>
