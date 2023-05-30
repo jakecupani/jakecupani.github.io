@@ -2,7 +2,7 @@
 title: Food Safety PG Web Application
 publishDate: 12 Oct 2021
 description: Creating a QR Code Generator with ChatGPT!
-tags: ['ChatGPT','AI','JavaScript','Web Dev']
+tags: ['JavaScript','Web Dev']
 ---
 
 ![Food Safety PG Logo](https://github.com/jakecupani/foodsafety_pg/blob/master/src/static/pg-logo.png)
