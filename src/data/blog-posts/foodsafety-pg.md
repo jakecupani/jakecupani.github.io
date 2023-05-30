@@ -5,6 +5,7 @@ description: Creating a QR Code Generator with ChatGPT!
 tags: ['JavaScript','Web Dev']
 ---
 
+[FoodSafetyPG](https://raw.githubusercontent.com/jakecupani/foodsafety-pg/master/src/static/pg-logo.png)
 # [Github Repo](https://github.com/jakecupani/foodsafety-pg)
 
 > An application created to help users make make informed, healthy decisions regarding where to eat in PG County.
