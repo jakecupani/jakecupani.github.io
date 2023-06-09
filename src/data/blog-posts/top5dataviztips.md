@@ -5,10 +5,11 @@ description: Five easy tips for creating beautiful, effective, and high impact d
 tags: ['Data Visualization 📊','Data Analytics 📈','UX/UI']
 ---
 
-Data visualization is a powerful way to communicate complex information and insights to your audience. But how do you create effective and engaging data visualizations that stand out and get noticed? These are my top 5 tips for creating great data visualizations:
+### Data visualization is a powerful way to communicate complex information and insights to your audience. But how do you create effective and engaging data visualizations that stand out and get noticed? These are my top 5 tips for creating great data visualizations:
 
 **1. Choose the right visualization for the job.** 
 Different types of visualizations have different strengths and weaknesses. For example, bar charts are good for comparing categories, line graphs are good for showing trends over time, and maps are good for showing geographic data. Choose the format that best suits your data and your message.
+
 
 **2. Use predictable patterns for layouts.** 
 Despite what you might have been taught, we are *all* naturally visual learners. We tend to look for familiar patterns and cues when we see a visualization. Use common conventions such as placing the most important information at the top left, using consistent fonts and colors, and aligning elements neatly.
