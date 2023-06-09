@@ -69,43 +69,43 @@ console.log(allTags);
     
     
     
-    {allPosts.map((post, index) => {
-      const href = `/blog/${post.file.split('/').pop().split('.').shift()}`;
-      const tags = post.frontmatter.tags;
-      const colors = {
-        
-      }
-      return (
-      
-        <div class="post" data-message={}>
-          { index !== 0 && <hr /> }
-          <div class="post-item">
-            <h2>
-              <a href={href}>{post.frontmatter.title}</a>
-            </h2>
-            <p>{post.frontmatter.description}</p>
-
-            
-            <div class="post-item-footer">
-              
-              {tags.map((tag) => (
-                <>
-                  <div class="post-tag" data-message={tag}>{tag}</div>
-                </>
-              ))}
-
-            </div>
-          </div>
-        </div>
-
-        
-      )
-    })}
+    
   </div>
 
   
     
+  {allPosts.map((post, index) => {
+    const href = `/blog/${post.file.split('/').pop().split('.').shift()}`;
+    const tags = post.frontmatter.tags;
+    const colors = {
+      
+    }
+    return (
     
+      <div class="post" data-message={}>
+        { index !== 0 && <hr /> }
+        <div class="post-item">
+          <h2>
+            <a href={href}>{post.frontmatter.title}</a>
+          </h2>
+          <p>{post.frontmatter.description}</p>
+
+          
+          <div class="post-item-footer">
+            
+            {tags.map((tag) => (
+              <>
+                <div class="post-tag" data-message={tag}>{tag}</div>
+              </>
+            ))}
+
+          </div>
+        </div>
+      </div>
+
+      
+    )
+  })}
     
    
 
