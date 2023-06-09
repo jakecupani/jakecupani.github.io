@@ -1,5 +1,5 @@
 ---
-title: 📰 Weekly Top Three in Machine Learning News! (06/09/2023) 🤖
+title: 📰 Weekly Top 3 Machine Learning Articles/News! 🤖 (06/09/2023) 
 publishDate: Friday, June 9th, 2023
 description: Weekly news and articles I found interesting in the Machine Learning world.
 tags: ['Top 3 Weekly','Machine Learning','Data Analytics','AI']
