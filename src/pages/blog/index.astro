@@ -30,7 +30,40 @@ console.log(allTags);
 
     <h1>Blog</h1>
 
-    
+    <div class="tags-filter">
+      
+      
+      <!-- <p>*Filters go here*</p> -->
+      <div class="search-container">
+        <label id="searchLabel" for="searchBar"></label>
+        <input type="text" id="searchBar" placeholder="Search" aria-labelledby="searchLabel">
+        
+        
+            <div class="filter-select">
+  
+  
+              
+              {allTags.map((t) => (
+                <>
+                <div class="filter-input">
+                
+                  <div>{t}</div>
+                  
+  
+  
+                </div>
+                
+                
+                
+                
+                </>
+              ))}
+  
+              <button class="resetBtn">Reset</button>
+              
+         
+        
+      </div>
     
     
     
@@ -70,40 +103,7 @@ console.log(allTags);
     })}
   </div>
 
-  <div class="tags-filter">
-      
-      
-    <!-- <p>*Filters go here*</p> -->
-    <div class="search-container">
-      <label id="searchLabel" for="searchBar"></label>
-      <input type="text" id="searchBar" placeholder="Search" aria-labelledby="searchLabel">
-      
-      
-          <div class="filter-select">
-
-
-            
-            {allTags.map((t) => (
-              <>
-              <div class="filter-input">
-              
-                <div>{t}</div>
-                
-
-
-              </div>
-              
-              
-              
-              
-              </>
-            ))}
-
-            <button class="resetBtn">Reset</button>
-            
-       
-      
-    </div>
+  
     
     
     
@@ -145,8 +145,8 @@ console.log(allTags);
   padding: 20px;
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px 0px;
-  height: fit-content;
-  margin-top: 110px;
+  /* height: fit-content; */
+  /* margin-top: 110px; */
   
 }
 
@@ -166,6 +166,7 @@ console.log(allTags);
   .container {
     max-width: 30rem;
     padding: 20px;
+    display: grid!important;
   }
 
   input {

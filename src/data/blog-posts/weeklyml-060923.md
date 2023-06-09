@@ -21,4 +21,4 @@ I'd love to hear everyone's thoughts on these articles and this new weekly posts
 
 #MachineLearningNews #ArtificialIntelligence #AICommunity #TechNews
 
-[🔗 Link to the original LinkedIn Post](https://www.linkedin.com/feed/)
+[🔗 Link to the original LinkedIn Post 🔗](https://www.linkedin.com/feed/)
