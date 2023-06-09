@@ -65,15 +65,9 @@ console.log(allTags);
         
       </div>
     
-    
-    
-    
-    
-    
+  </div>
   </div>
 
-  
-    
   {allPosts.map((post, index) => {
     const href = `/blog/${post.file.split('/').pop().split('.').shift()}`;
     const tags = post.frontmatter.tags;
@@ -104,10 +98,10 @@ console.log(allTags);
       
     )
   })}
-    
-   
 
   </div>
+
+  
 
 </BaseLayoutBlog>
 
