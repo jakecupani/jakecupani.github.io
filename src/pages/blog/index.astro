@@ -82,6 +82,7 @@ console.log(allTags);
           <h2>
             <a href={href}>{post.frontmatter.title}</a>
           </h2>
+          <p class="publishDate">{post.frontmatter.publishDate}</p>
           <p>{post.frontmatter.description}</p>
 
           
@@ -106,6 +107,11 @@ console.log(allTags);
 </BaseLayoutBlog>
 
 <style>
+  .publishDate {
+    font-size: 0.8em;
+    color: var(--text-secondary);
+  }
+
   h2,
   .post-item-footer {
     font-family: var(--font-family-sans);
