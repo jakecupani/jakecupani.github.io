@@ -82,7 +82,7 @@ console.log(allTags);
           <h2>
             <a href={href}>{post.frontmatter.title}</a>
           </h2>
-          <p class="publishDate">{post.frontmatter.publishDate}</p>
+          <div class="publishDate">{post.frontmatter.publishDate}</div>
           <p>{post.frontmatter.description}</p>
 
           
@@ -108,8 +108,10 @@ console.log(allTags);
 
 <style>
   .publishDate {
-    font-size: 0.8em;
-    color: var(--text-secondary);
+    /* font-size: 0.8em; */
+    color: darkgray;
+    padding-left: 20px;
+    font-weight: bolder;
   }
 
   h2,
