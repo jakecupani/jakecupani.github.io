@@ -145,6 +145,10 @@ article p img {
   padding: 10px;
 }
 
+p:has(img) {
+  text-align: center;
+}
+
 article h2:first-of-type {
   margin: 0.6em 0 0 0;
   padding-top: 1px!important;
