@@ -314,21 +314,11 @@ You can also check out the [Github Repo](https://github.com/jakecupani/meteorite
 
 ## References
 
-1. NASA & Kaggle. (2016, November 5). Meteorite Landings [The Meteoritical
-Society collects data on meteorites that have fallen to Earth from outer space.
-This dataset includes the location, mass, composition, and fall year for over
-45,000 meteorites that have struck our planet.]. NASA.
-https://www.kaggle.com/nasa/meteorite-landings
+1.[ NASA & Kaggle. (2016, November 5). Meteorite Landings NASA.](https://www.kaggle.com/nasa/meteorite-landings)
 
-2. American Museum of Natural History. (n.d.). What Are Meteorites? Ancient Clues
-to Our Solar System | AMNH. Retrieved December 11, 2020, from
-https://www.amnh.org/exhibitions/permanent/meteorites/meteorites/what-is-a-met
-eorite#:%7E:text=Meteorites%20from%20asteroids%20and%20even,of%20nicke
-l%20and%20iron%20metal
+2. [American Museum of Natural History. (n.d.). What Are Meteorites? Ancient Clues to Our Solar System | AMNH. Retrieved December 11, 2020, from](https://www.amnh.org/exhibitions/permanent/meteorites/meteorites/what-is-a-meteorite)
 
-3. Planetary Science Institute. (2019, April 16). FAQ - Meteoroids/Meteorites.
-https://www.psi.edu/epo/faq/meteor.html#:%7E:text=To%20date%2C%20there%
-20have%20been,less%20than%2010%20are%20recovered
+3. [Planetary Science Institute. 2019, April 16. FAQ](https://www.psi.edu/epo/faq/meteor.html)
 
 
 
