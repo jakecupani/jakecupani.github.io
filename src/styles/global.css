@@ -139,6 +139,12 @@ article h2 {
   margin: 2.2em 0 0 0;
 }
 
+article p img {
+  box-shadow: 0 4px 8px #0003, 0 6px 20px #00000030;
+  border-radius: 20px;
+  padding: 10px;
+}
+
 article h2:first-of-type {
   margin: 0.6em 0 0 0;
   padding-top: 1px!important;
