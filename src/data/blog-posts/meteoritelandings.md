@@ -326,11 +326,13 @@ As we can see from the analysis done above, there are some noteable points that 
 
 Thank you for reading through my project! I hope you found this dataset as fun as I did to explore. If you would like to explore further, I have even created dashboards for these datasets available below:
 
-**[Power BI Dashboard:](URL)**
+**[ 📊 Power BI Dashboard 📊](URL)**
 
-**[Tableau Dashboard:](URL)**
+**[📊 Tableau Dashboard 📊](URL)** 
 
 You can also check out the [Github Repo](https://github.com/jakecupani/meteorite-landings) where you can find a full breakdown of the analysis in PDF form and the associated Colab notebook.
+
+If you have any suggestions, comments, or constructive criticism, please let me know. I am always aiming to improve my skills! 🤓
 
 <hr> 
 
