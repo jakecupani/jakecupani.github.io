@@ -31,7 +31,7 @@ meteorite landings and their respective geographical locations.
 
 ## About the Data
 
-he dataset for my analysis is the Meteorite Landings dataset developed by
+The dataset for my analysis is the Meteorite Landings dataset developed by
 NASA. The data was downloaded directly from [NASA’s Kaggle repository](https://www.kaggle.com/nasa/meteorite-landings) (NASA &
 Kaggle, 2016). The dataset is also directly available from [NASA’s Data Portal](https://data.nasa.gov/Space-Science/Meteorite-Landings/gh4g-9sfh). The data
 was in normal Comma Separated Value format (CSV), which made it relatively easy to
