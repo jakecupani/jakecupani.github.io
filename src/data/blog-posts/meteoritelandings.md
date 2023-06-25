@@ -245,7 +245,6 @@ Here we show the average mass of Northern vs Southern Hemisphere meteorites. It 
 
 **H0: There is no difference between the masses of meteorites in the hemispheres. (avg difference 0).**
 
-</br>
 
 **HA: There is a difference between the masses of meteorites in the hemispheres. (avg difference != 0).**
 
@@ -315,7 +314,7 @@ You can also check out the [Github Repo](https://github.com/jakecupani/meteorite
 
 ## References
 
-1.[ NASA & Kaggle. (2016, November 5). Meteorite Landings NASA.](https://www.kaggle.com/nasa/meteorite-landings)
+1. [ NASA & Kaggle. (2016, November 5). Meteorite Landings NASA.](https://www.kaggle.com/nasa/meteorite-landings)
 
 2. [American Museum of Natural History. (n.d.). What Are Meteorites? Ancient Clues to Our Solar System | AMNH. Retrieved December 11, 2020, from](https://www.amnh.org/exhibitions/permanent/meteorites/meteorites/what-is-a-meteorite)
 
