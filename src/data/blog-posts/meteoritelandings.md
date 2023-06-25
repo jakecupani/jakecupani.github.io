@@ -4,6 +4,7 @@ title: NASA Meteorite Landings Analysis ☄️
 description: Statistical analysis of meteorite landings dataset to identify the frequency of meteorite landings throughout different time periods, most common geographic regions of meteorites, and the differences between meteorite landings in the norhtern and southern hemispheres respectively.
 tags: ['Data Visualization 📊','Data Analytics 📈']
 ---
+
 ## Motivation
 
 The heart of my research project comes from my understanding and passion for
@@ -20,6 +21,7 @@ must be plenty of meteorites still to be discovered, which means there’s still
 insights yet to be made from meteorites. These factors are what inspired me to pursue
 this project.
 
+<hr> 
 ## Project Summary 
 
 The goal of this project is to identify the frequency of meteorite landings
@@ -29,6 +31,7 @@ respectively. The goal of this project would be an analytical pipeline to identi
 meteorite landings and their respective geographical locations.
 
 
+<hr> 
 ## About the Data
 
 The dataset for my analysis is the Meteorite Landings dataset developed by
@@ -40,6 +43,7 @@ analysis with plenty of samples to work with. The programming for this analysis 
 done [via Google Colab for easy access](https://colab.research.google.com/assets/colab-badge.svg).
 
 
+<hr> 
 ## Imports
 
 ```python
@@ -66,6 +70,7 @@ plt.rcParams['figure.figsize'] = (10,5)
 plt.rcParams['font.size'] = 12
 ```
 
+<hr> 
 ## Data Collection and Cleaning
 
 ```python
@@ -87,7 +92,10 @@ df = df.drop(drop_cols,axis=1)
 df
 ```
 
+<hr> 
 ## Data Analysis
+
+</br>
 
 ### What years had the highest and lowest frequency of meteorite landings in past and present?
 
@@ -196,7 +204,7 @@ plot_meteorites(df_10,"2010s Meteorites")
 
 As we can see, there's a general trend of meteorites landing in the western US, Peru, Northern Africa, Southern Australia, and parts of Europe. Another trend that I noticed is that there seem to be less meteorites in the 2010s than in the other decades.
 
-## What is the distribution of masses amongst all of the meteorites?
+### What is the distribution of masses amongst all of the meteorites?
 
 ```python
 df['mass'][df['mass'] < 250].plot(kind='box')
@@ -241,6 +249,7 @@ Here we show the average mass of Northern vs Southern Hemisphere meteorites. It 
 
 ![Graph 15](/assets/meteorite-landings/15.png)
 
+<hr> 
 ## Final Analysis
 
 > Is there any statistically significant difference in the masses of Northern vs Southern Hemisphere meteorites?
@@ -290,8 +299,9 @@ print("The p value is:",mass_p)
 
 > Therefore, since the p-value is less than an alpha of 0.05, we can reject the null hypothesis and conclude that there is a significant difference in the masses of meteorites in the Northern and Southern Hemisphere.
 
-</br>
+<!-- </br> -->
 
+<hr> 
 ## Conclusion
 
 As we can see from the analysis done above, there are some noteable points that we have learned from this dataset.
@@ -314,6 +324,7 @@ Thank you for reading through my project! I hope you found this dataset as fun a
 
 You can also check out the [Github Repo](https://github.com/jakecupani/meteorite-landings) where you can find a full breakdown of the analysis in PDF form and the associated Colab notebook.
 
+<hr> 
 ## References
 
 1. [ NASA & Kaggle. (2016, November 5). Meteorite Landings NASA.](https://www.kaggle.com/nasa/meteorite-landings)
