@@ -332,7 +332,7 @@ Thank you for reading through my project! I hope you found this dataset as fun a
 
 You can also check out the [Github Repo](https://github.com/jakecupani/meteorite-landings) where you can find a full breakdown of the analysis in PDF form and the associated Colab notebook.
 
-If you have any suggestions, comments, or constructive criticism, please let me know. I am always aiming to improve my skills! 🤓
+If you have any suggestions, comments, or constructive criticism, please let me know. I am always aiming to improve my skills! 🤓 
 
 <hr> 
 
