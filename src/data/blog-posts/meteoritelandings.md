@@ -42,7 +42,7 @@ Kaggle, 2016). The dataset is also directly available from [NASA’s Data Portal
 was in normal Comma Separated Value format (CSV), which made it relatively easy to
 import into Python. There were also over 45,000 rows of data, which provided the
 analysis with plenty of samples to work with. The programming for this analysis was
-done [via Google Colab for easy access](https://colab.research.google.com/assets/colab-badge.svg).
+done [via Google Colab for easy access](https://colab.research.google.com/github/jakecupani/meteorite-landings/blob/main/Jake_Cupani_Final_Analysis.ipynb).
 
 
 <hr> 
