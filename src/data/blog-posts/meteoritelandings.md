@@ -87,7 +87,9 @@ df = df.drop(drop_cols,axis=1)
 df
 ```
 
-## What years had the highest and lowest frequency of meteorite landings in past and present?
+## Data Analysis
+
+### What years had the highest and lowest frequency of meteorite landings in past and present?
 
 **Past: any year between 1900 and 1950**
 **Present: any year after 1990**
@@ -134,7 +136,7 @@ plt.suptitle("Past Frequencies of Meteorite Landings (Fig. 2)")
 
 ![Graph 4](/assets/meteorite-landings/4.png)
 
-## In what areas of the world were meteorite landings most common? Does the distribution change over the years?
+### In what areas of the world were meteorite landings most common? Does the distribution change over the years?
 
 ```python
 def plot_meteorites(df,title):
