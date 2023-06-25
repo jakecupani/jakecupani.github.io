@@ -4,6 +4,42 @@ title: NASA Meteorite Landings Analysis ☄️
 description: Statistical analysis of meteorite landings dataset to identify the frequency of meteorite landings throughout different time periods, most common geographic regions of meteorites, and the differences between meteorite landings in the norhtern and southern hemispheres respectively.
 tags: ['Data Visualization 📊','Data Analytics 📈']
 ---
+## Motivation
+
+The heart of my research project comes from my understanding and passion for
+Astronomy. In fact, in my undergraduate studies at the University of Maryland, I minored
+in Astronomy and interned at NASA Goddard for two years. Due to these experiences, I
+thought that this class project would be a great opportunity to apply the statistical
+methods learned in class to some real world astronomical data from NASA. Meteorites
+are much more than just space rocks, they can provide us with crucial information about
+everything from solar system formation to the origins of life on Earth (American Museum
+of Natural History, n.d.). Furthermore, according to the Planetary Science Institute,
+approximately 500 meteorites land on the Earth’s surface every year with only 10
+recovered (Planetary Science Institute, 2019). This approximation tells us that there
+must be plenty of meteorites still to be discovered, which means there’s still lots of
+insights yet to be made from meteorites. These factors are what inspired me to pursue
+this project.
+
+## Project Summary 
+
+The goal of this project is to identify the frequency of meteorite landings
+throughout different time periods, most common geographic regions of meteorites, and
+the differences between meteorite landings in the northern and southern hemispheres
+respectively. The goal of this project would be an analytical pipeline to identify trends in
+meteorite landings and their respective geographical locations.
+
+
+## About the Data
+
+he dataset for my analysis is the Meteorite Landings dataset developed by
+NASA. The data was downloaded directly from [NASA’s Kaggle repository](https://www.kaggle.com/nasa/meteorite-landings) (NASA &
+Kaggle, 2016). The dataset is also directly available from [NASA’s Data Portal](https://data.nasa.gov/Space-Science/Meteorite-Landings/gh4g-9sfh). The data
+was in normal Comma Separated Value format (CSV), which made it relatively easy to
+import into Python. There were also over 45,000 rows of data, which provided the
+analysis with plenty of samples to work with. The programming for this analysis was
+done [via Google Colab for easy access](https://colab.research.google.com/assets/colab-badge.svg).
+
+
 ## Imports
 
 ```python
@@ -29,12 +65,6 @@ plt.style.use('ggplot')
 plt.rcParams['figure.figsize'] = (10,5)
 plt.rcParams['font.size'] = 12
 ```
-
-## About the Data
-
-https://www.kaggle.com/nasa/meteorite-landings
-
-https://data.nasa.gov/Space-Science/Meteorite-Landings/gh4g-9sfh
 
 ## Data Collection and Cleaning
 
@@ -275,7 +305,30 @@ As we can see from the analysis done above, there are some noteable points that 
 
 - There's a general trend of meteorites landing in the western US, Southern America, Norther Africa, Southern Austrailia, and parts of Europe. Another trend that I noticed is that there seem to be less meteorites in the 2010s than in the other decades.
 
+Thank you for reading through my project! I hope you found this dataset as fun as I did to explore. If you would like to explore further, I have even created dashboards for these datasets available below:
 
+- **[Power BI Dashboard:](URL)**
+- **[Tableau Dashboard:](URL)**
+
+You can also check out the [Github Repo](https://github.com/jakecupani/meteorite-landings) where you can find a full breakdown of the analysis in PDF form and the associated Colab notebook.
+
+## References
+
+1. NASA & Kaggle. (2016, November 5). Meteorite Landings [The Meteoritical
+Society collects data on meteorites that have fallen to Earth from outer space.
+This dataset includes the location, mass, composition, and fall year for over
+45,000 meteorites that have struck our planet.]. NASA.
+https://www.kaggle.com/nasa/meteorite-landings
+
+2. American Museum of Natural History. (n.d.). What Are Meteorites? Ancient Clues
+to Our Solar System | AMNH. Retrieved December 11, 2020, from
+https://www.amnh.org/exhibitions/permanent/meteorites/meteorites/what-is-a-met
+eorite#:%7E:text=Meteorites%20from%20asteroids%20and%20even,of%20nicke
+l%20and%20iron%20metal
+
+3. Planetary Science Institute. (2019, April 16). FAQ - Meteoroids/Meteorites.
+https://www.psi.edu/epo/faq/meteor.html#:%7E:text=To%20date%2C%20there%
+20have%20been,less%20than%2010%20are%20recovered
 
 
 
