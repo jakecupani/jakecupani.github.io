@@ -104,8 +104,9 @@ df
 
 ### What years had the highest and lowest frequency of meteorite landings in past and present?
 
-**Past: any year between 1900 and 1950**
-**Present: any year after 1990**
+**Past:** any year between 1900 and 1950
+
+**Present:** any year after 1990
 
 Bar plots were used in this case to show the frequency of meteorite landings since we want to see how many times they happened over the years.
 
