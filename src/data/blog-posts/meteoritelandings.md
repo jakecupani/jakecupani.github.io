@@ -40,7 +40,7 @@ https://data.nasa.gov/Space-Science/Meteorite-Landings/gh4g-9sfh
 
 ```python
 # Read in the data
-df = pd.read_csv("/content/drive/My Drive/INST627/meteorite-landings.csv",
+df = pd.read_csv(/content/drive/My Drive/INST627/meteorite-landings.csv",
 low_memory=False).dropna()
 
 # Some data cleaning to make sure year values are for relevant years (a couple of rows had weird years)
@@ -71,7 +71,7 @@ df['year'][df['year'] >= 1990].value_counts().plot(kind = 'bar', title = 'Presen
 
 As we can see from the graph, 2003 had the highest frequency of meteorite landings, while 2013 had the least.
 
-<img src="">
+![Graph 1](/assets/meteorite-landings/1.png)
 
 As we can see from the graph, 2003 had the highest frequency of meteorite landings, while 2013 had the least.
 
@@ -84,7 +84,7 @@ present.plot(x ='year', y='frequency', kind = 'line')
 plt.suptitle("Present Frequencies of Meteorite Landings (Fig. 1)")
 ```
 
-<img src="">
+![Graph 2](/assets/meteorite-landings/2.png)
 
 ```python
 df['year'][(df['year'] <= 1950) & (df['year'] >= 1900)].value_counts()
@@ -93,7 +93,7 @@ df['year'][(df['year'] <= 1950) & (df['year'] >= 1900)].value_counts()
 
 As we can see from the graph, 1937 had the highest frequency of meteorite landings, while 1901 had the least.
 
-<img src="">
+![Graph 3](/assets/meteorite-landings/3.png)
 
 ```python
 past = df['year'][(df['year'] <= 1950) & (df['year'] >= 1900)].value_counts()
@@ -102,7 +102,7 @@ past.plot(x ='year', y='frequency', kind = 'line')
 plt.suptitle("Past Frequencies of Meteorite Landings (Fig. 2)")
 ```
 
-<img src="">
+![Graph 4](/assets/meteorite-landings/4.png)
 
 ## In what areas of the world were meteorite landings most common? Does the distribution change over the years?
 
@@ -120,7 +120,7 @@ def plot_meteorites(df,title):
 plot_meteorites(df,"All Meteorites (Fig. 3)")
 ```
 
-<img src="">
+![Graph 5](/assets/meteorite-landings/5.png)
 
 ```python
 # Past Meteorites
@@ -128,7 +128,7 @@ past_m = df[(df['year'] <= 1950) & (df['year'] >= 1900)]
 plot_meteorites(past_m, "Past Meteorites (Fig. 3)")
 ```
 
-<img src="">
+![Graph 6](/assets/meteorite-landings/6.png)
 
 ```python
 # Present Meteorites
@@ -136,7 +136,7 @@ present_m = df[df['year'] >= 1990]
 plot_meteorites(present_m, "Present Meteorites (Fig. 4)")
 ```
 
-<img src="">
+![Graph 7](/assets/meteorite-landings/7.png)
 
 ```python
 # 90s Meteorites
@@ -144,7 +144,7 @@ df_90 = df[(df['year'] >= 1990) & (df['year'] <= 1999)]
 plot_meteorites(df_90, "90s Meteorites")
 ```
 
-<img src="">
+![Graph 8](/assets/meteorite-landings/8.png)
 
 ```python
 # 00s Meteorites
@@ -152,7 +152,7 @@ df_00 = df[(df['year'] >= 2000) & (df['year'] <= 2009)]
 plot_meteorites(df_00,"2000s Meteorites")
 ```
 
-<img src="">
+![Graph 9](/assets/meteorite-landings/9.png)
 
 ```python
 # 10s Meteorites
@@ -160,7 +160,7 @@ df_10 = df[(df['year'] >= 2010) & (df['year'] <= 2019)]
 plot_meteorites(df_10,"2010s Meteorites")
 ```
 
-<img src="">
+![Graph 10](/assets/meteorite-landings/10.png)
 
 As we can see, there's a general trend of meteorites landing in the western US, Peru, Northern Africa, Southern Australia, and parts of Europe. Another trend that I noticed is that there seem to be less meteorites in the 2010s than in the other decades.
 
@@ -170,13 +170,13 @@ As we can see, there's a general trend of meteorites landing in the western US, 
 df['mass'][df['mass'] < 250].plot(kind='box')
 ```
 
-<img src="">
+![Graph 11](/assets/meteorite-landings/11.png)
 
 As we can see in the distribution plot, the distribution is highly skewed to the right with a majority of the values below 500 grams.
 
 We can also say that the distribution is unimodal. There are 7182 clear outliers that I will remove from my histogram to show the general distribution.
 
-<img src="">
+![Graph 12](/assets/meteorite-landings/12.png)
 
 ```python
 mass_df = df[df['mass'] < 250]
@@ -185,7 +185,7 @@ plot_meteorites(mass_df,"Normal Mass Meteorites (<250g) (Fig. 6)")
 
 Looks like the more 'normal' mass meteorites are distributed evenly across the world.
 
-<img src="">
+![Graph 13](/assets/meteorite-landings/13.png)
 
 ```python
 mass_df = df[df['mass'] > 2000]
@@ -194,7 +194,7 @@ plot_meteorites(mass_df,"Large Mass Meteorites (>2000g) (Fig. 7)")
 
 There seem to be more large mass meteorites in Southern Africa, the US, and parts of South America.
 
-<img src="">
+![Graph 14](/assets/meteorite-landings/14.png)
 
 ## What differences are there in the masses of Northern vs. Southern Hemisphere meteorites?
 
@@ -207,7 +207,7 @@ plt.title("Northern vs. Southern Hemisphere Meteorite Masses (Fig. 8)")
 
 Here we show the average mass of Northern vs Southern Hemisphere meteorites. It is interesting to see that Northern Hemisphere meteorites have a higher average mass.
 
-<img src="">
+![Graph 15](/assets/meteorite-landings/15.png)
 
 ## Final Analysis
 
