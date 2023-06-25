@@ -22,6 +22,7 @@ insights yet to be made from meteorites. These factors are what inspired me to p
 this project.
 
 <hr> 
+
 ## Project Summary 
 
 The goal of this project is to identify the frequency of meteorite landings
@@ -32,6 +33,7 @@ meteorite landings and their respective geographical locations.
 
 
 <hr> 
+
 ## About the Data
 
 The dataset for my analysis is the Meteorite Landings dataset developed by
@@ -44,6 +46,7 @@ done [via Google Colab for easy access](https://colab.research.google.com/assets
 
 
 <hr> 
+
 ## Imports
 
 ```python
@@ -71,6 +74,7 @@ plt.rcParams['font.size'] = 12
 ```
 
 <hr> 
+
 ## Data Collection and Cleaning
 
 ```python
@@ -250,6 +254,7 @@ Here we show the average mass of Northern vs Southern Hemisphere meteorites. It 
 ![Graph 15](/assets/meteorite-landings/15.png)
 
 <hr> 
+
 ## Final Analysis
 
 > Is there any statistically significant difference in the masses of Northern vs Southern Hemisphere meteorites?
@@ -302,6 +307,7 @@ print("The p value is:",mass_p)
 <!-- </br> -->
 
 <hr> 
+
 ## Conclusion
 
 As we can see from the analysis done above, there are some noteable points that we have learned from this dataset.
@@ -325,6 +331,7 @@ Thank you for reading through my project! I hope you found this dataset as fun a
 You can also check out the [Github Repo](https://github.com/jakecupani/meteorite-landings) where you can find a full breakdown of the analysis in PDF form and the associated Colab notebook.
 
 <hr> 
+
 ## References
 
 1. [ NASA & Kaggle. (2016, November 5). Meteorite Landings NASA.](https://www.kaggle.com/nasa/meteorite-landings)
