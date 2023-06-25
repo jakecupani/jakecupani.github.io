@@ -97,6 +97,7 @@ df
 ```
 
 <hr> 
+
 ## Data Analysis
 
 </br>
@@ -240,7 +241,7 @@ There seem to be more large mass meteorites in Southern Africa, the US, and part
 
 ![Graph 14](/assets/meteorite-landings/14.png)
 
-## What differences are there in the masses of Northern vs. Southern Hemisphere meteorites?
+### What differences are there in the masses of Northern vs. Southern Hemisphere meteorites?
 
 The bar chart shows the average mass of meteorites for the northern and southern hemispheres respectively.
 
