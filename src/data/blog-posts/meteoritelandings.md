@@ -214,6 +214,9 @@ Here we show the average mass of Northern vs Southern Hemisphere meteorites. It 
 > Is there any statistically significant difference in the masses of Northern vs Southern Hemisphere meteorites?
 
 **H0: There is no difference between the masses of meteorites in the hemispheres. (avg difference 0).**
+
+</br>
+
 **HA: There is a difference between the masses of meteorites in the hemispheres. (avg difference != 0).**
 
 ```python
@@ -255,6 +258,8 @@ print("The p value is:",mass_p)
 
 
 > Therefore, since the p-value is less than an alpha of 0.05, we can reject the null hypothesis and conclude that there is a significant difference in the masses of meteorites in the Northern and Southern Hemisphere.
+
+</br>
 
 ## Conclusion
 
