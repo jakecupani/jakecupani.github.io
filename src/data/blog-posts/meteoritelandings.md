@@ -247,14 +247,14 @@ mass_p = stats.distributions.t.sf(mass_t,deg_freedom)
 print("The p value is:",mass_p)
 ```
 
-The **point estimate** is: **32648.79079167894**
-The **degrees of freedom** is: **8258**
-The **standard error** is: **10687.521940131997**
-The **t score** is: **3.054851346698214**
-The **p value** is: **0.001129450442007376**
+- The **point estimate** is: **32648.79079167894**
+- The **degrees of freedom** is: **8258**
+- The **standard error** is: **10687.521940131997**
+- The **t score** is: **3.054851346698214**
+- The **p value** is: **0.001129450442007376**
 
 
-Therefore, since the **p-value** is **less than** an **alpha of 0.05**, we can **reject** the **null hypothesis** and conclude that there **is a significant difference in the masses of meteorites in the Northern and Southern Hemisphere**.
+> Therefore, since the p-value is less than an alpha of 0.05, we can reject the null hypothesis and conclude that there is a significant difference in the masses of meteorites in the Northern and Southern Hemisphere.
 
 ## Conclusion
 
