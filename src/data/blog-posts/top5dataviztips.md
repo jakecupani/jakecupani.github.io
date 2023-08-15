@@ -36,3 +36,7 @@ Sometimes less is more. Keeping complexity of individual pages to a minimum will
 **5. Let your visualizations breathe 🧘**
 
  We all need our personal space, and so do your visualizations! White space is your friend when it comes to data visualization. It helps you highlight the most important elements of your charts and graphs, and it makes them easier to read and understand. White space also gives your data visualizations a clean and professional look. So don't be afraid to leave some blank areas around your data. Trust me, your audience will appreciate it!
+
+<hr>
+
+Looking for a good book on Data Visualization? One of my favorites is [Storytelling with Data by Cole Nussbaumer Knaflic](https://www.amazon.com/dp/1119002257/?coliid=I3DLIOR5J69QE0&amp;colid=KN1JX1X03V79&amp;psc=1&amp;ref_=cm_sw_r_cp_ud_lstpd_V6AHSPR7WBQW5E3MDXDE&_encoding=UTF8&tag=jcupani-20&linkCode=ur2&linkId=6d60739620912d88e7825f6719ca7e90&camp=1789&creative=9325).

@@ -19,3 +19,7 @@ Here's some of my personal favorite **✨ FREE ✨** resources for learning tech
 5️⃣ [Stratascratch](https://platform.stratascratch.com/) : This site is a great place to practice Data Science and SQL coding problems. The free tier has 600+ data science coding questions, 500+ data science machine learning, product sense, statistics, probability, system design questions, and 50+ data science projects.
 
 **⭐ Like + Follow if you found this valuable! ⭐**
+
+<hr>
+
+Looking for a good book on Data Visualization? One of my favorites is [Storytelling with Data by Cole Nussbaumer Knaflic](https://www.amazon.com/dp/1119002257/?coliid=I3DLIOR5J69QE0&amp;colid=KN1JX1X03V79&amp;psc=1&amp;ref_=cm_sw_r_cp_ud_lstpd_V6AHSPR7WBQW5E3MDXDE&_encoding=UTF8&tag=jcupani-20&linkCode=ur2&linkId=6d60739620912d88e7825f6719ca7e90&camp=1789&creative=9325).
