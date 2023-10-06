@@ -44,6 +44,7 @@ const pokemonInfo = document.getElementById('pokemonInfo');
 const pokemonSprite = document.getElementById('pokemonSprite');
 const pokemonTotalStats = document.getElementById('pokemonTotalStats');
 
+
 function fetchPokemonStats(pokemonName) {
   if (pokemonChart) {
     // Destroy the previous chart instance if it exists
@@ -54,7 +55,35 @@ function fetchPokemonStats(pokemonName) {
     .then(response => response.json())
     .then(data => {
       const stats = data.stats.map(stat => stat.base_stat);
-      const labels = data.stats.map(stat => stat.stat.name);
+      const labels = data.stats.map(stat => stat.stat.name.toUpperCase());
+      
+      const pokeType = data.types[0].type.name.toLowerCase();
+      const typeColors = {
+        normal: 'hsl(60, 40%, 70%)',      // Pastel yellow
+        fire: 'hsl(15, 70%, 70%)',       // Pastel orange
+        water: 'hsl(210, 60%, 70%)',     // Pastel blue
+        electric: 'hsl(60, 100%, 70%)',  // Pastel yellow
+        grass: 'hsl(120, 70%, 70%)',     // Pastel green
+        ice: 'hsl(180, 50%, 70%)',       // Pastel cyan
+        fighting: 'hsl(0, 80%, 70%)',    // Pastel red
+        poison: 'hsl(270, 50%, 70%)',    // Pastel purple
+        ground: 'hsl(40, 70%, 70%)',     // Pastel brown
+        flying: 'hsl(240, 50%, 70%)',    // Pastel blue
+        psychic: 'hsl(330, 60%, 70%)',   // Pastel pink
+        bug: 'hsl(75, 70%, 70%)',        // Pastel green-yellow
+        rock: 'hsl(45, 60%, 70%)',       // Pastel orange-brown
+        ghost: 'hsl(270, 40%, 70%)',     // Pastel purple
+        steel: 'hsl(240, 20%, 70%)',     // Pastel blue-gray
+        dragon: 'hsl(270, 100%, 70%)',   // Pastel purple
+        dark: 'hsl(0, 0%, 40%)',         // Dark gray
+        fairy: 'hsl(330, 40%, 70%)'      // Pastel pink
+      };
+
+      const pokeColor = typeColors[pokeType];
+      
+
+      // console.log(data.species.type);
+      // const types = data.type;
 
       // Set a fixed canvas size (e.g., 400x400)
       ctx.canvas.width = 400;
@@ -67,8 +96,8 @@ function fetchPokemonStats(pokemonName) {
           datasets: [{
             label: 'Pokemon Stats',
             data: stats,
-            backgroundColor: 'rgba(255, 143, 143)',
-            borderColor: 'rgba(255, 143, 143)',
+            backgroundColor: pokeColor,
+            borderColor: 'dimgray',
             borderWidth: 1
           }]
         },
@@ -93,7 +122,7 @@ function fetchPokemonStats(pokemonName) {
       const generationUrl = data.species.url;
       const generationId = generationUrl.split('/').slice(-2, -1)[0];
 
-      console.log(generationUrl,generationId);
+      
 
       if (generationId <= 649) {
         pokemonSprite.src = data.sprites.versions['generation-v']['black-white'].animated.front_default;
@@ -102,6 +131,10 @@ function fetchPokemonStats(pokemonName) {
       else {
         pokemonSprite.src = data.sprites.front_default;
       }
+
+
+
+      
       
 
       
@@ -139,6 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     body {
       padding: 20px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
     canvas {
