@@ -1,0 +1,147 @@
+<!-- popup.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- <link rel="stylesheet" type="text/css" href="popup.css"> -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css">
+</head>
+<body>
+  <!-- <h1 class="text-2xl font-bold mb-4">Pokemon Stats</h1> -->
+  <div class="mb-4">
+    <input type="text" id="pokemonName" class="w-1/2 py-2 px-3 rounded-lg shadow-sm focus:ring-white-500 focus:border-white-500 border-white-300" placeholder="Enter Pokemon name">
+    <button id="searchButton" class="bg-red-500 text-white py-2 px-4 rounded-lg ml-2 hover:bg-red-600 focus:ring-red-500 focus:border-red-500">Search</button>
+  </div>
+  <div id="pokemonInfo" class="hidden">
+    <div class="grid grid-cols-2 gap-4 mt-4">
+      <div class="bg-white p-4 rounded-lg shadow-md">
+        <!-- <h2 class="text-xl font-semibold mb-2">Sprite Image</h2> -->
+        <img id="pokemonSprite" class="mx-auto" src="" alt="Pokemon Sprite">
+      </div>
+      <div class="bg-white p-4 rounded-lg shadow-md">
+        <div class="divStatTotal">Stat Total</h2>
+        <p id="pokemonTotalStats" class="text-xlg font-bold"></p>
+      </div>
+    </div>
+  </div>
+  <div class="bg-white p-4 rounded-lg shadow-md">
+    <canvas id="pokemonStatsChart"></canvas>
+  </div>
+  <script>
+    // popup.js
+let pokemonChart; // Declare a variable to store the Chart.js instance
+let ctx; // Declare a variable to store the canvas context
+
+const searchButton = document.getElementById('searchButton');
+const pokemonNameInput = document.getElementById('pokemonName');
+const pokemonInfo = document.getElementById('pokemonInfo');
+const pokemonSprite = document.getElementById('pokemonSprite');
+const pokemonTotalStats = document.getElementById('pokemonTotalStats');
+
+function fetchPokemonStats(pokemonName) {
+  if (pokemonChart) {
+    // Destroy the previous chart instance if it exists
+    pokemonChart.destroy();
+  }
+
+  fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName.toLowerCase()}/`)
+    .then(response => response.json())
+    .then(data => {
+      const stats = data.stats.map(stat => stat.base_stat);
+      const labels = data.stats.map(stat => stat.stat.name);
+
+      // Set a fixed canvas size (e.g., 400x400)
+      ctx.canvas.width = 400;
+      ctx.canvas.height = 400;
+
+      pokemonChart = new Chart(ctx, {
+        type: 'radar',
+        data: {
+          labels: labels,
+          datasets: [{
+            label: 'Pokemon Stats',
+            data: stats,
+            backgroundColor: 'rgba(255, 143, 143)',
+            borderColor: 'rgba(255, 143, 143)',
+            borderWidth: 1
+          }]
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true
+              
+            }
+          }
+        }
+      });
+
+      // Update Pokemon info
+      pokemonInfo.classList.remove('hidden');
+      pokemonSprite.src = data.sprites.front_default;
+      const totalStats = stats.reduce((acc, stat) => acc + stat, 0);
+      pokemonTotalStats.textContent = `${totalStats}`;
+    })
+    .catch(error => {
+      console.error(error);
+      // Hide Pokemon info on error
+      pokemonInfo.classList.add('hidden');
+    });
+}
+
+searchButton.addEventListener('click', () => {
+  const pokemonName = pokemonNameInput.value.trim();
+  if (pokemonName) {
+    fetchPokemonStats(pokemonName);
+  }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Initialize the canvas context
+  ctx = document.getElementById('pokemonStatsChart').getContext('2d');
+});
+
+  </script>
+  <style>
+    .mb-4 {
+      text-align: center;
+    }
+    body {
+      padding: 20px;
+    }
+
+    canvas {
+      margin: 0 auto;
+      height: 50%;
+    }
+
+    div {
+      padding: 20px;
+      /* margin: 100px; */
+    }
+
+    input {
+      border: 2pt solid rgb(222, 222, 222);
+    }
+
+    input:focus {
+      /* border: 2pt solid rgb(255, 103, 103)!important;
+       */
+    }
+
+    div img#pokemonSprite {
+      width: 50%;
+    }
+    
+    #pokemonTotalStats, .divStatTotal {
+      font-size: 100px;
+      text-align: center;
+    }
+
+    body, canvas, div canvas {
+      transition: 0s!important;
+      transition-duration: 0ms!important;
+    }
+  </style>
+</body>
+</html>
