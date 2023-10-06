@@ -13,7 +13,7 @@
     <button id="searchButton" class="bg-red-500 text-white py-2 px-4 rounded-lg ml-2 hover:bg-red-600 focus:ring-red-500 focus:border-red-500">Search</button>
   </div>
   <div id="pokemonInfo" class="hidden">
-    <div class="grid grid-cols-1 gap-4 mt-4">
+    <div class="grid grid-cols-2 gap-4 mt-4">
       <div>
         <div class="bg-white p-4 rounded-lg shadow-md">
           <div class="divStatTotal">Stat Total</h2>
@@ -203,8 +203,12 @@ document.addEventListener('DOMContentLoaded', () => {
       /* margin-top: 20px; */
       filter: drop-shadow(1px 2px 2px );
     }
+
+    .divStatTotal {
+      font-size: 1.5em;
+    }
     
-    #pokemonTotalStats, .divStatTotal {
+    #pokemonTotalStats {
       font-size: 100px;
       text-align: center;
     }
