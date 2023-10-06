@@ -155,17 +155,6 @@ searchButton.addEventListener('click', () => {
   }
 });
 
-pokemonNameInput.addEventListener('keyup', async (event) => {
-  const input = event.target.value.toLowerCase();
-  const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=1118');
-  const data = await response.json();
-  const pokemonNames = data.results.map((pokemon) => pokemon.name);
-  const filteredPokemonNames = pokemonNames.filter((name) =>
-    name.includes(input)
-  );
-  console.log(filteredPokemonNames);
-});
-
 document.addEventListener('DOMContentLoaded', () => {
   // Initialize the canvas context
   ctx = document.getElementById('pokemonStatsChart').getContext('2d');
