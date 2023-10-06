@@ -7,26 +7,32 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css">
 </head>
 <body>
-  <!-- <h1 class="text-2xl font-bold mb-4">Pokemon Stats</h1> -->
+  <h1 class="text-2xl font-bold mb-4">PokeStats</h1>
   <div class="mb-4">
     <input type="text" id="pokemonName" class="w-1/2 py-2 px-3 rounded-lg shadow-sm focus:ring-white-500 focus:border-white-500 border-white-300" placeholder="Enter Pokemon name">
     <button id="searchButton" class="bg-red-500 text-white py-2 px-4 rounded-lg ml-2 hover:bg-red-600 focus:ring-red-500 focus:border-red-500">Search</button>
   </div>
   <div id="pokemonInfo" class="hidden">
-    <div class="grid grid-cols-2 gap-4 mt-4">
-      <div class="bg-white p-4 rounded-lg shadow-md">
-        <!-- <h2 class="text-xl font-semibold mb-2">Sprite Image</h2> -->
-        <img id="pokemonSprite" class="mx-auto" src="" alt="Pokemon Sprite">
+    <div class="grid grid-cols-1 gap-4 mt-4">
+      <div>
+        <div class="bg-white p-4 rounded-lg shadow-md">
+          <div class="divStatTotal">Stat Total</h2>
+          <p id="pokemonTotalStats" class="text-xlg font-bold"></p>
+        </div>
+  
+        <div class="bg-white p-4 rounded-lg">
+          <!-- <h2 class="text-xl font-semibold mb-2">Sprite Image</h2> -->
+          <img id="pokemonSprite" class="mx-auto" src="" alt="Pokemon Sprite">
+        </div>
       </div>
-      <div class="bg-white p-4 rounded-lg shadow-md">
-        <div class="divStatTotal">Stat Total</h2>
-        <p id="pokemonTotalStats" class="text-xlg font-bold"></p>
-      </div>
+      
+
+    </div>
+    <div class="bg-white p-4 rounded-lg shadow-md">
+      <canvas id="pokemonStatsChart"></canvas>
     </div>
   </div>
-  <div class="bg-white p-4 rounded-lg shadow-md">
-    <canvas id="pokemonStatsChart"></canvas>
-  </div>
+  
   <script>
     // popup.js
 let pokemonChart; // Declare a variable to store the Chart.js instance
@@ -55,7 +61,7 @@ function fetchPokemonStats(pokemonName) {
       ctx.canvas.height = 400;
 
       pokemonChart = new Chart(ctx, {
-        type: 'radar',
+        type: 'bar',
         data: {
           labels: labels,
           datasets: [{
@@ -69,8 +75,13 @@ function fetchPokemonStats(pokemonName) {
         options: {
           scales: {
             y: {
-              beginAtZero: true
-              
+              beginAtZero: true,
+              ticks: {
+                font: {
+                  size: 16,
+                  weight: "bold"
+                }
+              }
             }
           }
         }
@@ -78,7 +89,22 @@ function fetchPokemonStats(pokemonName) {
 
       // Update Pokemon info
       pokemonInfo.classList.remove('hidden');
-      pokemonSprite.src = data.sprites.front_default;
+      
+      const generationUrl = data.species.url;
+      const generationId = generationUrl.split('/').slice(-2, -1)[0];
+
+      console.log(generationUrl,generationId);
+
+      if (generationId <= 649) {
+        pokemonSprite.src = data.sprites.versions['generation-v']['black-white'].animated.front_default;
+        
+      }
+      else {
+        pokemonSprite.src = data.sprites.front_default;
+      }
+      
+
+      
       const totalStats = stats.reduce((acc, stat) => acc + stat, 0);
       pokemonTotalStats.textContent = `${totalStats}`;
     })
@@ -103,6 +129,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   </script>
   <style>
+    /* body {
+      background-image: url("https://th.bing.com/th/id/OIG.KgqVN3.CQN2pZc0eavOY?pid=ImgGn");
+      backdrop-filter: blur(5px)!important;
+    } */
+
     .mb-4 {
       text-align: center;
     }
@@ -120,6 +151,10 @@ document.addEventListener('DOMContentLoaded', () => {
       /* margin: 100px; */
     }
 
+    div div.grid {
+      align-self: center;
+    }
+
     input {
       border: 2pt solid rgb(222, 222, 222);
     }
@@ -130,7 +165,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     div img#pokemonSprite {
-      width: 50%;
+      width: 20%;
+      /* margin-top: 20px; */
+      filter: drop-shadow(1px 2px 2px );
     }
     
     #pokemonTotalStats, .divStatTotal {
