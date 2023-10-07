@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css">
 </head>
 <body>
-  <h1 class="text-2xl font-bold mb-4">PokeStats</h1>
+  <h1 class="text-2xl font-bold mb-4">Dextension</h1>
   <div class="mb-4">
     <input type="text" id="pokemonName" class="w-1/2 py-2 px-3 rounded-lg shadow-sm focus:ring-white-500 focus:border-white-500 border-white-300" placeholder="Enter Pokemon name">
     <button id="searchButton" class="bg-red-500 text-white py-2 px-4 rounded-lg ml-2 hover:bg-red-600 focus:ring-red-500 focus:border-red-500">Search</button>
@@ -44,6 +44,10 @@
   </div>
   </div>
   
+  <footer class="footer">
+    Created using <a href="https://pokeapi.co/">PokeAPI</a>
+  </footer>
+
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
   
@@ -70,6 +74,7 @@ function fetchPokemonStats(pokemonName) {
     .then(data => {
       const stats = data.stats.map(stat => stat.base_stat);
       const labels = data.stats.map(stat => stat.stat.name.toUpperCase());
+      console.log(data);
       
       const pokeType = data.types[0].type.name.toLowerCase();
       const typeColors = {
@@ -187,6 +192,22 @@ document.addEventListener('DOMContentLoaded', () => {
     body {
       padding: 20px;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    footer a {
+      color: red;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      border-radius: 20px;
+      /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+      margin: 0 auto;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      color: darkgray;
     }
 
     canvas {
