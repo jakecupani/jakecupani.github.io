@@ -12,16 +12,17 @@
     <input type="text" id="pokemonName" class="w-1/2 py-2 px-3 rounded-lg shadow-sm focus:ring-white-500 focus:border-white-500 border-white-300" placeholder="Enter Pokemon name">
     <button id="searchButton" class="bg-red-500 text-white py-2 px-4 rounded-lg ml-2 hover:bg-red-600 focus:ring-red-500 focus:border-red-500">Search</button>
   </div>
+
+  
   <div id="pokemonInfo" class="hidden">
     <div class="grid grid-cols-2 gap-4 mt-4">
-      <div>
+      <div class="total">
         <div class="bg-white p-4 rounded-lg shadow-md">
           <div class="divStatTotal">Stat Total</h2>
           <p id="pokemonTotalStats" class="text-xlg font-bold"></p>
         </div>
   
         <div class="bg-white p-4 rounded-lg">
-          <!-- <h2 class="text-xl font-semibold mb-2">Sprite Image</h2> -->
           <img id="pokemonSprite" class="mx-auto" src="" alt="Pokemon Sprite">
         </div>
       </div>
@@ -29,9 +30,16 @@
 
     </div>
     <div class="bg-white p-4 rounded-lg shadow-md">
+      
+        
       <canvas id="pokemonStatsChart"></canvas>
+      
+
     </div>
   </div>
+  </div>
+  
+  
   
   <script>
     // popup.js
@@ -206,6 +214,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     .divStatTotal {
       font-size: 1.5em;
+      text-align: center;
+      font-weight: bold;
     }
     
     #pokemonTotalStats {
