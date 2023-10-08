@@ -16,6 +16,7 @@
     "rehype-external-links": "^2.0.0"
   },
   "dependencies": {
+    "chartjs-plugin-datalabels": "^2.2.0",
     "reading-time": "^1.5.0"
   }
 }

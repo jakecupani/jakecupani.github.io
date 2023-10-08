@@ -2,8 +2,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.0/dist/chart.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css">
 </head>
 <body>
   <h1 class="text-2xl font-bold mb-4">PokeStats</h1>
@@ -62,8 +62,8 @@ function fetchPokemonStats(pokemonName) {
         normal: 'hsl(60, 40%, 70%)',      // Pastel yellow
         fire: 'hsl(15, 70%, 70%)',       // Pastel orange
         water: 'hsl(210, 60%, 70%)',     // Pastel blue
-        electric: 'hsl(60, 100%, 70%)',  // Pastel yellow
-        grass: 'hsl(120, 70%, 70%)',     // Pastel green
+        electric: '#F4D23B',  // Pastel yellow
+        grass: '#64BD5B',                // Pastel green
         ice: 'hsl(180, 50%, 70%)',       // Pastel cyan
         fighting: 'hsl(0, 80%, 70%)',    // Pastel red
         poison: 'hsl(270, 50%, 70%)',    // Pastel purple
@@ -71,10 +71,10 @@ function fetchPokemonStats(pokemonName) {
         flying: 'hsl(240, 50%, 70%)',    // Pastel blue
         psychic: 'hsl(330, 60%, 70%)',   // Pastel pink
         bug: 'hsl(75, 70%, 70%)',        // Pastel green-yellow
-        rock: 'hsl(45, 60%, 70%)',       // Pastel orange-brown
+        rock: '#C9B68B',       // Pastel orange-brown
         ghost: 'hsl(270, 40%, 70%)',     // Pastel purple
         steel: 'hsl(240, 20%, 70%)',     // Pastel blue-gray
-        dragon: 'hsl(270, 100%, 70%)',   // Pastel purple
+        dragon: '#096DC3',                // Pastel purple
         dark: 'hsl(0, 0%, 40%)',         // Dark gray
         fairy: 'hsl(330, 40%, 70%)'      // Pastel pink
       };
@@ -87,7 +87,7 @@ function fetchPokemonStats(pokemonName) {
       // const types = data.type;
 
       // Set a fixed canvas size (e.g., 400x400)
-      ctx.canvas.width = 500;
+      ctx.canvas.width = 700;
       ctx.canvas.height = 500;
 
       pokemonChart = new Chart(ctx, {
@@ -99,7 +99,10 @@ function fetchPokemonStats(pokemonName) {
             data: stats,
             backgroundColor: pokeColor,
             borderColor: 'dimgray',
-            borderWidth: 1
+            borderWidth: 1,
+            datalabels: {
+        color: pokeColor
+      }
           }]
         },
         options: {
@@ -116,7 +119,19 @@ function fetchPokemonStats(pokemonName) {
               }
             }
           }
-        }
+        },
+        plugins: {
+      datalabels: {
+        anchor: 'end',
+        align: 'top',
+        font: {
+          size: 14, // Adjust the font size as needed
+        },
+        formatter: function(value) {
+          return value; // Display the data value as the label
+        },
+      },
+    },
       });
 
       // Update Pokemon info
