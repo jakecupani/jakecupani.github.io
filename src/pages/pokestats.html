@@ -89,7 +89,7 @@ function fetchPokemonStats(pokemonName) {
 
       const pokeColor = typeColors[pokeType];
       pokemonSprite.setAttribute("style","border: 4pt solid " + pokeColor)
-      pokeName.innerHTML = "<p><a href='https://bulbapedia.bulbagarden.net/wiki/" + pokemonName + "'>" + pokemonName + "</a></p>";
+      pokeName.innerHTML = "<p><a target='_blank' href='https://bulbapedia.bulbagarden.net/wiki/" + pokemonName + "'>" + pokemonName + "</a></p>";
       pokeName.setAttribute("style","color:" + pokeColor);
 
       console.log(data.species.flavor_text_entries);
