@@ -16,6 +16,7 @@
   <div id="pokemonInfo" class="hidden">
       <div class="infoDiv">
         <img src="" id="pokemonSprite" alt="">
+        <p id="pokeName"></p>
         <div id="pokemonTotalStats"></div>
       </div>
       
@@ -41,6 +42,7 @@
 
   const searchButton = document.getElementById('searchButton');
   const pokemonNameInput = document.getElementById('pokemonName');
+  const pokeName = document.getElementById("pokeName");
   const pokemonInfo = document.getElementById('pokemonInfo');
   const pokemonSprite = document.getElementById('pokemonSprite');
   const pokemonTotalStats = document.getElementById('pokemonTotalStats');
@@ -83,6 +85,9 @@ function fetchPokemonStats(pokemonName) {
 
       const pokeColor = typeColors[pokeType];
       pokemonSprite.setAttribute("style","border: 4pt solid " + pokeColor)
+      pokeName.innerText = pokemonName;
+      pokeName.setAttribute("style","color:" + pokeColor);
+
       
 
       // console.log(data.species.type);
@@ -180,6 +185,14 @@ document.addEventListener('DOMContentLoaded', () => {
       background-image: url("https://th.bing.com/th/id/OIG.KgqVN3.CQN2pZc0eavOY?pid=ImgGn");
       backdrop-filter: blur(5px)!important;
     } */
+
+    #pokeName {
+      text-align: center;
+      font-weight: bold;
+      text-transform: capitalize;
+      font-size: 2em;
+      padding-top: 10px;
+    }
 
     .infoDiv {
       display: block;
