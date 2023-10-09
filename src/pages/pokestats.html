@@ -215,9 +215,6 @@ function updatePokemonInfoClass() {
     // Revert the class to "hidden grid grid-cols-3" for larger screens
     pokemonInfo.classList.remove('grid-cols-1');
     pokemonInfo.classList.add('grid-cols-3');
-
-    let canvas = document.getElementsByTagName("canvas");
-    canvas.style.height = 800;
   }
 }
 
@@ -363,18 +360,14 @@ updatePokemonInfoClass();
     }
 
     /* Default styles for desktop */
-canvas {
-  width: 800px;
-  height: 600px;
-}
+
 
 /* Media query for mobile devices with a maximum width of 767px */
-/* @media screen and (max-width: 767px) {
-  canvas {
-    width: 400px;
-    height: 600px;
+@media screen and (max-width: 1400px) {
+  div#pokemonInfo {
+    padding-left: 0px;
   }
-} */
+}
 
   </style>
 </body>
