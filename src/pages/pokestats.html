@@ -198,6 +198,36 @@ document.addEventListener('DOMContentLoaded', () => {
   ctx = document.getElementById('pokemonStatsChart').getContext('2d');
 });
 
+// Function to update the class based on screen width
+function updatePokemonInfoClass() {
+  const pokemonInfo = document.getElementById('pokemonInfo');
+  const screenWidth = window.innerWidth;
+
+  if (screenWidth < 1400) {
+    // Change the class to "hidden grid grid-cols-1" if screen width is less than 1400 pixels
+    pokemonInfo.classList.remove('grid-cols-3');
+    pokemonInfo.classList.add('grid-cols-1');
+
+    
+
+
+  } else {
+    // Revert the class to "hidden grid grid-cols-3" for larger screens
+    pokemonInfo.classList.remove('grid-cols-1');
+    pokemonInfo.classList.add('grid-cols-3');
+
+    let canvas = document.getElementsByTagName("canvas");
+    canvas.style.height = 800;
+  }
+}
+
+// Add an event listener to update the class on window resize
+window.addEventListener('resize', updatePokemonInfoClass);
+
+// Call the function to set the initial class based on the current screen width
+updatePokemonInfoClass();
+
+
   </script>
   <style>
     /* body {
@@ -214,6 +244,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     .chartContainer {
       padding-bottom: 0px;
+      padding-top: 100px;
+
     }
 
     .type1, .type2 {
@@ -269,7 +301,7 @@ document.addEventListener('DOMContentLoaded', () => {
       margin: 0 auto;
       /* position: absolute; */
       bottom: 0;
-      width: 100%;
+      width: 70%;
       color: darkgray;
     }
 
@@ -326,7 +358,24 @@ document.addEventListener('DOMContentLoaded', () => {
       text-align: center;
     }
 
-    
+    div#pokemonInfo {
+      padding-left: 100px;
+    }
+
+    /* Default styles for desktop */
+canvas {
+  width: 800px;
+  height: 600px;
+}
+
+/* Media query for mobile devices with a maximum width of 767px */
+/* @media screen and (max-width: 767px) {
+  canvas {
+    width: 400px;
+    height: 600px;
+  }
+} */
+
   </style>
 </body>
 </html>
