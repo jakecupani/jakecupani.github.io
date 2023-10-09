@@ -13,14 +13,14 @@
   </div>
 
   
-  <div id="pokemonInfo" class="hidden">
-      <div class="infoDiv">
+  <div id="pokemonInfo" class="hidden grid grid-cols-3">
+      <div class="infoDiv col-span-1">
         <img src="" id="pokemonSprite" alt="">
         <p id="pokeName"></p>
         <div id="pokemonTotalStats"></div>
       </div>
       
-      <div class="chartContainer">
+      <div class="chartContainer col-span-2">
         <canvas id="pokemonStatsChart"></canvas>
       </div>
          
@@ -85,7 +85,7 @@ function fetchPokemonStats(pokemonName) {
 
       const pokeColor = typeColors[pokeType];
       pokemonSprite.setAttribute("style","border: 4pt solid " + pokeColor)
-      pokeName.innerText = pokemonName;
+      pokeName.innerHTML = "<p><a href='https://bulbapedia.bulbagarden.net/wiki/" + pokemonName + "'>" + pokemonName + "</a></p>";
       pokeName.setAttribute("style","color:" + pokeColor);
 
       
@@ -94,7 +94,7 @@ function fetchPokemonStats(pokemonName) {
       // const types = data.type;
 
       // Set a fixed canvas size (e.g., 400x400)
-      ctx.canvas.width = 700;
+      ctx.canvas.width = 800;
       ctx.canvas.height = 500;
 
       pokemonChart = new Chart(ctx, {
@@ -201,7 +201,7 @@ document.addEventListener('DOMContentLoaded', () => {
       border-radius: 20px;
       box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 
-      width: 30%;
+      width: 100%;
       margin: 0 auto;
     }
 
