@@ -18,6 +18,7 @@
         <img src="" id="pokemonSprite" alt="">
         <p id="pokeName"></p>
         <div id="pokemonTotalStats"></div>
+        <div id="pokeTypes"></div>
         <div id="pokemonDesc"></div>
       </div>
       
@@ -48,6 +49,7 @@
   const pokemonSprite = document.getElementById('pokemonSprite');
   const pokemonTotalStats = document.getElementById('pokemonTotalStats');
   const pokemonDesc = document.getElementById('pokemonDesc');
+  const pokemonTypes = document.getElementById("pokeTypes");
 
 
 function fetchPokemonStats(pokemonName) {
@@ -93,6 +95,18 @@ function fetchPokemonStats(pokemonName) {
       console.log(data.species.flavor_text_entries);
       // pokemonDesc.innerText = data.species.flavor_text_entries;
 
+      if (data.types.length > 1) {
+        let type1 = data.types[0].type.name;
+        let type2 = data.types[1].type.name;
+
+        pokemonTypes.innerHTML = "<p class='type1' style='background-color:" + typeColors[type1] + "'>" + type1 + "</p>" + "<p class='type2' style='background-color:" + typeColors[type2] + "'>" + type2 + "</p>";
+      }
+      else {
+        let type1 = data.types[0].type.name;
+        pokemonTypes.innerHTML = "<p class='type1' style='background-color:" + typeColors[type1] + "'>" + type1 + "</p>"
+      }
+      
+
       
 
       // console.log(data.species.type);
@@ -100,7 +114,7 @@ function fetchPokemonStats(pokemonName) {
 
       // Set a fixed canvas size (e.g., 400x400)
       ctx.canvas.width = 800;
-      ctx.canvas.height = 500;
+      ctx.canvas.height = 600;
 
       pokemonChart = new Chart(ctx, {
         type: 'bar',
@@ -191,8 +205,22 @@ document.addEventListener('DOMContentLoaded', () => {
       backdrop-filter: blur(5px)!important;
     } */
 
+    #pokeTypes p {
+    margin: 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
     .chartContainer {
       padding-bottom: 0px;
+    }
+
+    .type1, .type2 {
+      text-transform: capitalize;
+      text-align: center;
+      padding: 20px;
+      border-radius: 20px;
     }
 
     #pokeName {
@@ -216,6 +244,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     .mb-4 {
       text-align: center;
+      padding-bottom: 20px;
     }
     body {
       padding: 20px;
@@ -249,10 +278,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
 
-    div {
-      padding: 20px;
-      /* margin: 100px; */
-    }
+    
 
     div div.grid {
       align-self: center;
