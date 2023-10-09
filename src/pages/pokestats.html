@@ -18,6 +18,7 @@
         <img src="" id="pokemonSprite" alt="">
         <p id="pokeName"></p>
         <div id="pokemonTotalStats"></div>
+        <div id="pokemonDesc"></div>
       </div>
       
       <div class="chartContainer col-span-2">
@@ -46,6 +47,7 @@
   const pokemonInfo = document.getElementById('pokemonInfo');
   const pokemonSprite = document.getElementById('pokemonSprite');
   const pokemonTotalStats = document.getElementById('pokemonTotalStats');
+  const pokemonDesc = document.getElementById('pokemonDesc');
 
 
 function fetchPokemonStats(pokemonName) {
@@ -87,6 +89,9 @@ function fetchPokemonStats(pokemonName) {
       pokemonSprite.setAttribute("style","border: 4pt solid " + pokeColor)
       pokeName.innerHTML = "<p><a href='https://bulbapedia.bulbagarden.net/wiki/" + pokemonName + "'>" + pokemonName + "</a></p>";
       pokeName.setAttribute("style","color:" + pokeColor);
+
+      console.log(data.species.flavor_text_entries);
+      // pokemonDesc.innerText = data.species.flavor_text_entries;
 
       
 
