@@ -22,4 +22,4 @@ Here's some of my personal favorite **✨ FREE ✨** resources for learning tech
 
 <hr>
 
-Looking for a good book on Data Visualization? One of my favorites is [Storytelling with Data by Cole Nussbaumer Knaflic](https://www.amazon.com/dp/1119002257/?coliid=I3DLIOR5J69QE0&amp;colid=KN1JX1X03V79&amp;psc=1&amp;ref_=cm_sw_r_cp_ud_lstpd_V6AHSPR7WBQW5E3MDXDE&_encoding=UTF8&tag=jcupani-20&linkCode=ur2&linkId=6d60739620912d88e7825f6719ca7e90&camp=1789&creative=9325).
+Want to help support my work, and also your own personal finance? Automate your investing for free with [M1 Finance](https://m1.finance/84bdbO8Vc0an).
