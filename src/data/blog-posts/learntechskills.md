@@ -22,4 +22,4 @@ Here's some of my personal favorite **✨ FREE ✨** resources for learning tech
 
 <hr>
 
-Want to help support my work, and also your own personal finance? Automate your investing for free with [M1 Finance](https://m1.finance/84bdbO8Vc0an).
+Want to help support my work, and also your own personal finance? Automate your investing and get **$250** for **FREE** with [M1 Finance](https://m1.finance/84bdbO8Vc0an).
