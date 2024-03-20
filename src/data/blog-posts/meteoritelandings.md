@@ -334,12 +334,6 @@ You can also check out the [Github Repo](https://github.com/jakecupani/meteorite
 
 If you have any suggestions, comments, or constructive criticism, please let me know. I am always aiming to improve my skills! 🤓 
 
-<hr> 
-
-Want to help support my work, and also your own personal finance? Automate your investing and get **$250** for **FREE** with [M1 Finance](https://m1.finance/84bdbO8Vc0an).
-
-<hr>
-
 ## References
 
 1. [ NASA & Kaggle. (2016, November 5). Meteorite Landings NASA.](https://www.kaggle.com/nasa/meteorite-landings)
