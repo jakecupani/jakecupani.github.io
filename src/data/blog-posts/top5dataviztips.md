@@ -5,9 +5,9 @@ description: Five easy tips for creating beautiful, effective, and high impact d
 tags: ['Data Visualization 📊','UX/UI 📐']
 ---
 
-> Data visualization is a powerful way to communicate complex information and insights to your audience. But how do we create effective and engaging data visualizations that stand out and get noticed?
-
 ## These are my Top 5 tips for creating beautiful and effective data visualizations:
+
+> Data visualization is a powerful way to communicate complex information and insights to your audience. But how do we create effective and engaging data visualizations that stand out and get noticed?
 
 **1. Choose the right visualization for the job ✅** 
 
