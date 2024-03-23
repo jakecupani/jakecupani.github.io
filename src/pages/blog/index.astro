@@ -107,6 +107,20 @@ console.log(allTags);
 
 </BaseLayoutBlog>
 
+<script>
+
+document.addEventListener("DOMContentLoaded", function() {
+  const filterInputs = document.querySelectorAll(".filter-input");
+
+  filterInputs.forEach(input => {
+    input.addEventListener("click", function() {
+      this.style.border = "2px solid white";
+    });
+  });
+});
+
+</script>
+
 <style>
   #logo {
     color: #fff!important;
