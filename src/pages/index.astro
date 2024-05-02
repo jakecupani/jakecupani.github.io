@@ -16,7 +16,7 @@ const permalink = Astro.site.href;
         ><a target='_blank' href="Jake Cupani Resume.pdf">Resume</a>
       </button>
 
-      <button class="button portfolioBtn"
+      <button id="portfolioBtn" class="button"
         ><a target='_blank' href="https://bento.com/jakecupani">UX Portfolio</a>
       </button>
       
@@ -62,8 +62,8 @@ const permalink = Astro.site.href;
 </BaseLayout>
 
 <style>
-  .portfolioBtn {
-    background-image: linear-gradient(135deg,#007dd7 0%,var(--emp-hover) 100%);
+  #portfolioBtn {
+    background-image: linear-gradient(135deg,#007dd7 0%,#6661ff 100%);
   }
 
   .socials img {
