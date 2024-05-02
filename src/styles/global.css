@@ -388,7 +388,9 @@ td {
   transition: 0.5s;
 }
 
-
+.home-copy button:hover {
+  text-decoration: 
+}
 
 .button a:hover {
   /* font-size: 1.75rem; */
