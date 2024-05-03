@@ -73,11 +73,11 @@ const permalink = Astro.site.href;
   }
 
   .socials img:nth-child(n+2):hover {
-    transform: rotate(-5deg);
+    transform: rotate(5deg);
     transition: 0.5s;
   }
 
-  .socials img:nth-child(-n+2):hover {
+  .socials img:nth-last-child(-n+2):hover {
     transform: rotate(5deg);
     transition: 0.5s;
   }
