@@ -72,12 +72,12 @@ const permalink = Astro.site.href;
     transition: 0.5s;
   }
 
-  .socials img:nth-child(n+2) {
+  .socials img:nth-child(n+2):hover {
     transform: rotate(5deg);
     transition: 0.5s;
   }
 
-  .socials img:hover {
+  .socials img:nth-child(-n+2):hover {
     transform: rotate(-5deg);
     transition: 0.5s;
   }
