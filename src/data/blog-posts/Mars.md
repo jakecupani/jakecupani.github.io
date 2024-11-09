@@ -1,5 +1,5 @@
 ---
-title: Mars Rover 
+title: Mars Rover Image Classification 🚀
 # publishDate: Friday, June 9th, 2023
 description: Image classification model project for Mars rover images.
 tags: ['Data Visualization 📊','Machine Learning 🤖']
