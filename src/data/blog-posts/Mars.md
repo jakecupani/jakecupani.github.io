@@ -1412,11 +1412,4 @@ As with any work, there are always limitations and ways in which the project cou
 3. NASA. (2021, July 7). Mars Curiosity Overview. NASA. Retrieved May 17, 2022, from https://mars.nasa.gov/msl/mission/overview/
 4. NASA. (2021, July 7). Mars Curiosity Home. NASA. Retrieved May 17, 2022, from https://mars.nasa.gov/msl/mission/home/
 5. NASA. (2021, July 7). Mars Curiosity Science. NASA. Retrieved May 17, 2022, from https://mars.nasa.gov/msl/mission/science/summary/
-6. Image classification  :   Tensorflow Core. TensorFlow. (2022, January 26). Retrieved May 17, 2022, from https://www.tensorflow.org/tutorials/images/classification#data_augmentation
-
-
-
-
-```python
-
-```
+6. Image classification  :   Tensorflow Core. TensorFlow. (2022, January 26). Retrieved May 17, 2022, from https://www.tensorflow.org/tutorials/images/classification
