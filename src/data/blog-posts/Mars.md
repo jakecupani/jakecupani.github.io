@@ -5,8 +5,6 @@ description: Image classification model project for Mars rover images.
 tags: ['Data Visualization 📊','Machine Learning 🤖']
 ---
 
-<hr>
-
 # Background
 
 Mars is an extremely interesting planet because it is thought to have been at one time similar in conditions to Earth.	 If the red planet previously had similar conditions, one might think that there is the potential for the existence, or past existence, of microbial life. The Mars Curiosity is one of the more recent Mars rovers developed by NASA, launched in November of 2011. Curiosity was launched with the aim of identifying if Mars ever had the right conditions for past microbial life [3]. With the many scientific instruments on the Mars Curiosity rover, the rover has taken a total of over 930,000 pictures [4]. These images could not only be used to make new scientific discoveries on Mars, but also to train new machine learning models to improve the technical capabilities of future martian rovers.
