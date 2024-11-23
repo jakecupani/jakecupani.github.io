@@ -70,9 +70,8 @@ const permalink = Astro.site.href;
     githubImage.addEventListener('mouseleave', () => {
       githubLabel.style.opacity = '0'; // Hide the label
     });
-  </script>
-<script>
-    // Select the image and label elements
+
+// Select the image and label elements
     const linkedinImage = document.getElementById('linkedin');
     const linkedinLabel = document.getElementById('linkedinlabel');
 
@@ -93,11 +92,12 @@ const permalink = Astro.site.href;
 }
 
 .social-labels p {
-    font-size: 12pt;
-    color: var(--primary-color);
-    background-color: white;
+    font-size: 10pt;
+    color: white;
+    background-color: #929dff;
     padding: 5px;
     border-radius: 10px;
+    margin-right: 20px;
 }
 
 #githublabel {
