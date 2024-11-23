@@ -31,7 +31,13 @@ const permalink = Astro.site.href;
         <!-- <a target='_blank' href="https://medium.com/@jcupani"><img id="medium" src="/assets/socials/medium-logo.png" alt="Medium Logo" height="150px" width="200px"></a> -->
         <!-- <a target='_blank' class="kofiBtnLight" href="https://ko-fi.com/jakecupani"><img width="175px" src="https://storage.ko-fi.com/cdn/brandasset/kofi_bg_tag_white.png?_gl=1*1dx7yya*_ga*MTQyNzYwMjMxLjE2OTQ5Nzk5NDA.*_ga_M13FZ7VQ2C*MTcxNDY5NDUzMC4zNi4xLjE3MTQ2OTQ1NDIuNDguMC4w" alt="Support Me"></a>         -->
       </div>
-      
+
+
+  <div class="social-labels">
+          <p id="githublabel" class="social-label">GitHub</p>
+          <p id="linkedinlabel" class="">LinkedIn</p>
+          
+      </div>
       
     </div>
 
@@ -52,6 +58,19 @@ const permalink = Astro.site.href;
 
 </BaseLayout>
 <style>
+.social-labels {
+  display: flex;
+  color: currentcolor;
+}
+
+#githublabel {
+  opacity: 0;
+}
+
+#linkedinlabel {
+  opacity: 0;
+}
+
   .home-copy button {
     margin-right: 20px;
     margin-bottom: 20px;
