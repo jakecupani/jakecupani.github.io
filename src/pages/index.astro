@@ -71,18 +71,39 @@ const permalink = Astro.site.href;
       githubLabel.style.opacity = '0'; // Hide the label
     });
   </script>
+<script>
+    // Select the image and label elements
+    const linkedinImage = document.getElementById('linkedin');
+    const linkedinLabel = document.getElementById('linkedinlabel');
+
+    // Add event listeners for hover effects
+    linkedinImage.addEventListener('mouseenter', () => {
+      linkedinLabel.style.opacity = '1'; // Show the label
+    });
+
+    linkedinImage.addEventListener('mouseleave', () => {
+      linkedinLabel.style.opacity = '0'; // Hide the label
+      linkedinLabel.style.transition = '0.2s';
+    });
+  </script>
 <style>
 .social-labels {
   display: flex;
   color: currentcolor;
 }
 
+.social-labels p {
+    font-size: 12pt;
+}
+
 #githublabel {
   opacity: 0;
+  transition: 0.2s;
 }
 
 #linkedinlabel {
   opacity: 0;
+  transition: 0.2s;
 }
 
   .home-copy button {
