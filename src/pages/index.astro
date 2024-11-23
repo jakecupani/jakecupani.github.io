@@ -57,6 +57,20 @@ const permalink = Astro.site.href;
 
 
 </BaseLayout>
+<script>
+    // Select the image and label elements
+    const githubImage = document.getElementById('github');
+    const githubLabel = document.getElementById('githublabel');
+
+    // Add event listeners for hover effects
+    githubImage.addEventListener('mouseenter', () => {
+      githubLabel.style.opacity = '1'; // Show the label
+    });
+
+    githubImage.addEventListener('mouseleave', () => {
+      githubLabel.style.opacity = '0'; // Hide the label
+    });
+  </script>
 <style>
 .social-labels {
   display: flex;
