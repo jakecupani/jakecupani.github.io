@@ -59,7 +59,7 @@ const permalink = Astro.site.href;
 
 
 </BaseLayout>
-<script>
+<!-- <script>
     // Select the image and label elements
     const githubImage = document.getElementById('github');
     const githubLabel = document.getElementById('githublabel');
@@ -100,6 +100,22 @@ const permalink = Astro.site.href;
       wealthworthLabel.style.opacity = '0'; // Hide the label
       wealthworthLabel.style.transition = '0.2s';
     });
+  </script> -->
+
+  <script>
+    const elements = ['github', 'linkedin', 'wealthworth'];
+
+elements.forEach(id => {
+  const image = document.getElementById(id);
+  const label = document.getElementById(`${id}label`);
+  
+  ['mouseenter', 'mouseleave'].forEach(event => {
+    image.addEventListener(event, () => {
+      label.style.opacity = event === 'mouseenter' ? '1' : '0';
+      label.style.transition = '0.2s';
+    });
+  });
+});
   </script>
 <style>
 .social-labels {
