@@ -5,8 +5,6 @@ title: NASA Meteorite Analysis
 tags: ['Data Visualization 📊','Data Science 📈']
 ---
 
-## **Introduction** 
-
 ## **Motivation**
 
 The heart of my research project comes from my understanding and passion for Astronomy. In fact, in my undergraduate studies at the University of Maryland, I minored in Astronomy and interned at NASA Goddard for two years. Due to these experiences, I thought that this class project would be a great opportunity to apply the statistical methods learned in class to some real world astronomical data from NASA. Meteorites are much more than just space rocks, they can provide us with crucial information about everything from solar system formation to the origins of life on Earth (American Museum of Natural History, n.d.). Furthermore, according to the Planetary Science Institute, approximately 500 meteorites land on the Earth’s surface every year with only 10 recovered (Planetary Science Institute, 2019). This approximation tells us that there must be plenty of meteorites still to be discovered, which means there’s still lots of insights yet to be made from meteorites. These factors are what inspired me to pursue this project. 
@@ -23,7 +21,7 @@ I have addressed 4 main research questions in my analysis. The first question as
 
 ## **Methodology**
 
-Data Collection:
+### **Data Collection**
 
 The dataset for my analysis is the Meteorite Landings dataset developed by NASA. The data was downloaded directly from NASA’s Kaggle repository (NASA & Kaggle, 2016). The dataset is also directly available from NASA’s Data Portal. The data was in normal Comma Separated Value format (CSV), which made it relatively easy to import into Python. There were also over 45,000 rows of data, which provided the analysis with plenty of samples to work with. The programming for this analysis was done via Google Colab for easy access. 
 
@@ -32,10 +30,40 @@ The dataset for my analysis is the Meteorite Landings dataset developed by NASA.
 According to the Kaggle repository, some of the date information was incorrectly parsed when the dataset was created, so only data from years 1800-2016 were used. Additionally, some of the geolocation data had 0 degrees longitude and latitude, and were said to be treated as NA. Any rows with NA values in any variables were filtered out using the .dropna() function in Pandas to ensure data validity. In order to address one of my research questions, a new column had to be made to easily distinguish which hemisphere (Northern or Southern) the meteorite was found in or fell. Any other columns that were not used were dropped. 
 
 Summary of Variables: 
-|   | Mass  | Year  | reclat  | reclong  | GeoLocation  | Hemisphere  |
-| -- | -- | -- | -- | -- | -- | -- |
-| Description  | The mass of the meteorite in grams.  | The year the meteorite fell or was found.  | Latitude coordinate.  | Longitude coordinate.  | Set of longitude and latitude coordinates.  | Hemisphere in which a meteorite was found or fell.  |
-| Data Type  | INT  | INT  | FLOAT  | FLOAT  | SET  | STR  |
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th>Mass</th>
+      <th>Year</th>
+      <th>reclat</th>
+      <th>reclong</th>
+      <th>GeoLocation</th>
+      <th>Hemisphere</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Description</td>
+      <td>The mass of the meteorite in grams.</td>
+      <td>The year the meteorite fell or was found.</td>
+      <td>Latitude coordinate.</td>
+      <td>Longitude coordinate.</td>
+      <td>Set of longitude and latitude coordinates.</td>
+      <td>Hemisphere in which a meteorite was found or fell.</td>
+    </tr>
+    <tr>
+      <td>Data Type</td>
+      <td>INT</td>
+      <td>INT</td>
+      <td>FLOAT</td>
+      <td>FLOAT</td>
+      <td>SET</td>
+      <td>STR</td>
+    </tr>
+  </tbody>
+</table>
+
 
 
 ## **Solution Framework**
@@ -59,6 +87,8 @@ Key Points (Results)
 By separating the notebook into these different sections, I was able to clearly address all of my research questions in an organized manner. Additionally, for the geographic coordinate plots, I defined a function that used a dataframe as an argument so that I can easily reuse the code and plot graphs for different time periods. Furthermore, I have commented much of my code to ensure that anyone reading it can easily follow along with my thought process. This is how I organized my data pipeline. 
 
 ## **Experiment Result**
+
+</br>
 
 ### **Experiment Setup**
 
@@ -104,9 +134,9 @@ From these plots we can see that there seem to be more large mass meteorites in 
 
 This finding led me to inquire whether there is a statistically significant difference in the masses of northern and southern hemisphere meteorites. From this research question I developed my null hypothesis and alternative hypothesis: 
 
-H0: There is no difference between the masses of meteorites in the hemispheres. (avg difference 0). 
+>**H0: There is no difference between the masses of meteorites in the hemispheres. (avg difference 0)**
 
-HA: There is a difference between the masses of meteorites in the hemispheres. (avg difference!=0).. 
+>**HA: There is a difference between the masses of meteorites in the hemispheres. (avg difference!=0)**
 
 I then conducted a hypothesis test and calculated the p-value with an alpha set at 0.05 to test for statistical significance. Since my p-value was around 0.0011, we can reject the null hypothesis and conclude that there is a significant difference in the masses of meteorites in the Northern and Southern Hemisphere. More research is needed to determine if there is any reason for this relationship. 
 
@@ -114,7 +144,7 @@ I then conducted a hypothesis test and calculated the p-value with an alpha set 
 
 Although there were many interesting results from this experiment, there were also some limitations that need to be taken into account. The first limitation was that the highly skewed distribution of masses might impact the validity of the hypothesis test that was conducted since it is not normally distributed. However, in future analysis this could possibly be fixed by applying a transformation of the data, such as a log transformation. Additionally, while the most frequent meteorite landing regions were identified, future analysis could go into finer detail as to what specific areas of these regions experience more landings. This would give us greater insight into if there are any specific places in the world that experience more meteorite landings than others. Lastly, my limited knowledge on meteorite class types made it hard to use that variable that was originally present in the data. This variable could prove to be useful in a future analysis. 
 
-## Conclusion
+## **Conclusion**
 
 Overall, I believe that the results that the experiments yielded were very interesting and I thoroughly enjoyed researching this topic. This research has reaffirmed to me that there is still much more we can learn about meteorites and what information they gleam about other astronomical processes. Although there are some limitations to this study, I am confident that further research would greatly improve these experiments. 
 
