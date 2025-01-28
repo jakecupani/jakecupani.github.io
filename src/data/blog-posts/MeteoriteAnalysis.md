@@ -1,5 +1,5 @@
 ---
-title: NASA Meteorite Analysis 
+title: NASA Meteorite Analysis ☄️
 # publishDate: Friday, June 9th, 2023
 # description: Five easy tips for creating beautiful, effective, and high impact data visualizations and dashboards.
 tags: ['Data Visualization 📊','Data Science 📈']
