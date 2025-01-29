@@ -30,39 +30,29 @@ The dataset for my analysis is the Meteorite Landings dataset developed by NASA.
 According to the Kaggle repository, some of the date information was incorrectly parsed when the dataset was created, so only data from years 1800-2016 were used. Additionally, some of the geolocation data had 0 degrees longitude and latitude, and were said to be treated as NA. Any rows with NA values in any variables were filtered out using the .dropna() function in Pandas to ensure data validity. In order to address one of my research questions, a new column had to be made to easily distinguish which hemisphere (Northern or Southern) the meteorite was found in or fell. Any other columns that were not used were dropped. 
 
 Summary of Variables: 
-<table>
-  <thead>
-    <tr>
-      <th></th>
-      <th>Mass</th>
-      <th>Year</th>
-      <th>reclat</th>
-      <th>reclong</th>
-      <th>GeoLocation</th>
-      <th>Hemisphere</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Description</td>
-      <td>The mass of the meteorite in grams.</td>
-      <td>The year the meteorite fell or was found.</td>
-      <td>Latitude coordinate.</td>
-      <td>Longitude coordinate.</td>
-      <td>Set of longitude and latitude coordinates.</td>
-      <td>Hemisphere in which a meteorite was found or fell.</td>
-    </tr>
-    <tr>
-      <td>Data Type</td>
-      <td>INT</td>
-      <td>INT</td>
-      <td>FLOAT</td>
-      <td>FLOAT</td>
-      <td>SET</td>
-      <td>STR</td>
-    </tr>
-  </tbody>
-</table>
+- **Mass**: 
+  - Description: The mass of the meteorite in grams.
+  - Data Type: INT
+
+- **Year**: 
+  - Description: The year the meteorite fell or was found.
+  - Data Type: INT
+
+- **reclat**: 
+  - Description: Latitude coordinate.
+  - Data Type: FLOAT
+
+- **reclong**: 
+  - Description: Longitude coordinate.
+  - Data Type: FLOAT
+
+- **GeoLocation**: 
+  - Description: Set of longitude and latitude coordinates.
+  - Data Type: SET
+
+- **Hemisphere**: 
+  - Description: Hemisphere in which a meteorite was found or fell.
+  - Data Type: STR
 
 
 
