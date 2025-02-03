@@ -150,4 +150,4 @@ Overall, I believe that the results that the experiments yielded were very inter
 
 </br>
 
-If you enjoyed this blog post, consider [supporting me on Ko-Fi](https://ko-fi.com/jakecupani)!
+If you enjoyed this blog post, consider [supporting me on Ko-Fi](https://dub.sh/SYe1qWe)!

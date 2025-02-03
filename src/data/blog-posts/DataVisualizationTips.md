@@ -39,4 +39,4 @@ Sometimes less is more. Keeping complexity of individual pages to a minimum will
 
  </br>
 
- If you enjoyed this blog post, consider [supporting me on Ko-Fi](https://ko-fi.com/jakecupani)!
+ If you enjoyed this blog post, consider [supporting me on Ko-Fi](https://dub.sh/SYe1qWe)!
