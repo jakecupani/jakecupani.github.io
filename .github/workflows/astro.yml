@@ -59,7 +59,7 @@ jobs:
           cache-dependency-path: ${{ env.BUILD_PATH }}/package-lock.json
       - run: npm install && npm run build
         working-directory: ${{ env.BUILD_PATH }}
-      - uses: actions/upload-pages-artifact@v1
+      - uses: actions/upload-pages-artifact@v4
         with:
           path: ${{ env.BUILD_PATH }}/dist
 
