@@ -30,7 +30,7 @@ const permalink = Astro.site.href;
         <!-- <a target='_blank' href="https://apps.apple.com/us/developer/jake-cupani/id1730791358"><img id="appstore" src="/assets/socials/appstore.png" alt="Apple App Store Logo" height="50px" width="50px"></a>  -->
         <!-- <a target='_blank' href="https://dev.to/jakecupani"><img id="dev" src="/assets/socials/dev.png" alt="Dev Logo" height="40px" width="60px"></a> -->
         <!-- <a target='_blank' href="https://medium.com/@jcupani"><img id="medium" src="/assets/socials/medium-logo.png" alt="Medium Logo" height="150px" width="200px"></a> -->
-        <a target='_blank' class="kofiBtnLight" href="https://ko-fi.com/jakecupani"><img width="175px" src="https://storage.ko-fi.com/cdn/brandasset/kofi_bg_tag_white.png?_gl=1*1dx7yya*_ga*MTQyNzYwMjMxLjE2OTQ5Nzk5NDA.*_ga_M13FZ7VQ2C*MTcxNDY5NDUzMC4zNi4xLjE3MTQ2OTQ1NDIuNDguMC4w" alt="Support Me"></a>        
+        <a target='_blank' class="kofiBtnLight" href="https://ko-fi.com/jakecupani"><img id="kofi-btn" width="175px" src="https://storage.ko-fi.com/cdn/brandasset/kofi_bg_tag_white.png?_gl=1*1dx7yya*_ga*MTQyNzYwMjMxLjE2OTQ5Nzk5NDA.*_ga_M13FZ7VQ2C*MTcxNDY5NDUzMC4zNi4xLjE3MTQ2OTQ1NDIuNDguMC4w" alt="Support Me"></a>        
       </div>
 
 
@@ -60,7 +60,7 @@ const permalink = Astro.site.href;
 </BaseLayout>
 
   <script>
-    const elements = ['github', 'linkedin', 'appstore'];
+    const elements = ['github', 'linkedin', 'appstore',"kofi-btn"];
 
   elements.forEach(id => {
     const image = document.getElementById(id);
@@ -86,6 +86,10 @@ const permalink = Astro.site.href;
     padding: 5px;
     border-radius: 10px;
     margin-right: 35px;
+}
+
+#kofi-btn {
+  margin-top: 10px;
 }
 
 img#appstore {
