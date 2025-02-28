@@ -147,7 +147,3 @@ Overall, I believe that the results that the experiments yielded were very inter
 3. [Planetary Science Institute. (2019, April 16). *FAQ - Meteoroids/Meteorites*. Retrieved from ](https://www.psi.edu/epo/faq/meteor.html#:%7E:text=To%20date%2C%20there%20have%20been,less%20than%2010%20are%20recovered)
 
 4. Google Colab Link: [Meteorite Landings Analysis Notebook](https://colab.research.google.com/drive/1oaIU6OETfJVevdWVKvzq2npXM3fNgg0G?usp=sharing)
-
-</br>
-
-If you enjoyed this blog post, consider [supporting me on Ko-Fi](https://dub.sh/SYe1qWe)!
