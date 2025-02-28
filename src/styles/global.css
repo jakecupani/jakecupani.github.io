@@ -223,6 +223,10 @@ img {
   height: auto;
 }
 
+#kofi-gif {
+  margin-bottom: -20px;
+}
+
 hr {
   padding: 0;
   border: 0;
