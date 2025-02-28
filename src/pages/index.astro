@@ -4,6 +4,23 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 const title = "Jake Cupani";
 const description = "Jake Cupani's personal website.";
 const permalink = Astro.site.href;
+
+const elements = ['github', 'linkedin', 'appstore', 'kofi-btn'];
+
+elements.forEach(id => {
+  const image = document.getElementById(id);
+  const label = document.getElementById(`${id}label`);
+
+  // Check if both elements exist to avoid null reference errors
+  if (image && label) {
+    ['mouseenter', 'mouseleave'].forEach(eventType => {
+      image.addEventListener(eventType, () => {
+        // Adjust opacity based on the event type
+        label.style.opacity = eventType === 'mouseenter' ? '1' : '0';
+      });
+    });
+  }
+});
 ---
 
 <BaseLayout title={title} description={description} permalink={permalink}>
@@ -60,25 +77,7 @@ const permalink = Astro.site.href;
 
 </BaseLayout>
 
-  <script>
-    const elements = ['github', 'linkedin', 'appstore', 'kofi-btn'];
-
-elements.forEach(id => {
-  const image = document.getElementById(id);
-  const label = document.getElementById(`${id}label`);
-
-  // Check if both elements exist to avoid null reference errors
-  if (image && label) {
-    ['mouseenter', 'mouseleave'].forEach(eventType => {
-      image.addEventListener(eventType, () => {
-        // Adjust opacity based on the event type
-        label.style.opacity = eventType === 'mouseenter' ? '1' : '0';
-      });
-    });
-  }
-});
-
-  </script>
+  
 <style>
 .social-labels {
   display: flex;
