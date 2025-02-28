@@ -11,7 +11,7 @@ export async function getStaticPaths() {
   }));
 }
 
-const { Content, frontmatter, headings } = Astro.props.post;
+const { Content, frontmatter } = Astro.props.post;
 const { title, description, publishDate } = frontmatter;
 const { slug } = getPostData(Astro.props.post);
 const permalink = `${Astro.site.href}${slug}`;
@@ -23,91 +23,53 @@ const permalink = `${Astro.site.href}${slug}`;
     <h1>{title}</h1>
     <hr />
   </header>
-  <div class="layout">
-    <nav class="toc">
-      <ul>
-        {headings.map((heading) => (
-          <li style={`margin-left: ${heading.depth * 10}px;`}>
-            <a href={`#${heading.slug}`}>{heading.text}</a>
-          </li>
-        ))}
-      </ul>
-    </nav>
-    <div class="container">
-      <article class="content">
-        <Content />
-      </article>
-      <hr />
-      <p>Enjoyed this blog post? Consider <a href="https://dub.sh/SYe1qWe">supporting me on Ko-Fi</a>! 
-        <img id="kofi-gif" src="/assets/socials/kofi.gif" width="50px" height="50px" alt="Support me on Ko-Fi">
-      </p>
-      <Bio />
-    </div>
+  <div class="container">
+    <article class="content">
+      <Content />
+    </article>
+    <hr />
+    <p>Enjoyed this blog post? Consider <a href="https://dub.sh/SYe1qWe">supporting me on Ko-Fi</a>! <img id="kofi-gif" src="/assets/socials/kofi.gif" width="50px" height="50px" alt="Support me on Ko-Fi"></p>
+    <Bio />
   </div>
+  
 </BaseLayout>
+<style>
+  .container {
+    box-shadow: #0003 0px 8px 2px -2px!important;
+  }
+
+  main header {
+    width: 75%;
+    margin: 0 auto;
+  } 
+
+  header {
+    text-align: center;
+  }
+
+  /* header h1 {
+    margin-bottom: 0.7em;
+  } */
+
+  h1 {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  header p {
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    font-family: var(--font-family-sans);
+    font-weight: 600;
+  }
+
+  header hr {
+    min-width: 100px;
+    width: 30%;
+  }
+</style>
 
 <style>
-.layout {
-  display: flex;
-}
-
-.toc {
-  position: sticky;
-  top: 100px;
-  width: 200px;
-  margin-right: 20px;
-}
-
-.toc ul {
-  list-style: none;
-  padding: 0;
-}
-
-.toc li {
-  margin-bottom: 8px;
-}
-
-.toc a {
-  text-decoration: none;
-  color: var(--link-color);
-}
-
-.container {
-  box-shadow: #0003 0px 8px 2px -2px!important;
-  flex-grow: 1;
-}
-
-main header {
-  width: 75%;
-  margin: 0 auto;
-} 
-
-header {
-  text-align: center;
-}
-
-h1 {
-  width: 70%;
-  margin: 0 auto;
-}
-
-header p {
-  color: var(--text-secondary);
-  text-transform: uppercase;
-  font-family: var(--font-family-sans);
-  font-weight: 600;
-}
-
-header hr {
-  min-width: 100px;
-  width: 30%;
-}
-
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
-}
-
 /* Basic table styles */
 table {
   width: 100%;
@@ -126,6 +88,7 @@ thead {
 
 thead th {
   padding: 12px;
+  text-align: left;
 }
 
 /* Table body styling */
@@ -144,9 +107,45 @@ tbody tr:hover {
 /* Table cell styling */
 td, th {
   padding: 12px;
+}
+
+/* Active row styling */
+tbody tr.active-row {
+  font-weight: bold;
+  color: #009879;
+}
 
 /* Responsive adjustments */
-@media (max-width:600px){
-table,thead tbody td tr{
-display:block width100%
-``
+@media (max-width: 600px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tbody tr {
+    margin-bottom: 10px;
+    border-bottom: none;
+    background-color: white;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(50%, auto));
+    gap: .5em;
+    text-align:left;
+    align-items:center
+   }
+  
+   tbody td::before {
+     content: attr(data-label);
+     font-weight:bold
+   }
+}
+</style>
+
