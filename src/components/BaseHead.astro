@@ -72,4 +72,25 @@ crossorigin="anonymous"></script>
   gtag('config', 'G-4HG7DN7EG2');
 </script>
 
+<script>
+  const elements = ['github', 'linkedin', 'appstore', 'kofi'];
+  console.log(elements)
+
+elements.forEach(id => {
+const image = document.getElementById(id);
+const label = document.getElementById(`${id}label`);
+
+// Check if both elements exist to avoid null reference errors
+if (image && label) {
+  ['mouseenter', 'mouseleave'].forEach(eventType => {
+    image.addEventListener(eventType, () => {
+      // Adjust opacity based on the event type
+      label.style.opacity = eventType === 'mouseenter' ? '1' : '0';
+      console.log("hover")
+    });
+  });
+}
+});
+</script>
+
 <!-- Kofi  -->
