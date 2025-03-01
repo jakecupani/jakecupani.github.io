@@ -11,19 +11,42 @@ export async function getStaticPaths() {
   }));
 }
 
+export function initScrollFade() {
+  const elements = document.querySelectorAll('.fade-in');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  });
+
+  elements.forEach((el) => observer.observe(el));
+}
+
 const { Content, frontmatter } = Astro.props.post;
 const { title, description, publishDate } = frontmatter;
 const { slug } = getPostData(Astro.props.post);
 const permalink = `${Astro.site.href}${slug}`;
+
+const { Content, frontmatter } = Astro.props.post;
+const { title, description, publishDate } = frontmatter;
+
+setTimeout(() => {
+  if (typeof window !== "undefined") {
+    initScrollFade();
+  }
+}, 0);
 ---
 
 <BaseLayout title={title} description={description} permalink={permalink} current="blog">
-  <header>
+  <header class="fade-in">
     <!-- <p>{publishDate}</p> -->
     <h1>{title}</h1>
     <hr />
   </header>
-  <div class="container">
+  <div class="container fade-in">
     <article class="content">
       <Content />
     </article>
