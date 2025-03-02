@@ -108,38 +108,32 @@ For my first experiment, which looks at frequency of meteorite landings over dif
 
 In my analysis, I was able address all of the questions initially stated. The results from this analysis are also listed in the “Key Points” section of my Google Colab notebook for easy access. The first question asked what years had the highest and lowest frequencies of meteorite landings in the past and present. In this analysis, I created line plots for each time period to show the change in frequency over time. 
 
+![Present Frequencies of Meteorite Landings by Year](https://raw.githubusercontent.com/jakecupani/jakecupani.github.io/refs/heads/master/public/assets/meteorite-landings/2.png)
 
-![Image 1](public/assets/meteorite-landings/1.png)
-
-![](public/assets/meteorite-landings/2.png)
+![Present Frequencies of Meteorite Landings](https://raw.githubusercontent.com/jakecupani/jakecupani.github.io/refs/heads/master/public/assets/meteorite-landings/3.png)
 
 As we can see from the figures above, it was found that 1937 and 2003 were the years with the highest frequency of meteorite landings in the past and present respectively,while 1901 and 2013 had the least number of meteorite landings in the past and present respectively.The next result I found in my analysis was that there was a general trend of meteorites landing in the western US, Southern South America, Africa, Southern Australia, and parts of Europe. Another major trend that I noticed is that most meteorites seem to land along the 25°N and -25°S latitude lines. These main trends can be seen by directly comparing the plots of present and past meteorites, as shown below.
 
-<!-- 75 50 25 0 -25 -50 -75 -150 -100 -50 0 50 100 150  -->
-![](public/assets/meteorite-landings/3.png)
+![Bar Plot by Year](https://raw.githubusercontent.com/jakecupani/jakecupani.github.io/refs/heads/master/public/assets/meteorite-landings/4.png)
 
-Present Meteorites(Fig.4)
+Present Meteorites (Fig.4)
 
-<!-- 75 50 25 0 -25 -50 -75 -150 -100 -50 0 50 100 150  -->
-![](public/assets/meteorite-landings/3.png)
+![](https://raw.githubusercontent.com/jakecupani/jakecupani.github.io/refs/heads/master/public/assets/meteorite-landings/Fig4.png)
 
 The next research finding that I made applies to the masses of the meteorites. It was found that a majority of the meteorite masses fall below 250 grams (Fig. 5). 
 
-
-![](public/assets/meteorite-landings/4.png)
+![](https://raw.githubusercontent.com/jakecupani/jakecupani.github.io/refs/heads/master/public/assets/meteorite-landings/Fig5.png)
 
 From this distribution plot, we can tell that the distribution of masses of meteorites is highly skewed to the right and is unimodal. If we plot the meteorites that are abnormally large compared to the meteorites that fall below 250 grams, we get the following plots (Fig. 6 & 7). 
 
 
-![](public/assets/meteorite-landings/5.png)
+![](https://raw.githubusercontent.com/jakecupani/jakecupani.github.io/refs/heads/master/public/assets/meteorite-landings/Fig6.png)
 
-
-![](public/assets/meteorite-landings/6.png)
+![](https://raw.githubusercontent.com/jakecupani/jakecupani.github.io/refs/heads/master/public/assets/meteorite-landings/Fig7.png)
 
 From these plots we can see that there seem to be more large mass meteorites in Southern Africa, the US, and parts of South America. Lastly, I found in my analysis the differences between meteorites in the Northern and Southern Hemispheres respectively. For example, by plotting the average masses of northern and southern hemisphere meteories, we can see that Northern hemisphere meteorites have a much higher average mass than Southern hemisphere meteorites (Fig. 8). 
 
-
-![](public/assets/meteorite-landings/7.png)
+![](https://raw.githubusercontent.com/jakecupani/jakecupani.github.io/refs/heads/master/public/assets/meteorite-landings/Fig8.png)
 
 This finding led me to inquire whether there is a statistically significant difference in the masses of northern and southern hemisphere meteorites. From this research question I developed my null hypothesis and alternative hypothesis: 
 
