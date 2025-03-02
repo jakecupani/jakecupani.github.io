@@ -31,11 +31,7 @@ The dataset for my analysis is the Meteorite Landings dataset developed by NASA.
 
 According to the Kaggle repository, some of the date information was incorrectly parsed when the dataset was created, so only data from years 1800-2016 were used. Additionally, some of the geolocation data had 0 degrees longitude and latitude, and were said to be treated as NA. Any rows with NA values in any variables were filtered out using the .dropna() function in Pandas to ensure data validity. In order to address one of my research questions, a new column had to be made to easily distinguish which hemisphere (Northern or Southern) the meteorite was found in or fell. Any other columns that were not used were dropped. 
 
-<table>
-<thead></thead>
-</table>
-
-
+Summary of variables:
 <table>
   <thead>
     <tr>
