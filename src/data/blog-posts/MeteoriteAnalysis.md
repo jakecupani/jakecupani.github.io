@@ -21,6 +21,8 @@ I have addressed 4 main research questions in my analysis. The first question as
 
 ## **Methodology**
 
+<br>
+
 ### **Data Collection**
 
 The dataset for my analysis is the Meteorite Landings dataset developed by NASA. The data was downloaded directly from NASA’s Kaggle repository (NASA & Kaggle, 2016). The dataset is also directly available from NASA’s Data Portal. The data was in normal Comma Separated Value format (CSV), which made it relatively easy to import into Python. There were also over 45,000 rows of data, which provided the analysis with plenty of samples to work with. The programming for this analysis was done via Google Colab for easy access. 
@@ -29,30 +31,52 @@ The dataset for my analysis is the Meteorite Landings dataset developed by NASA.
 
 According to the Kaggle repository, some of the date information was incorrectly parsed when the dataset was created, so only data from years 1800-2016 were used. Additionally, some of the geolocation data had 0 degrees longitude and latitude, and were said to be treated as NA. Any rows with NA values in any variables were filtered out using the .dropna() function in Pandas to ensure data validity. In order to address one of my research questions, a new column had to be made to easily distinguish which hemisphere (Northern or Southern) the meteorite was found in or fell. Any other columns that were not used were dropped. 
 
-Summary of Variables: 
-- **Mass**: 
-  - Description: The mass of the meteorite in grams.
-  - Data Type: INT
+<table>
+<thead></thead>
+</table>
 
-- **Year**: 
-  - Description: The year the meteorite fell or was found.
-  - Data Type: INT
 
-- **reclat**: 
-  - Description: Latitude coordinate.
-  - Data Type: FLOAT
-
-- **reclong**: 
-  - Description: Longitude coordinate.
-  - Data Type: FLOAT
-
-- **GeoLocation**: 
-  - Description: Set of longitude and latitude coordinates.
-  - Data Type: SET
-
-- **Hemisphere**: 
-  - Description: Hemisphere in which a meteorite was found or fell.
-  - Data Type: STR
+<table>
+  <thead>
+    <tr>
+      <th>Variable</th>
+      <th>Description</th>
+      <th>Data Type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Mass</td>
+      <td>The mass of the meteorite in grams.</td>
+      <td>INT</td>
+    </tr>
+    <tr>
+      <td>Year</td>
+      <td>The year the meteorite fell or was found.</td>
+      <td>INT</td>
+    </tr>
+    <tr>
+      <td>reclat</td>
+      <td>Latitude coordinate.</td>
+      <td>FLOAT</td>
+    </tr>
+    <tr>
+      <td>reclong</td>
+      <td>Longitude coordinate.</td>
+      <td>FLOAT</td>
+    </tr>
+    <tr>
+      <td>GeoLocation</td>
+      <td>Set of longitude and latitude coordinates.</td>
+      <td>SET</td>
+    </tr>
+    <tr>
+      <td>Hemisphere</td>
+      <td>Hemisphere in which a meteorite was found or fell.</td>
+      <td>STR</td>
+    </tr>
+  </tbody>
+</table>
 
 
 
