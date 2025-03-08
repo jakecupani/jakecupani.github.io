@@ -20,7 +20,7 @@ const permalink = `${Astro.site.href}${slug}`;
 <BaseLayout title={title} description={description} permalink={permalink} current="blog">
   <header>
     <!-- <p>{publishDate}</p> -->
-    <h1>{title}</h1>
+    <h1 id="top">{title}</h1>
     <hr />
   </header>
   <div class="container">
@@ -29,7 +29,7 @@ const permalink = `${Astro.site.href}${slug}`;
     </article>
     <hr />
     <p>Enjoyed this blog post? Consider <a href="https://dub.sh/SYe1qWe">supporting me on Ko-Fi</a>! <img id="kofi-gif" src="/assets/socials/kofi.gif" width="50px" height="50px" alt="Support me on Ko-Fi"></p>
-    <div id="arrow-bg"><img src="/assets/arrow.svg" alt=""></div>
+    <div id="arrow-bg"><a href="#top"><img height="50px" width="100%" src="/assets/arrow.svg" alt="Go To Top of Page"></a></div>
     <Bio />
   </div>
   
@@ -53,8 +53,11 @@ const permalink = `${Astro.site.href}${slug}`;
   } */
 
   #arrow-bg {
-    background-color: var(--primary-color);
+    background-color: var(--text-secondary);
     padding: 10px;
+    height: 70px;
+    width: 70px;
+    border-radius: 5px;
   }
 
   h1 {
