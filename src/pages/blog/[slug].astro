@@ -29,6 +29,7 @@ const permalink = `${Astro.site.href}${slug}`;
     </article>
     <hr />
     <p>Enjoyed this blog post? Consider <a href="https://dub.sh/SYe1qWe">supporting me on Ko-Fi</a>! <img id="kofi-gif" src="/assets/socials/kofi.gif" width="50px" height="50px" alt="Support me on Ko-Fi"></p>
+    <div id="arrow-bg"><img src="/assets/arrow.svg" alt=""></div>
     <Bio />
   </div>
   
@@ -50,6 +51,11 @@ const permalink = `${Astro.site.href}${slug}`;
   /* header h1 {
     margin-bottom: 0.7em;
   } */
+
+  #arrow-bg {
+    background-color: var(--primary-color);
+    padding: 10px;
+  }
 
   h1 {
     width: 70%;
