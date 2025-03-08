@@ -2,7 +2,7 @@
 title: Top 5 Tips for Creating Effective Data Visualizations 📊 
 publishDate: Friday, June 9th, 2023
 description: Five easy tips for creating beautiful, effective, and high impact data visualizations and dashboards.
-tags: ['Data Visualization 📊','UX/UI 🎨', 'Data Science 📈']
+tags: ['UX/UI 🎨', 'Data Science 📈']
 ---
 
 ## These are my Top 5 tips for creating beautiful and effective data visualizations:
