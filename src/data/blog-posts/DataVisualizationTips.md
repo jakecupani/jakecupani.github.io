@@ -9,7 +9,9 @@ tags: ['UX/UI 🎨', 'Data Science 📈']
 
 > Data visualization is a powerful way to communicate complex information and insights to your audience. But how do we create effective and engaging data visualizations that stand out and get noticed?
 
+<span id="test">
 **1. Choose the right visualization for the job ✅** 
+</span>
 
 Different types of visualizations are better for different contexts. For example, bar charts are good for comparing categories, line graphs are good for showing trends over time, and maps are good for showing geographic data. Choose the format that best suits your data and your message.
 
