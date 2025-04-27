@@ -4,9 +4,12 @@ import preprocess from "svelte-preprocess";
 import postcss from 'postcss';
 
 
-export default {
+export default defineConfig({
   integrations: [
-    // ...other integrations,
-    postcss(),
-  ],
-};
+    svelte({
+      preprocess: preprocess({
+        postcss: true // Force-enable PostCSS
+      })
+    })
+  ]
+});
