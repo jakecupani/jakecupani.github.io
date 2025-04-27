@@ -1,22 +1,14 @@
+// astro.config.mjs
 import { defineConfig } from "astro/config";
 import svelte from "@astrojs/svelte";
-import mdx from "@astrojs/mdx";
+import preprocess from "svelte-preprocess";
 
-// https://astro.build/config
 export default defineConfig({
-  site: "https://jakecupani.github.io",
-  integrations: [mdx(), svelte()],
-  markdown: {
-    shikiConfig: {
-      theme: "nord",
-    },
-    rehypePlugins: [
-      [
-        "rehype-external-links",
-        {
-          target: "_blank",
-        },
-      ],
-    ],
-  },
+  integrations: [
+    svelte({
+      preprocess: preprocess({
+        postcss: true, // Enable PostCSS processing
+      }),
+    }),
+  ],
 });
