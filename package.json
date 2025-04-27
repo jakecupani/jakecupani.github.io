@@ -12,7 +12,7 @@
   "devDependencies": {
     "@astrojs/mdx": "^0.8.3",
     "@astrojs/svelte": "^1.0.0",
-    "astro": "^1.9.2",
+    "astro": "^5.7.5",
     "rehype-external-links": "^2.0.0"
   },
   "dependencies": {
