@@ -57,6 +57,10 @@ const socialUrl = Astro.site.href + 'assets/social.png';
   } else {
     root.classList.remove('theme-dark');
   }
+
+  const htmlElement = document.getElementsByTagName('html')[0];
+
+  htmlElement.setAttribute("transition:animate", "fade");
 </script>
 
 <!-- Google Tags -->
