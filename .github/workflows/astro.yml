@@ -76,7 +76,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ${{ env.BUILD_PATH }}/dist
-          
+
   deploy:
     environment:
       name: github-pages
