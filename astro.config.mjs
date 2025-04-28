@@ -1,11 +1,13 @@
 import { defineConfig } from "astro/config";
 import svelte from "@astrojs/svelte";
+// import postcss from "@astrojs/postcss";
+// import tailwind from "@astrojs/tailwind";
 import mdx from "@astrojs/mdx";
 
 // https://astro.build/config
 export default defineConfig({
   site: "https://jakecupani.github.io",
-  integrations: [mdx(), svelte()],
+  integrations: [svelte(), mdx()],
   markdown: {
     shikiConfig: {
       theme: "nord",
