@@ -11,6 +11,9 @@ export interface Props {
 const { title, description, permalink } = Astro.props;
 const socialUrl = Astro.site.href + 'assets/social.png';
 
+import { ClientRouter } from "astro:transitions";
+
+
 // let themeHex = '';
 // if ()
 ---
@@ -92,5 +95,8 @@ if (image && label) {
 }
 });
 </script>
+
+<!-- Transition -->
+<ClientRouter />
 
 <!-- Kofi  -->
