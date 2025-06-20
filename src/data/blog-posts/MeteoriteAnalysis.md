@@ -153,10 +153,10 @@ Overall, I believe that the results that the experiments yielded were very inter
 
 ## **References**
 
-1. [NASA & Kaggle. (2016, November 5). *Meteorite Landings* [The Meteoritical Society collects data on meteorites that have fallen to Earth from outer space. This dataset includes the location, mass, composition, and fall year for over 45,000 meteorites that have struck our planet]. NASA. Retrieved from ](https://www.kaggle.com/nasa/meteorite-landings)
+1. [NASA & Kaggle. (2016, November 5). *Meteorite Landings* [The Meteoritical Society collects data on meteorites that have fallen to Earth from outer space. This dataset includes the location, mass, composition, and fall year for over 45,000 meteorites that have struck our planet]. NASA. Retrieved from ](https://dub.sh/zm6bmmK)
 
-2. [American Museum of Natural History. (n.d.). *What Are Meteorites? Ancient Clues to Our Solar System*. Retrieved December 11, 2020, from ](https://www.amnh.org/exhibitions/permanent/meteorites/meteorites/what-is-a-meteorite#:%7E:text=Meteorites%20from%20asteroids%20and%20even,of%20nickel%20and%20iron%20metal)
+2. [American Museum of Natural History. (n.d.). *What Are Meteorites? Ancient Clues to Our Solar System*. Retrieved December 11, 2020, from ](https://dub.sh/f5xxoeJ)
 
-3. [Planetary Science Institute. (2019, April 16). *FAQ - Meteoroids/Meteorites*. Retrieved from ](https://www.psi.edu/epo/faq/meteor.html#:%7E:text=To%20date%2C%20there%20have%20been,less%20than%2010%20are%20recovered)
+3. [Planetary Science Institute. (2019, April 16). *FAQ - Meteoroids/Meteorites*. Retrieved from ](https://dub.sh/weos2r4)
 
-4. Google Colab Link: [Meteorite Landings Analysis Notebook](https://colab.research.google.com/drive/1oaIU6OETfJVevdWVKvzq2npXM3fNgg0G?usp=sharing)
+4. Google Colab Link: [Meteorite Landings Analysis Notebook](https://dub.sh/MeteoriteLandings)
