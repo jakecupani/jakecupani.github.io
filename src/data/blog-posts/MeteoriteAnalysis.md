@@ -1,6 +1,6 @@
 ---
 title: NASA Meteorite Analysis ☄️
-# publishDate: Friday, June 9th, 2023
+publishDate: Friday, June 9th, 2023
 description: Statistical analysis of NASA Meteorite Landings dataset.
 tags: ['Data Science 📈']
 ---
