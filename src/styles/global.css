@@ -141,14 +141,14 @@ article h2 {
   margin: 2.2em 0 0 0;
 }
 
-article p img {
+article p img, figure img {
   border-radius: 20px;
   padding: 20px;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
   transition: 0.5s;
 }
 
-article p img:hover {
+article p img:hover, figure img:hover {
     border-radius: 20px;
     padding: 20px;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 5px;
