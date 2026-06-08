@@ -108,6 +108,10 @@ body {
   }
 }
 
+@view-transition {
+   navigation: auto;
+}
+
 main {
   display: block!important;
 }
