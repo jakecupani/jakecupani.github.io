@@ -395,7 +395,14 @@ td {
   border-radius: 20px;
 
   background-color: #8bc6ec;
-  background-image: linear-gradient(135deg,#007dd7 0%,#6661ff 100%);
+  /* background-image: linear-gradient(135deg,#007dd7 0%,#6661ff 100%); */
+  background-image: linear-gradient(195deg, #6661ff 0%, #da5cca 100%);
+  transition: 0.5s;
+}
+
+.button:hover {
+  /* filter: drop-shadow(1px 2px 2px grey); */
+  background-image: linear-gradient(12deg, #6661ff 0%, #da5cca 100%);
   transition: 0.5s;
 }
 
@@ -405,7 +412,8 @@ td {
 }
 
 .home-copy button:hover {
-  text-decoration: 
+  /* filter: drop-shadow(1px 2px 2px grey); */
+  transition: 0.5s;
 }
 
 .button a:hover {
