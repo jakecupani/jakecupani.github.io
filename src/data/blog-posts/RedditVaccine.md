@@ -57,28 +57,4 @@ Looking ahead, there is massive potential to refine this process. Future researc
 
 Ultimately, this study confirms that advanced polarity-based sentiment analysis—particularly when applied to individual comments using tools like TextBlob and GPT-3—can serve as a highly effective proxy for real-world vaccine acceptance. For health institutions and policymakers, this means digital chatter can legitimately highlight which regions require targeted education and promotion to protect public health.
 
-### References
-
-1. Safety of covid-19 vaccines. (n.d.). Retrieved March 17, 2022, from www.cdc.gov/coronavirus/2019-ncov/vaccines/safety/safety-of-vaccines.html
-2. Covid-19 vaccine confidence. (2022, February 28). Retrieved March 17, 2022, from [https://www.cdc.gov/vaccines/covid-19/vaccinate-with-confidence.html](https://www.cdc.gov/vaccines/covid-19/vaccinate-with-confidence.html)
-3. Guille, A., Hacid, H., Favre, C., Zighed, D. A. (2013). Information diffusion in online social networks. ACM SIGMOD Record, 42(2), 17-28. doi:10.1145/2503792.2503797
-4. Loomba, S., De Figueiredo, A., Piatek, S. J., De Graaf, K., & Larson, H. J. (2021). Measuring the impact of COVID-19 vaccine misinformation on vaccination intent in the UK and USA. Nature Human Behaviour, 5(3), 337-348. doi:10.1038/s41562-021-01056-1
-5. Low, D. M., Rumker, L., Talkar, T., Torous, J., Cecchi, G., & Ghosh, S. S. (2020). Natural language processing reveals vulnerable mental health support groups and heightened health anxiety on reddit during COVID-19: Observational study. Journal of Medical Internet Research, 22(10). doi:10.2196/22635
-6. Melton, C. A., Olusanya, O. A., Ammar, N., Shaban-Nejad, A. (2021). Public sentiment analysis and topic modeling regarding COVID-19 vaccines on the Reddit social media platform: A call to action for strengthening vaccine confidence. Journal of Infection and Public Health, 14(10), 1505-1512. doi:10.1016/j.jiph.2021.08.010
-7. Yan, C., Law, M., Nguyen, S., Cheung, J., & Kong, J. (2021). Comparing public sentiment toward covid-19 vaccines across Canadian cities: Analysis of comments on Reddit. Journal of Medical Internet Research, 23(9). doi:10.2196/32685
-8. COVID-19 Vaccinations in the United States. (2022, March 17). Retrieved March 17, 2022, from [https://covid.cdc.gov/covid-data-tracker/#vaccinations_vacc-people-onedose-pop-5yr](https://www.google.com/search?q=https://covid.cdc.gov/covid-data-tracker/%23vaccinations_vacc-people-onedose-pop-5yr)
-9. Report of the sage - World Health Organization. (2014, October 1). Retrieved March 18, 2022
-10. Alamoodi, A. H., Zaidan, B. B., Zaidan, A. A., Albahri, O. S., Mohammed, K. I., Malik, R. Q., ... Alaa, M. (2021). Sentiment analysis and its applications in fighting COVID-19 and infectious diseases: A systematic review. Expert systems with applications, 167, 114155.
-11. Murray, C., Mitchell, L., Tuke, J., Mackay, M. (2020). Symptom extraction from the narratives of personal experiences with COVID-19 on Reddit. arXiv preprint arXiv:2005.10454.
-12. Yin, H., Song, X., Yang, S., Li, J. (2022). Sentiment analysis and topic modeling for COVID-19 vaccine discussions. World Wide Web, 1-17.
-13. Kim, J., Hastak, M. (2018). Social network analysis: Characteristics of online social networks after a disaster. International journal of information management, 38(1), 86-96.
-14. Alamoodi, A. H., Zaidan, B. B., Al-Masawa, M., Taresh, S. M., Noman, S., Ahmaro, I. Y.,... Salahaldin, A. (2021). Multi-perspectives systematic review on the applications of sentiment analysis for vaccine hesitancy. Computers in Biology and Medicine, 139, 104957.
-15. Covid Data Tracker. (2022, April 14). Retrieved April 14, 2022, from [https://covid.cdc.gov/covid-data-tracker/#datatracker-home](https://www.google.com/search?q=https://covid.cdc.gov/covid-data-tracker/%23datatracker-home)
-16. COVID-19 Vaccinations in the United States Jurisdiction. (2022, April 14), from [https://data.cdc.gov/Vaccinations/COVID-19-Vaccinations-in-the-United-States-Jurisdi/unsk-b7fc](https://data.cdc.gov/Vaccinations/COVID-19-Vaccinations-in-the-United-States-Jurisdi/unsk-b7fc)
-17. TextBlob: Simplified Text Processing. (2022, April 14), from [https://textblob.readthedocs.io/en/dev/index.html](https://textblob.readthedocs.io/en/dev/index.html)
-18. Chipidza W. (2021). The effect of toxicity on COVID-19 news network formation in political subcommunities on Reddit: An affiliation network approach. International journal of information management, 61, 102397. [https://doi.org/10.1016/j.ijinfomgt.2021.102397](https://doi.org/10.1016/j.ijinfomgt.2021.102397)
-19. Open Al Fine Tuning. (2022, May 10). Retrieved May 10, 2022, from [https://beta.openai.com/docs/guides/fine-tuning](https://beta.openai.com/docs/guides/fine-tuning)
-20. Yue, L., Chen, W., Li, X., Zuo, W., Yin, M. (2019). A survey of sentiment analysis in social media. Knowledge and Information Systems, 60(2), 617-663.
-21. What is GPT-3? (2021, June), from [www.techtarget.com/searchenterpriseai/definition/GPT-3](https://www.techtarget.com/searchenterpriseai/definition/GPT-3)
-
 **The full paper and repository can be found on my GitHub: [https://github.com/jakecupani/reddit-vaccine](https://github.com/jakecupani/reddit-vaccine)**
