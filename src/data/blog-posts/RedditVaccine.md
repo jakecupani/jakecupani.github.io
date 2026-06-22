@@ -1,7 +1,7 @@
 ---
 title: Using Reddit Comment Sentiment Analysis as a Proxy for COVID-19 Vaccine Acceptance by State  💉
 publishDate: August 1st, 2022
-description: 
+description: Research project focused on Reddit sentiment analysis and vaccines.
 tags: ['Data Science 📈']
 ---
 
