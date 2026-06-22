@@ -5,7 +5,7 @@ description:
 tags: ['Data Science 📈']
 ---
 
-# Decoding Digital Chatter: Can Reddit Sentiment Predict COVID-19 Vaccine Acceptance?
+# Can Reddit Sentiment Predict COVID-19 Vaccine Acceptance?
 
 With the unprecedented spread of the COVID-19 pandemic, social media quickly transformed into a massive—and often highly divisive—forum for discussing the virus and the ensuing vaccines. While the vaccines proved highly effective at preventing severe illness, public hesitancy fueled by misinformation created major hurdles for public health.
 
