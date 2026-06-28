@@ -26,6 +26,17 @@ const { title, description, permalink, current } = Astro.props;
     <Footer />
   </div>
 </body>
+<script is:inline src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
+<script is:inline>
+  kofiWidgetOverlay.draw('jakecupani', {
+    'type': 'floating-chat',
+    'floating-chat.position': 'right',
+    'floating-chat.donateButton.text': 'Support me',
+    'floating-chat.donateButton.background-color': '5f7fff',
+    'floating-chat.donateButton.text-color': '#fff'
+  });
+</script>
+</html>
 </html>
 
 <style>
