@@ -168,6 +168,15 @@ article h2:first-of-type {
   padding-top: 1px!important;
 }
 
+.floatingchat-container-wrap, .floatingchat-donate-button { 
+  left:unset!important;
+  right: 16px!important; 
+}
+.floating-chat-kofi-popup-iframe , .kfds-lyt-row-f-start{
+  left:unset!important;
+  right: 16px!important;
+}
+
 h3 {
   font-size: 1.5em;
 }
