@@ -35,7 +35,7 @@ const { title, description, permalink, current } = Astro.props;
   kofiWidgetOverlay.draw('jakecupani', {
     'type': 'floating-chat',
     'floating-chat.position': 'right',
-    'floating-chat.donateButton.text': 'Support me',
+    'floating-chat.donateButton.text': 'Buy me a coffee',
     'floating-chat.donateButton.background-color': '5f7fff',
     'floating-chat.donateButton.text-color': '#fff'
   });
@@ -43,14 +43,6 @@ const { title, description, permalink, current } = Astro.props;
 </html>
 
 <style>
-.floatingchat-container-wrap, .floatingchat-donate-button { 
-  left:unset!important;
-  right: 16px!important; 
-}
-.floating-chat-kofi-popup-iframe , .kfds-lyt-row-f-start{
-  left:unset!important;
-  right: 16px!important;
-}
 
   .layout {
     display: flex;
